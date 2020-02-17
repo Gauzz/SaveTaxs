@@ -1,0 +1,143 @@
+id,name,parent_id
+0,Start Your Business,0
+1,Business Registration,1
+2,Private Limited Company,2
+3,Limited Liability Partnership,2
+4,One Person Company,2
+5,Nidhi Company,2
+6,Producer Company,2
+7,Partnership Firm,2
+8,Sole Proprietorship,2
+9,Licenses ,1
+10,FSSAI(Food License),10
+11,IEC(Import/Export Code),10
+12,APEDA-RCMC Registration ,10
+13,MSME/SSI Registration,10
+14,ISO Certification,10
+15,Digital Signature Certificate,10
+16,PSARA Licence,10
+17,OSP Licence,10
+18,Trade Licence,10
+19,Company Name Search and Logo,1
+20,Company Name Search,20
+21,Logo Design,20
+22,International Business Setup,1
+23,US Incorporation,23
+24,Singapore Incorporation,23
+25,UK Incorporation,23
+26,Netherlands Incorporation,23
+27,Hong Kong Incorporation,23
+28,Malaysia incorporation,23
+29,China Incorporation,23
+30,Dubai Incorporation,23
+31,Australia Incorporation,23
+32,Tax and Compliance,0
+33,Corporate Compliance,33
+34,Mandatory Annual Filings,34
+35,Private Limited Company / OPC,35
+36,Limited Liability Partnership,35
+37,Changes In Pvt Ltd Company,34
+38,Add a Director    ,38
+39,Remove a Director,38
+40, Increase Authorized Capital,38
+41,Close the Pvt Ltd Company,38
+42,Change Objective/Activity,38
+43,Change Address,38
+44,Change Company Name,38
+45,Changes In Limited Liability Partnership,34
+46,Add Designated Partner,46
+47,Changes to LLP Agreement,46
+48,Close the LLP,46
+49,Convert Your Business,34
+50, Proprietorship to Pvt Ltd Company,50
+51,Partnership to LLP,50
+52,Private to Public Limited Company,50
+53, Private to One Person Company,50
+54, Compliance Check - Secretarial Audit,50
+55, Due Diligence,50
+56, RBI Compliance,50
+57, Accounting & Tax,34
+58, Accounting and Book-keeping,58
+59,Payroll Maintenance,58
+60, TDS Return Filing,58
+61, Individual Income Tax Filing,58
+62, GST,34
+63,GST Registration,63
+64, GST Filing,63
+65, GST Advisory,63
+66,Labour Compliance,34
+67, Provident Fund (PF) Registration,67
+68, ESI Registration,67
+69,Professional Tax Registration,67
+70,Shops and Establishments License,67
+71, Employee Stock Option Plan [ESOP],67
+72,Trademark & IP,0
+73,Trademark ,73
+74, Trademark Registration,74
+75, Search for Trademark,74
+76, Respond to TM Objection,74
+77,Trademark Watch,74
+78, Trademark Renewal,74
+79, Trademark Assignment,74
+80,USA Trademark,74
+81,Logo Design,74
+82,Copyright,73
+83,copyright Registration,83
+84, Patent,73
+85,Patent Search,85
+86, Provisional Application,85
+87, Permanent Patent,85
+88,Fundraising,0
+89,Fundraising,89
+90, Fundraising,90
+91, Pitch Deck,90
+92,Legal,89
+93, Share Purchase Agreement,93
+94,Shareholders' Agreement,93
+95,Term Sheet Review,93
+96, Founders Agreement,93
+97, Contracts,0
+98,Hiring Documents,98
+99,Employment Contract,99
+100,Consultancy Agreement,99
+101,Freelancer Agreement,99
+102,Website Policies,98
+103,Terms of Service & Privacy Policy,103
+104,Disclaimer,103
+105,Joint Venture Agreement,103
+106,General Data Protection Regulation [GDPR],103
+107, Non Disclosure Agreement,103
+108, Business Contracts,98
+109,Memorandum of Understanding,109
+110, Franchise Agreement,109
+111, Joint Venture Agreement,109
+112, Service/Vendor,98
+113,Service Level Agreement,113
+114,Master Service Agreement,113
+115,Vendor Agreement,113
+116,NGO,0
+117,Registration,117
+118,NGO,118
+119,Section 8,118
+120,Trust Registration,118
+121,Society Registration,118
+122,Maintenance,117
+123, Section 8 Compliance,123
+124, Property and Personal,0
+125, Property,125
+126,Property Title Verification,126
+127,Property Registration,126
+128, Succession Certificate,126
+129,Legal Heir Certificate,126
+130,Will Drafting & Registration,126
+131,Sale Deed,126
+132, Gift Deed,126
+133,Residential Rental Agreement,126
+134,Relinquishment Deed,126
+135,Will Probate,126
+136, RERA Complaint,126
+137,Name change and other corrections,125
+138,Name Change,138
+139,Religion Change,138
+140,Gender Change,138
+141, Div,125
