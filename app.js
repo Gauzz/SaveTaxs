@@ -21,7 +21,7 @@ var db = "mongodb://localhost:27017/savetax";
 //     else console.log('mongodb connected');
 // });
 
-mongoose.connect(db, { useNewUrlParser: true , useUnifiedTopology: true })
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Mongodb connected"))
     .catch(err => console.log(err));
 
@@ -45,12 +45,12 @@ app.use('/user', require('./routes/user'));
 app.use(express.static(path.join(__dirname, 'views/dashboard/admin')));
 app.set('views', path.join(__dirname, 'views/dashboard/admin'));
 
- app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-app.get('/dashboard', function (req, res) {
-  res.render('index2.html'); // or res.render('index.ejs');
+app.get('/dashboard', function(req, res) {
+    res.render('index2.html'); // or res.render('index.ejs');
 });
 
 // app.get('/dashboard', function (req, res) {
@@ -59,17 +59,20 @@ app.get('/dashboard', function (req, res) {
 
 //fetch data from db into category.ejs
 
-app.get('/dashboard/category' , function(req,res){
-  categories.find({parent_id} , function(err , docs){
-    if(err) res.json(err);
-    else res.render('category',{categories:docs})
-  });
+app.get('/dashboard/category', function(req, res) {
+    categories.find({ parent_id }, function(err, docs) {
+        if (err) res.json(err);
+        else res.render('category', { categories: docs })
+    });
 });
 
 
+app.get('/blog', function(req, res) {
+    res.render('editblog.html'); // or res.render('index.ejs');
+});
 
 
 var port = 9000;
-app.listen(port , function(){
-    console.log('start at port '+port);
+app.listen(port, function() {
+    console.log('start at port ' + port);
 });
