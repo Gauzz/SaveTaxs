@@ -60,7 +60,7 @@ app.get('/dashboard', function(req, res) {
 //fetch data from db into category.ejs
 
 app.get('/dashboard/category', function(req, res) {
-    categories.find({ parent_id }, function(err, docs) {
+    categories.find({}, function(err, docs) {
         if (err) res.json(err);
         else res.render('category', { categories: docs })
     });
