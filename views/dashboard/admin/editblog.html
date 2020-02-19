@@ -13,6 +13,32 @@
       <link rel="stylesheet" href="dist/css/adminlte.min.css">
       <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+    input:focus{
+        border-style:none;
+        outline:none;
+    }
+    .Plus
+    {
+        margin-top:120px;
+        font-size:20px;
+        border-radius:20px;
+        border-style:solid;
+        background-color:white;
+        border-color:gray;
+        float:right;
+        width:40px;
+        height:40px;
+    }
+</style>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 </head>
 
 <body>
@@ -136,20 +162,48 @@
       
              
         </nav>
+        
+
+
       </div>
-    <div id="editor">
-        <p>This is the editor content.</p>
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-6">
+        
+              <input type="text" placeholder="Title" style="color:gray;margin-top:40px;font-size:50px;border:none;">
+              <br/>
+              <input type="text" placeholder="Tell Your Story...." style="width:300px;height:40px;border:none;font-size:20px;">
+               
+            </div>
+            <div class="col-lg-6">
+                <button class="Plus" onclick="iconDiv(this)"><i class='fas fa-plus' style="color:gray;"></i></button>
+               
+                <div class="AddField">
+                    <button  class="Plus"><i class="fas fa-italic"></i></button><br/>
+                    <button  class="Plus"><i class="fas fa-bold"></i></button><br/>
+                    <button  class="Plus"><i class="fas fa-align-center"></i></button><br/>
+                    <button  class="Plus"></button>
+                </div>
+                
+                
+            </div>
+            
+        </div>
     </div>
-    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    <script>
+        function iconDiv(obj){
+            var x=document.getElementsByClassName('AddField');
+            x.innerHTML=
+
+        }
+    </script>
     <script>
         CKEDITOR.replace('editor');
     </script>
- <div style="margin-left:50px;">
-    <buttton onclick="" >Addlabel</buttton>
-    <buttton onclick="" >Addbutton</buttton>
-    <buttton onclick="" >AddtextArea</buttton>
+ 
+ 
+ 
 
-</div>
 </body>
 
 </html>
