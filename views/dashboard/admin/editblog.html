@@ -13,7 +13,6 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -23,7 +22,7 @@
             outline: none;
         }
         
-        .Plus {
+        #Plus {
             margin-top: 120px;
             font-size: 20px;
             border-radius: 20px;
@@ -33,64 +32,38 @@
             float: right;
             width: 40px;
             height: 40px;
+            -webkit-tap-highlight-color: transparent;
+            line-height: 1.6;
+            color: #636b6f;
+            font-family: Oxygen, sans-serif;
+            box-sizing: border-box;
+            vertical-align: middle;
+            cursor: pointer;
+            animation-name: normal;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        
+        #AddField {
+            float: right;
+            display: none;
+            width: 300px;
+            height: 120px;
+            vertical-align: bottom;
+        }
+        
+        #createInput1 {
+            display: none;
         }
     </style>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-=======
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<style>
-
-    input:focus{
-        border-style:none;
-        outline:none;
-    }
-    #Plus
-    {
-        margin-top:120px;
-        font-size:20px;
-        border-radius:20px;
-        border-style:solid;
-        background-color:white;
-        border-color:gray;
-        float:right;
-        width:40px;
-        height:40px;
-        -webkit-tap-highlight-color: transparent;
-        line-height: 1.6;
-        color: #636b6f;
-        font-family: Oxygen,sans-serif;
-        box-sizing: border-box;
-
-        vertical-align: middle;
-        cursor: pointer;
-        animation-name: normal;
-        animation-duration: 0.3s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-    }
-
-    #AddField{
-      float:right;
-      display:none;    
-      width:300px;
-      height:120px;
-      vertical-align: bottom;
-    }
-   #createInput1{
-     display:none;
-   }
-
-</style>
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
->>>>>>> ba85c4b21aea8334337ab8ebe91c1608cd173721
 
 
 
 
-<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-<link href="https://platform.lateralx.com/css/profile.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://platform.lateralx.com/css/profile.css" rel="stylesheet">
 
 </head>
 
@@ -217,8 +190,6 @@
         </nav>
 
 
-<<<<<<< HEAD
-
         </div>
         <div class="container">
             <div class="row">
@@ -227,80 +198,54 @@
                     <input type="text" placeholder="Title" style="color:gray;margin-top:40px;font-size:50px;border:none;">
                     <br/>
                     <input type="text" placeholder="Tell Your Story...." style="width:300px;height:40px;border:none;font-size:20px;">
-
-=======
-      </div>
-    <div class="container">
-        <div class="row">
-           <div class="col-lg-6">
-        
-              <input type="text" placeholder="Title" style="color:gray;margin-top:40px;font-size:50px;border:none;">
-              <br/>
-              <input type="text" placeholder="Tell Your Story...." style="width:300px;height:40px;border:none;font-size:20px;">
-               <div id="createInput1"></div>
-            </div>
-            
-          </script>
-            <div class="col-lg-6">
-                <button id="Plus" onclick="Field(this)"><i class='fas fa-plus'  style="color:gray;"></i></button>
-                <div id="Add" style="width:300px;height:120px;float:right;"></div>
-               
-                <div id="AddField">
-                    <button id="input" onlick="CreateInput1(this)"><i class="fas fa-italic"></i></button><br/>
-                    <button  id="button"><i class="fas fa-bold"></i></button><br/>
-                    <button  id="textarea"><i class="fas fa-align-center"></i></button><br/>
-                    <button  id="embed"></button>
->>>>>>> ba85c4b21aea8334337ab8ebe91c1608cd173721
+                    <div id="createInput1"></div>
                 </div>
-                <div class="col-lg-6">
-                    <button class="Plus" onclick="iconDiv(this)"><i class='fas fa-plus' style="color:gray;"></i></button>
 
-                    <div class="AddField">
-                        <button class="Plus"><i class="fas fa-italic"></i></button><br/>
-                        <button class="Plus"><i class="fas fa-bold"></i></button><br/>
-                        <button class="Plus"><i class="fas fa-align-center"></i></button><br/>
-                        <button class="Plus"></button>
+                </script>
+                <div class="col-lg-6">
+                    <button id="Plus" onclick="Field(this)"><i class='fas fa-plus'  style="color:gray;"></i></button>
+                    <div id="Add" style="width:300px;height:120px;float:right;"></div>
+
+                    <div id="AddField">
+                        <button id="input" onlick="CreateInput1(this)"><i class="fas fa-italic"></i></button><br/>
+                        <button id="button"><i class="fas fa-bold"></i></button><br/>
+                        <button id="textarea"><i class="fas fa-align-center"></i></button><br/>
+                        <button id="embed"></button>
+                    </div>
+                    <div class="col-lg-6">
+                        <button class="Plus" onclick="iconDiv(this)"><i class='fas fa-plus' style="color:gray;"></i></button>
+
+                        <div class="AddField">
+                            <button class="Plus"><i class="fas fa-italic"></i></button><br/>
+                            <button class="Plus"><i class="fas fa-bold"></i></button><br/>
+                            <button class="Plus"><i class="fas fa-align-center"></i></button><br/>
+                            <button class="Plus"></button>
+                        </div>
+
+
                     </div>
 
-
                 </div>
-
             </div>
         </div>
-<<<<<<< HEAD
-        <script>
-            function iconDiv(obj) {
-                var x = document.getElementsByClassName('AddField');
-                x.innerHTML =
 
-            }
-        </script>
         <script>
             CKEDITOR.replace('editor');
         </script>
 
+        <script>
+            function Field(ev) {
+                document.getElementById('Add').innerHTML = document.getElementById('AddField').nodeValue;
+                document.getElementById('AddField').style.display = "block";
 
+            }
 
-=======
-    </div>
-    
-    <script>
-        CKEDITOR.replace('editor');
-    </script>
-    
- <script>
-    function Field(ev){
-       document.getElementById('Add').innerHTML = document.getElementById('AddField').nodeValue;
-       document.getElementById('AddField').style.display="block";
-      
-       }
-     function  createInput1(ab){
-      var x = document.createElement("INPUT");
-      var temp =document.getElementsByClassName('createInput1').innerHTML;
-      temp.appendChild(x);
-     }
- </script>
->>>>>>> ba85c4b21aea8334337ab8ebe91c1608cd173721
+            function createInput1(ab) {
+                var x = document.createElement("INPUT");
+                var temp = document.getElementsByClassName('createInput1').innerHTML;
+                temp.appendChild(x);
+            }
+        </script>
 
 </body>
 
