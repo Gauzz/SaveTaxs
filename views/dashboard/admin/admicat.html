@@ -21,11 +21,41 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <style>
-    </style>
+  .myform{
+     
+     display:center;
+     width:90%;
+     height:400px;
+     margin-top:30px;
+     
+     
+  }
+  input{
+      text-align: center;
+      width:90%;
+      height:50px;
+      margin-top:10px;
+      border-top:none;
+      border-right:none;
+      border-left:none;
+     
+  }
+  .nav-link{
+           font-weight: bold;
+           font-size: 15px;
+       }
+  .btn-buy{
+        float:right;
+        color: whitesmoke;
+        background-color: #28E096;
+        border:none;
+       }
+
+</style>
 </head>
 
 <body>
-<div class="container" style="width:100vw;">
+<div class="container">
   <div class="row" style="width:100vw;height: 9vh;margin-top: 10px;margin-bottom: 20px;">
     <div class="col-lg-12">
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -62,4 +92,29 @@
         </nav>
   </div>
 </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 style="margin-top:30px;color:#142C82 ;">Private Limited Company Registration</h2>
+         <br/>
+            <p style="color:#142C82";>Starting a Business in india takes 15 to 20 days,dpending on whether you choose a private limited company,a one-person company(OPC),limited liability partnership(LLP),partnership or sole proprietorship.The key factors to base your decision on are the funding support the business structure provides,start-up costs, the compliance work involved and the tax advantages offered.</p>
+    
+    
+        </div>
+        
+        <div class="col-lg-6" >
+          <form style="border:solid darkblue;border-radius:20px;width:70%;height:400px;">
+            <div class="myform">
+                <input type="text" name="fname" placeholder="Name"><br/>
+                <input type="text" name="phoneno" placeholder="Phone Number"><br/>
+                <input type="text" name="email" placeholder="Email Address"><br/>
+                <input type="text" name="city" placeholder="City"><br/>
+                <button class="btn-buy" type="submit">Buy Now</button>
+              </div>
+        
+          </form>
+        </div>
+    </div>
 </div>
+</body>
+</html>
