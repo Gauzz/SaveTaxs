@@ -1,0 +1,414 @@
+:root{
+    --bg-g:#2bdf98;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri',sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar */
+nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.brand{
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #001445;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.links{
+    width: 70%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.links li {
+    font-size: 0.9em;
+    color: #808080;
+    text-transform:uppercase;
+    padding: 6px 5px;
+}
+.links .login{
+    color: #fff;
+    background:var(--bg-g);
+    border-radius: 3px;
+}
+
+
+/* CTA */
+
+header{
+    width: 100%;
+    height: calc(93vh - 70px);
+    background-image: url('../../images/BG/Asset\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 4% 0%;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: transparent;
+}
+.content{
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: strech;
+}
+
+.title{
+    font-size: 2em;
+    color:#001445
+}
+.subtitle{
+    margin: 40px 0;
+    font-size: 1em;
+    color: #808080;
+}
+
+img{
+    width: 50%;
+    margin-left: auto;
+}
+header .group{
+    width: 100%;
+    border: solid 1px #12142d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #fff;
+}
+header .group input{
+    align-self: center;
+    justify-self: flex-start;
+    background: transparent;
+    border: none;
+    padding: 8px 8px;
+}
+
+header .group input::placeholder{
+    font-family: 'Calibri',sans-serif;
+}
+header .group input:focus{
+    outline: none;
+}
+header .group button{
+    align-self: flex-end;
+    justify-self: flex-end;
+    font-family: 'Calibri',sans-serif;
+    padding: 5px;
+    border: none;
+    background: var(--bg-g);
+    text-transform: uppercase;
+    color: #fff;
+    margin: 5px;
+    border-radius: 0;
+}
+
+header .group button:focus{
+    outline: none;
+}
+
+/* Services */
+/* Cards */
+
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #001446;
+}
+section .title{
+    font-weight: 600;
+    color: #fff;
+}
+
+.cards{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card{
+    height: 370px;
+    width: 270px;
+    background-image: url('../../images/Our-services/package-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card .head{
+    text-align: center;
+    font-size: 1.2em;
+    color: #001445;
+    flex-grow: 1;
+}
+
+.card .price{
+    flex-grow: 3;
+    color: #fff;
+    font-size: 3.5em;
+}
+.card .more{
+    flex-grow: 1;
+}
+
+/* Consult */
+
+.consult{
+    width: 100%;
+    background: #fff;
+    background-image: url('../../images/BG/blue-home-2.svg');
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: -418% 51%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.consult form{
+    position: relative;
+    justify-self: flex-start;
+    align-self: center;
+    width: 340px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    transform: translate(-25% ,-10%);
+}
+
+.consult form input{
+    text-align: center;
+    border: none;
+    padding: 15px 30px;
+    width: 70%;
+    border-bottom: 1px solid #001445;;
+}
+
+.consult form input::placeholder{
+    font-family: 'Calibri',sans-serif;
+    font-size: 1.2em;
+    color: #001445;
+}
+.consult form button{
+    padding: 6px 20px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background:var(--bg-g);
+}
+
+.consult .side{
+    text-align: right;
+    width: 20%;
+}
+
+.consult  p{
+    color: #808080;
+}
+.consult .title{
+    color: #001445;
+}
+
+
+/* Business */
+.business{
+    height: 70vh;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.business .title{
+    color: #001445;
+}
+.badges{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.badge{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.badgeimg{
+    width: 100px;
+    height: 100px;
+    background-image: url('../../images/Business-Served/client-served-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 900%;
+    background-position: center;
+}
+.two{
+    background-image: url('../../images/Business-Served/customer-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 900%;
+    background-position: center;
+}
+.three{
+    background-image: url('../../images/Business-Served/partners-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 650%;
+    background-position: center;
+}
+
+.badge .count{
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 0.1;
+    color: #001445;
+}
+.badge .sub{
+    color: #808080;
+    line-height:0.1;
+}
+
+
+
+/* Choose */
+.choose{
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    background-image: url('../../images/BG/blue-home-3.svg');
+    background-size: 99%;
+    background-repeat: no-repeat;
+    background-position-y: 48%;
+    background-position-x: 4000%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.choose .content{
+    margin-left: 10%;
+}
+.choose .title{
+    color: #001445;
+    font-weight: 400;
+}
+.choose .content ul{
+    color:#808080;
+}
+
+
+
+/* trusted */
+
+.trust{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    background-image: url('../../images/BG/blue-home-4.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 122%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+.contact{
+    width: 100%;
+    background: #fff;
+    background-image: url('../../images/BG/blue-home-5.svg');
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: -2300% 72%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.contact .content{
+    margin-right: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.contact .content .title{
+    font-size: 2.5em;
+    color: #001445;
+}
+.contact .group .head{
+    line-height: 0.5;
+    font-size: 1.8em;
+    color: #001445;
+}
+.contact .group .sub{
+    line-height: 0.1;
+    font-size: 1em;
+    color: #808080;
+}
+
+.contact .group ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1f1f1f;
+}
+
+footer ul{
+    list-style: none;
+    line-height: 2;
+    color: #808080;
+}
+
+footer ul .head{
+    font-size: 1.4em;
+    color: #fff;
+}
+.copy{
+    width: 100%;
+    background-color:#2e2e2e;
+    color: #808080;
+    text-align: center;
+    padding: 20px 0;
+}
