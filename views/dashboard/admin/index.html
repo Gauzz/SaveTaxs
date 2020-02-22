@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savetaxs</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root{
+    --bg-g:#2bdf98;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri',sans-serif;
+}
+
+
+/* Navbar */
+nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.brand{
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #001445;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.links li {
+    font-size: 0.9em;
+    color: #808080;
+    text-transform:uppercase;
+    padding: 10px 5px;
+}
+.links .login{
+    color: #fff;
+    background:var(--bg-g);
+    border-radius: 3px;
+}
+
+
+/* CTA */
+
+header{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url('/images/BG/Asset\ 1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0% -5%;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: transparent;
+}
+.content{
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title{
+    font-size: 2em;
+    color:#001445
+}
+.subtitle{
+    margin: 40px 0;
+    font-size: 1em;
+    color: #808080;
+}
+
+img{
+    width: 50%;
+    margin-left: auto;
+}
+.group{
+    width: 100%;
+    border: solid 1px #12142d;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+}
+.group input{
+    align-self: center;
+    justify-self: flex-start;
+    background: transparent;
+    border: none;
+    padding: 8px 8px;
+}
+
+.group input::placeholder{
+    font-family: 'Calibri',sans-serif;
+}
+.group input:focus{
+    outline: none;
+}
+.group button{
+    align-self: flex-end;
+    justify-self: flex-end;
+    font-family: 'Calibri',sans-serif;
+    padding: 5px;
+    border: none;
+    background: var(--bg-g);
+    text-transform: uppercase;
+    color: #fff;
+    margin: 5px;
+    border-radius: 0;
+}
+
+.group button:focus{
+    outline: none;
+}
+
+
+/* Cards */
+/* Services */
+
+section{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #001446;
+}
+section .title{
+    font-weight: 600;
+    color: #fff;
+}
+
+.cards{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card{
+    height: 370px;
+    width: 270px;
+    background-image: url('/images/Our-services/package-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card .head{
+    text-align: center;
+    font-size: 1.2em;
+    color: #001445;
+    flex-grow: 1;
+}
+
+.card .price{
+    flex-grow: 3;
+    color: #fff;
+    font-size: 3.5em;
+}
+.card .more{
+    flex-grow: 1;
+}
+
+.contact{
+    width: 100%;
+    background: #fff;
+    background-image: url('/images/BG/blue-home-2.svg');
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: -418% 51%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contact form{
+    position: relative;
+    justify-self: flex-start;
+    align-self: center;
+    width: 355px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    transform: translate(-25% ,-10%);
+}
+
+.contact form input{
+    text-align: center;
+    border: none;
+    padding: 15px 30px;
+    width: 70%;
+    border-bottom: 1px solid #808080;
+}
+.contact form button{
+    padding: 6px 20px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background:var(--bg-g);
+}
+
+.contact .side{
+    text-align: right;
+    width: 20%;
+}
+
+.contact  p{
+    color: #808080;
+}
+.contact .title{
+    color: #001445;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="brand">
+            <i>savetaxs</i>
+        </div>
+            <ul class="links">
+                <li>Startup</li>
+                <li>TAXS & Compliances</li>
+                <li>Trademark & IP</li>
+                <li>Fundraising</li>
+                <li>Contract</li>
+                <li>NGO</li>
+                <li>Property & Personal</li>
+                <li class="login">Sign in</li>
+            </ul>
+    </nav>
+
+    <!-- cover -->
+    <header>
+        <div class="container">
+            <div class="content">
+                <p class="title">Providing 1 stop solution for all the Startup & Legal Compliances</p>
+                 <p class="subtitle">
+                     Savetaxs provides you all kind of solution starting from company registration, GST Resitration, Tax Filling, Trademark, Registration and much more..
+                 </p>
+                 <form action="#">
+                     <div class="group">
+                        <input type="text" placeholder="Search anything...">
+                        <button>Search</button>   
+                     </div>
+                 </form>
+            </div>
+            <img src="/images/home-img.png" alt="svg">
+        </div>
+    </header>
+
+    <!-- services -->
+    <section>
+        <p class="title">Our Services</p>
+        <div class="cards">
+            <div class="card">
+                <p class="head">Private Limited Company Registration</p>
+                <p class="price">$3453</p>
+                <p class="more">Know more</p>
+            </div>
+            <div class="card">
+                <p class="head">Private Limited Company Registration</p>
+                <p class="price">$3453</p>
+                <p class="more">Know more</p>
+            </div>
+            <div class="card">
+                <p class="head">Private Limited Company Registration</p>
+                <p class="price">$3453</p>
+                <p class="more">Know more</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- consult -->
+    <section class="contact">
+        <form action="">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="City">
+            <button>Submit</button>
+        </form>
+        <div class="side">
+            <p class="title">Get Free Consultation</p>
+            <p>Get a call from our expert and get a free Consultation on any of your requirements</p>
+        </div>
+    </section>
+
+    <section>
+        <p class="title">Our Services</p>
+        <div class="cards">
+            <div class="card">
+                <p class="head">Private Limited Company Registration</p>
+                <p class="price">$3453</p>
+                <p class="more">Know more</p>
+            </div>
+            <div class="card">
+                <p class="head">Private Limited Company Registration</p>
+                <p class="price">$3453</p>
+                <p class="more">Know more</p>
+            </div>
+            <div class="card">
+                <p class="head">Private Limited Company Registration</p>
+                <p class="price">$3453</p>
+                <p class="more">Know more</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
