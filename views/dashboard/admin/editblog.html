@@ -13,30 +13,6 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <style>
-        input:focus {
-            border-style: none;
-            outline: none;
-        }
-        
-        .Plus {
-            margin-top: 120px;
-            font-size: 20px;
-            border-radius: 20px;
-            border-style: solid;
-            background-color: white;
-            border-color: gray;
-            float: right;
-            width: 40px;
-            height: 40px;
-        }
-    </style>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -115,6 +91,10 @@ button{
 }
 </style>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+
+
 <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 <link href="https://platform.lateralx.com/css/profile.css" rel="stylesheet">
 
@@ -241,41 +221,45 @@ button{
 
 
         </nav>
-       </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-              <input type="text" placeholder="Title" style="color:gray; opacity:0.6; margin-top:40px;font-size:47px; border:none; font-family: italic; margin-left:180px; margin-right:4px "><br/>
-        </div>
-     </script>
+
+
+      </div>
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-6">
+        
+              <input type="text" placeholder="Title" style="color:gray;margin-top:40px;font-size:50px;border:none;">
+              <br/>
+              <input type="text" placeholder="Tell Your Story...." style="width:300px;height:40px;border:none;font-size:20px;">
+               <div id="createInput1"></div>
+            </div>
             
             <div class="col-lg-6" >
                 <button id="Plus" onclick="Field(this)"><i class='fas fa-plus'  style="color:black; "></i></button>
                 <div id="Add" style="width:300px;height:100px; float: left; "></div>
                
                 <div id="AddField">
-                <button id="" onlick="CreateInput1(this)"><i class="fa fa-search" aria-hidden="true" style='font-size: 18px;'></i></button>
-                <button id="" onlick="CreateInput1(this)"><i class="fa fa-camera" aria-hidden="true" style='font-size: 18px;'></i></button>
-                <button id="" onlick="CreateInput1(this)"><i class="fa fa-video" aria-hidden="true" style='font-size: 18px;'></i></button>
-                <button id="" onlick="CreateInput1(this)"><i class="fa fa-play" aria-hidden="true" style='font-size: 18px;'></i></button>
-                <button id="" onlick="CreateInput1(this)"><i class="fa fa-code" aria-hidden="true" style='font-size:18px;'></i></button>
-                <button id="" onlick="CreateInput1(this)"><i class="fa fa-plus" aria-hidden="true" style='font-size: 18px;'></i></button>
-                 </div>
-                 </div>
-             </div>
-        
-  <script>
-            function iconDiv(obj) {
-                var x = document.getElementsByClassName('AddField');
-                x.innerHTML =
+                    <button id="input" onlick="CreateInput1(this)"><i class="fas fa-italic"></i></button><br/>
+                    <button  id="button"><i class="fas fa-bold"></i></button><br/>
+                    <button  id="textarea"><i class="fas fa-align-center"></i></button><br/>
+                    <button  id="embed"></button>
+                </div>
+                <div class="col-lg-6">
+                    <button class="Plus" onclick="iconDiv(this)"><i class='fas fa-plus' style="color:gray;"></i></button>
 
-            }
-  </script>
-        
-  <script>
-            CKEDITOR.replace('editor');
-  </script>
-</div>
+                    <div class="AddField">
+                        <button class="Plus"><i class="fas fa-italic"></i></button><br/>
+                        <button class="Plus"><i class="fas fa-bold"></i></button><br/>
+                        <button class="Plus"><i class="fas fa-align-center"></i></button><br/>
+                        <button class="Plus"></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
     
     <script>
         CKEDITOR.replace('editor');

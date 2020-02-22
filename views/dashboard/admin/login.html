@@ -21,7 +21,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <style>
        .img1{
-        z-index:+1;
+        
         position: absolute;
         top: calc( 30vh - 100px );
         left: calc( 23vw - 100px );
@@ -43,30 +43,81 @@
            
        }
        .logincust{
-           margin-left:60px;
-           display: none;
+        margin-left:100px;
+         display: none;
        }
+      
        .loginpart{
-           margin-left:60px;
+           margin-left:100px;
            display: none;
        }
+       .nav-link{
+           font-weight: bold;
+           font-size: 15px;
+       }
+       .footer{
+        line-height: 2.0;
+        background-color: black;
+        color:white;
+        height:50%;
+        padding-left:50px;
+       }
+       
    </style>
   </head>
   <body>
      <div class="container" style="width:100vw">
+        <div class="row" style="width:100vw;height: 9vh;margin-top: 10px;margin-bottom: 20px;">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand" href="#" style="margin-left: 60px;font-size: 40px;font-weight: bold;font-style: italic;"><i>savetaxs</i></a>
+                <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav" style="margin-left:200px;">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">STARTUP </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">TAXS & COMPLIANCES</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">TRADEMARKS & IP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" >FUNDRASING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >CONTRACTS</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >NGO</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >PROPERTY & PERSONAL</a>
+                      </li>
+                    <button class="nav-item" style="background-color: rgb(13, 196, 77);border:none;border-radius:10px;color:white;width:100px;">SIGN IN</button>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </div>
+
          <div class="row" style="width:100vw">
+     
            <div class="col-lg-6" style="width:100%;height:500px;margin:0px;padding:0px;outline:none;">
-            <form class="customer" action="login.html" style="width:100%;height:100%;background-color: #6610f2;">
+            <div class="customer" action="login.html" style="width:100%;height:100%;background-color: #6610f2;">
                 
-                <img class="img1" src="\images\png\cust-icon.png" alt="Cust-icon image" onclick="loginCust()"> 
-            </form>
+                <img class="img1" src="\images\png\cust-icon.png" alt="Cust-icon image" onclick="loginCust(this)"> 
+            </div>
         
             <form class="logincust" action="login.html"  style="width:100%;height:100%;">
-               <img src="\images\png\cust-icon-blue.png" alt="logocust" style="margin-bottom:50px;width:200px;height:80px;">
+               <img src="\images\png\cust-icon-blue.png" alt="logocust" style="margin-top:30px;margin-bottom:50px;width:160px;height:60px;">
                
                <h3 style="color:#001445;font-family:open sans;font-weight: bold;font-style: italic;">Login</h3><br/>
-               <input type="text" placeholder="Email ID" style="width:60%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
-               <input type="text" placeholder="Password"style="width:60%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+               <input type="text" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+               <input type="text" placeholder="Password"style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
              <div style="margin-bottom:20px;">
                  <a href="" style="text-decoration: underline;color:grey;">Don't remember your password?</a>
              </div>
@@ -76,16 +127,16 @@
 
            
         <div class="col-lg-6" style="height:500px;margin:0px;padding:0px;outline-style:none;">
-            <form action="login.html" style="width:100%;height:100%;background-color:#F96554;">
-                <img class="img1"  src="\images\png\part-icon.png" alt="Part-icon image"> 
+            <form action="login.html" class="partner" style="width:100%;height:100%;background-color:#F96554;">
+                <img class="img1"  src="\images\png\part-icon.png" alt="Part-icon image" onclick="loginPart(this)"> 
             </form>
 
             <form class="loginpart" action="login.html"  style="width:100%;height:100%;">
                 <img src="\images\png\part-icon-blue.png" alt="logopart" style="margin-bottom:50px;width:200px;height:80px;">
                 
                 <h3 style="color:#001445;font-family:open sans;font-weight: bold;font-style: italic;">Login</h3><br/>
-                <input type="text" placeholder="Email ID" style="width:60%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
-                <input type="text" placeholder="Password"style="width:60%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="text" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="text" placeholder="Password"style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
               <div style="margin-bottom:20px;">
                   <a href="" style="text-decoration: underline;color:grey;">Don't remember your password?</a>
               </div>
@@ -94,39 +145,56 @@
         </div>
     </div>
  </div>
- <div class="footer" style="background-color: black;color:white;height:30%;">
-    <h2>Savetaxs</h2>
-    <div class="col-lg-4">
+ <script>
+    function loginCust(asd){
+        document.getElementsByClassName('logincust')[0].style.display="block";
+       document.getElementsByClassName('customer')[0].style.display="none";
+       document.getElementsByClassName('partner')[0].style.display="block";
+       document.getElementsByClassName('loginpart')[0].style.display="none";
+    }
+
+    function loginPart(bsd){
+        document.getElementsByClassName('loginpart')[0].style.display="block";
+       document.getElementsByClassName('partner')[0].style.display="none";
+       document.getElementsByClassName('customer')[0].style.display="block";
+       document.getElementsByClassName('logincust')[0].style.display="none";
+
+    }
+</script>
+   
+ <div class="footer">
+   <div>
+    <h2 style="margin-bottom:30px;">savetaxs</h2>
+   </div> 
+    <div class="row">
+        <div class="col-lg-4">
         <b>Popular Services</b><br/>
-        Private Limited Company Registration<br/>
-        One person Company Registration<br/>
-
-
-        
+        <div style="color:grey;">Private Limited Company Registration<br/>
+                                   One person Company Registration<br/>
+                                   Limited Labiality Partnership Registration<br/>
+                                   Partnership Firm<br/>
+                                   Sole Proprietorship firm Registration
+      </div> 
     </div>
     <div class="col-lg-4">
         <b>Company</b><br/>
-        About Us<br/>
-        Blogs<br/>
-        Partner with Us <br/>
-        Contact Us<br/>
-        Sitemap
-        
+        <div style="color:grey;"> About Us<br/>
+                                     Blog<br/>
+                                    Partner with Us <br/>
+                                     Contact Us<br/>
+                                      Sitemap
+      </div>  
     </div>
     <div class="col-lg-4">
         <b>Terms and Policies</b><br/>
-        Privacy Policy<br/>
-        Term and Condition<br/>
-        Satisfaction Guarantees
+        <div style="color:grey;">Privacy Policy<br/>
+                               Term and Condition<br/>
+                                Satisfaction Guarantees
+      </div>
     </div>
-    
+</div>
 
  </div>
- <script>
-     function loginCust(){
-          
-     }
- </script>
-    
+ 
   </body>
   </html>
