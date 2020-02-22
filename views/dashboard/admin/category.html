@@ -20,12 +20,57 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    .container{
+           margin-left:0px;
+           margin-right:0px;
+           border-right:0px;
+           width:100vw;
+           height:60vh
+       }
+    #sticky-footer{
+        line-height: 2.0;
+        width: 100vw;
+        height:60%;
+        padding-left:50px;
+        flex-shrink: none;
+    }
+   
+     
+   .navbar-brand{
+    margin-left: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .fa-plus-square-o
+    {
+       
+       margin-left:40px;
+       font-size:20px;
+        -webkit-tap-highlight-color: transparent;
+        line-height: 1.6;
+        
+        
+        box-sizing: border-box;
+        vertical-align: middle;
+        cursor: pointer;
+        animation-name: normal;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        
+       
+         
+    }
+    }
     </style>
 </head>
 
 <body>
-<div class="container" style="width:100vw;">
+
+ <div class="container">
   <div class="row" style="width:100vw;height: 9vh;margin-top: 10px;margin-bottom: 20px;">
     <div class="col-lg-12">
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -62,4 +107,51 @@
         </nav>
   </div>
 </div>
+
+
+<div class="row" style="width:100vw;height:50vh;">
+   
+        <div class="col-lg-6">
+        <i class='fa fa-plus-square-o' onclick="fSub"></i>
+          
+        </div>
+   
+
 </div>
+
+<footer id="sticky-footer" class="py-20 bg-dark text-white-50">
+    <div>
+      <h2>savetaxs</h2>
+    </div>
+     <div class="row">
+         <div class="col-lg-4">
+         <b>Popular Services</b><br/>
+         <div style="color:grey;">Private Limited Company Registration<br/>
+                                    One person Company Registration<br/>
+                                    Limited Labiality Partnership Registration<br/>
+                                    Partnership Firm<br/>
+                                    Sole Proprietorship firm Registration
+       </div> 
+     </div>
+     <div class="col-lg-4">
+         <b>Company</b><br/>
+         <div style="color:grey;"> About Us<br/>
+                                      Blog<br/>
+                                     Partner with Us <br/>
+                                      Contact Us<br/>
+                                       Sitemap
+       </div>  
+     </div>
+     <div class="col-lg-4">
+         <b>Terms and Policies</b><br/>
+         <div style="color:grey;">Privacy Policy<br/>
+                                Term and Condition<br/>
+                                 Satisfaction Guarantees
+       </div>
+     </div>
+ </div>
+ 
+  </div>
+  
+   </body>
+   </html>
