@@ -20,6 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     .container{
            margin-left:0px;
@@ -43,21 +44,15 @@
     font-weight: bold;
     font-style: italic;
   }
-  #Add
+  .fa-plus-square-o
     {
        
-        font-size:20px;
-        border-radius:20px;
-        border-style:solid;
-        background-color:white;
-        border-color:gray;
-        float:left;
-        width:25px;
-        height:25px;
+       margin-left:40px;
+       font-size:20px;
         -webkit-tap-highlight-color: transparent;
         line-height: 1.6;
-        color: #636b6f;
-        font-family: Oxygen,sans-serif;
+        
+        
         box-sizing: border-box;
         vertical-align: middle;
         cursor: pointer;
@@ -67,10 +62,8 @@
         animation-fill-mode: forwards;
         
        
-          animation: mymove 3s;
-           animation-delay: 2s;
-           animation-fill-mode: backwards;
-        
+         
+    }
     }
     </style>
 </head>
@@ -118,8 +111,8 @@
 
 <div class="row" style="width:100vw;height:50vh;">
    
-        <div class="col-lg-6" >
-          <button id="Add" onclick=""><i class='fas fa-plus'  style="color:black; "></i></button>
+        <div class="col-lg-6">
+        <i class='fa fa-plus-square-o' onclick="fSub"></i>
           
         </div>
    
