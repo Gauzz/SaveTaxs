@@ -81,7 +81,7 @@ app.get('/blog', function(req, res) {
 });
 
 
-var port = 9000;
+var port = 3000;
 app.listen(port, function() {
     console.log('start at port ' + port);
 });
