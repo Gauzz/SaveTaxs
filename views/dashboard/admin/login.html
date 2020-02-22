@@ -55,6 +55,13 @@
            font-weight: bold;
            font-size: 15px;
        }
+       .footer{
+        line-height: 2.0;
+        background-color: black;
+        color:white;
+        height:50%;
+        padding-left:50px;
+       }
        
    </style>
   </head>
@@ -143,43 +150,47 @@
         document.getElementsByClassName('logincust')[0].style.display="block";
        document.getElementsByClassName('customer')[0].style.display="none";
        document.getElementsByClassName('partner')[0].style.display="block";
-
+       document.getElementsByClassName('loginpart')[0].style.display="none";
     }
 
     function loginPart(bsd){
         document.getElementsByClassName('loginpart')[0].style.display="block";
        document.getElementsByClassName('partner')[0].style.display="none";
        document.getElementsByClassName('customer')[0].style.display="block";
+       document.getElementsByClassName('logincust')[0].style.display="none";
 
     }
 </script>
    
- <div class="footer" style="line-height: 2.0;background-color: black;color:white;height:50%;padding-left:40px;">
-    <h2>Savetaxs</h2>
+ <div class="footer">
+   <div>
+    <h2 style="margin-bottom:30px;">savetaxs</h2>
+   </div> 
     <div class="row">
         <div class="col-lg-4">
         <b>Popular Services</b><br/>
-        Private Limited Company Registration<br/>
-        One person Company Registration<br/>
-        Limited Labiality Partnership Registration<br/>
-        Partnership Firm<br/>
-        Sole Proprietorship firm Registration
-        
+        <div style="color:grey;">Private Limited Company Registration<br/>
+                                   One person Company Registration<br/>
+                                   Limited Labiality Partnership Registration<br/>
+                                   Partnership Firm<br/>
+                                   Sole Proprietorship firm Registration
+      </div> 
     </div>
     <div class="col-lg-4">
         <b>Company</b><br/>
-        About Us<br/>
-        Blog<br/>
-        Partner with Us <br/>
-        Contact Us<br/>
-        Sitemap
-        
+        <div style="color:grey;"> About Us<br/>
+                                     Blog<br/>
+                                    Partner with Us <br/>
+                                     Contact Us<br/>
+                                      Sitemap
+      </div>  
     </div>
     <div class="col-lg-4">
         <b>Terms and Policies</b><br/>
-        Privacy Policy<br/>
-        Term and Condition<br/>
-        Satisfaction Guarantees
+        <div style="color:grey;">Privacy Policy<br/>
+                               Term and Condition<br/>
+                                Satisfaction Guarantees
+      </div>
     </div>
 </div>
 
