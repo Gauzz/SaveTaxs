@@ -55,6 +55,9 @@ app.get('/dashboard', function(req, res) {
 app.get('/login', function(req, res) {
     res.render('login.html'); // or res.render('index.ejs');
 });
+app.get('/admincat', function(req, res) {
+    res.render('admincat.html'); // or res.render('index.ejs');
+});
 app.get('/category', function(req, res) {
     res.render('category.html'); // or res.render('index.ejs');
 });
