@@ -44,22 +44,8 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-        
-        #AddField {
-            float: right;
-            display: none;
-            width: 300px;
-            height: 120px;
-            vertical-align: bottom;
-        }
-        
-        #createInput1 {
-            display: none;
-        }
     </style>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
-
 
 
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
@@ -212,19 +198,32 @@
                         <button id="textarea"><i class="fas fa-align-center"></i></button><br/>
                         <button id="embed"></button>
                     </div>
-                    <div class="col-lg-6">
-                        <button class="Plus" onclick="iconDiv(this)"><i class='fas fa-plus' style="color:gray;"></i></button>
 
-                        <div class="AddField">
-                            <button class="Plus"><i class="fas fa-italic"></i></button><br/>
-                            <button class="Plus"><i class="fas fa-bold"></i></button><br/>
-                            <button class="Plus"><i class="fas fa-align-center"></i></button><br/>
-                            <button class="Plus"></button>
+                    </script>
+                    <div class="col-lg-6">
+                        <button id="Plus" onclick="Field(this)"><i class='fas fa-plus'  style="color:gray;"></i></button>
+                        <div id="Add" style="width:300px;height:120px;float:right;"></div>
+
+                        <div id="AddField">
+                            <button id="input" onlick="CreateInput1(this)"><i class="fas fa-italic"></i></button><br/>
+                            <button id="button"><i class="fas fa-bold"></i></button><br/>
+                            <button id="textarea"><i class="fas fa-align-center"></i></button><br/>
+                            <button id="embed"></button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button class="Plus" onclick="iconDiv(this)"><i class='fas fa-plus' style="color:gray;"></i></button>
+
+                            <div class="AddField">
+                                <button class="Plus"><i class="fas fa-italic"></i></button><br/>
+                                <button class="Plus"><i class="fas fa-bold"></i></button><br/>
+                                <button class="Plus"><i class="fas fa-align-center"></i></button><br/>
+                                <button class="Plus"></button>
+                            </div>
+
+
                         </div>
 
-
                     </div>
-
                 </div>
             </div>
         </div>
