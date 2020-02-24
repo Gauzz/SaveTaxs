@@ -4,238 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savetaxs</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        :root{
-    --bg-g:#2bdf98;
-}
-
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Calibri',sans-serif;
-}
-
-
-/* Navbar */
-nav{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-}
-
-.brand{
-    font-size: 1.8em;
-    font-weight: 600;
-    color: #001445;
-    justify-self: flex-start;
-    align-self: center;
-}
-
-.links{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-.links li {
-    font-size: 0.9em;
-    color: #808080;
-    text-transform:uppercase;
-    padding: 10px 5px;
-}
-.links .login{
-    color: #fff;
-    background:var(--bg-g);
-    border-radius: 3px;
-}
-
-
-/* CTA */
-
-header{
-    width: 100%;
-    height: calc(100vh - 70px);
-    background-image: url('/images/BG/Asset\ 1.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0% -5%;
-}
-
-.container{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: transparent;
-}
-.content{
-    max-width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.title{
-    font-size: 2em;
-    color:#001445
-}
-.subtitle{
-    margin: 40px 0;
-    font-size: 1em;
-    color: #808080;
-}
-
-img{
-    width: 50%;
-    margin-left: auto;
-}
-.group{
-    width: 100%;
-    border: solid 1px #12142d;
-    display: flex;
-    flex-direction: row;
-    background: #fff;
-}
-.group input{
-    align-self: center;
-    justify-self: flex-start;
-    background: transparent;
-    border: none;
-    padding: 8px 8px;
-}
-
-.group input::placeholder{
-    font-family: 'Calibri',sans-serif;
-}
-.group input:focus{
-    outline: none;
-}
-.group button{
-    align-self: flex-end;
-    justify-self: flex-end;
-    font-family: 'Calibri',sans-serif;
-    padding: 5px;
-    border: none;
-    background: var(--bg-g);
-    text-transform: uppercase;
-    color: #fff;
-    margin: 5px;
-    border-radius: 0;
-}
-
-.group button:focus{
-    outline: none;
-}
-
-
-/* Cards */
-/* Services */
-
-section{
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #001446;
-}
-section .title{
-    font-weight: 600;
-    color: #fff;
-}
-
-.cards{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.card{
-    height: 370px;
-    width: 270px;
-    background-image: url('/images/Our-services/package-img.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.card .head{
-    text-align: center;
-    font-size: 1.2em;
-    color: #001445;
-    flex-grow: 1;
-}
-
-.card .price{
-    flex-grow: 3;
-    color: #fff;
-    font-size: 3.5em;
-}
-.card .more{
-    flex-grow: 1;
-}
-
-.contact{
-    width: 100%;
-    background: #fff;
-    background-image: url('/images/BG/blue-home-2.svg');
-    background-repeat: no-repeat;
-    background-size: 95%;
-    background-position: -418% 51%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.contact form{
-    position: relative;
-    justify-self: flex-start;
-    align-self: center;
-    width: 355px;
-    height: 380px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background: #fff;
-    transform: translate(-25% ,-10%);
-}
-
-.contact form input{
-    text-align: center;
-    border: none;
-    padding: 15px 30px;
-    width: 70%;
-    border-bottom: 1px solid #808080;
-}
-.contact form button{
-    padding: 6px 20px;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    background:var(--bg-g);
-}
-
-.contact .side{
-    text-align: right;
-    width: 20%;
-}
-
-.contact  p{
-    color: #808080;
-}
-.contact .title{
-    color: #001445;
-}
-    </style>
+    <link rel="stylesheet" href="dist\css\main.css">
+   
 </head>
 <body>
     <!-- Navbar -->
@@ -270,7 +40,7 @@ section .title{
                      </div>
                  </form>
             </div>
-            <img src="/images/home-img.png" alt="svg">
+            <img src="images/home-img.png" alt="svg">
         </div>
     </header>
 
@@ -297,7 +67,7 @@ section .title{
     </section>
 
     <!-- consult -->
-    <section class="contact">
+    <section class="consult">
         <form action="">
             <input type="text" placeholder="Full Name">
             <input type="text" placeholder="Phone Number">
@@ -311,25 +81,99 @@ section .title{
         </div>
     </section>
 
-    <section>
-        <p class="title">Our Services</p>
-        <div class="cards">
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
+    <section class="business">
+        <p class="title">Business Serverd</p>
+        <div class="badges">
+            <div class="badge">
+                <div class="badgeimg one"></div>
+                <p class="count">4,000+</p>
+                <p class="sub">Clients Served</p>
             </div>
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
+            <div class="badge">
+                <div class="badgeimg two"></div>
+                <p class="count">150+</p>
+                <p class="sub">Partners</p>
             </div>
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
+            <div class="badge">
+                <div class="badgeimg three"></div>
+                <p class="count">7000+</p>
+                <p class="sub">Happy Customers</p>
             </div>
         </div>
     </section>
+
+    <section class="choose">
+        <div class="content">
+            <p class="title">Why choose <i><b>savetaxs</b></i>?</p>
+            <ul>
+                <li>India's <b>best startup's legal service provider</b> company.</li>
+                <li><b>Lowest pricing</b> through autmation and technology.</li>
+                <li><b>Startup friendly team</b> which gives you service beyond satisfaction</li>
+                <li><b>Superb packages</b> which you cant find anywhere.</li>
+               <li>After service <b>Lifetime support policy</b> as premium client</li>
+               <li><b>Confidential documents policy</b> during the process</li>
+               <li><b>Highest credibilty partners</b> from the induastry.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="trust">
+        <div class="content">
+            <p class="title">Trusted by the best</p>
+
+        </div>
+    </section>
+
+
+    <section class="contact">
+        <div class="content">
+            <p class="title">Contact us</p>
+            <div class="group">
+                <p class="head">Call us</p>
+                <p class="sub">+91-7515795165, +91-8624562452</p>
+            </div>
+            <div class="group">
+                <p class="head">Email us</p>
+                <p class="sub">support@savetaxs.com</p>
+            </div>
+            <div class="group">
+                <p class="head">Connect with us</p>
+                <ul class="social">
+                    <li><img src="images/Contact/fb.png" alt="" srcset=""></li>
+                    <li><img src="images/Contact/in.png" alt=""></li>
+                    <li><img src="images/Contact/insta.png" alt="" srcset=""></li>
+                    <li><img src="images/Contact/tweet.png" alt="" srcset=""></li>
+                    <li><img src="images/Contact/you.png" alt="" srcset=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li class="head">Popular Services</li>
+            <li>Private limited Company Registration</li>
+            <li>One Person Company Registration</li>
+            <li>Limited Labiality Partnership Registration</li>
+            <li>Partnership Frim</li>
+            <li>Sole Proprietorship Firm Registration</li>
+        </ul>
+        <ul>
+            <li class="head">Company</li>
+            <li>About us</li>
+            <li>Blog</li>
+            <li>Partner with us</li>
+            <li>Contact us</li>
+            <li>Sitemap</li>
+        </ul>
+        <ul>
+            <li class="head">Terms and Ploicies</li>
+            <li>Privacy Policy</li>
+            <li>Satisfaction Gauarantees</li>
+        </ul>
+    </footer>
+    <div class="copy">
+        Copyright 2020 savetaxs.com
+    </div>
 </body>
 </html>
