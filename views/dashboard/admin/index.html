@@ -5,7 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savetaxs</title>
     <link rel="stylesheet" href="dist\css\main.css">
-   
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Make the cards fully responsive */
+  .carousel-inner{
+      width: 100%;
+      height: 100%;
+    
+  }
+  
+  .cards{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left:280px;
+}
+.card{
+    background-image: url('../../images/Our-services/package-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:330px;
+    height:350px;
+    display: flex;
+    margin-bottom:80px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   background-color:#001445;
+   padding:10px 20px 10px 20px;
+ }
+ .carousel-img{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     
+     margin-top: 80px;
+ }
+
+     </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -13,6 +56,7 @@
         <div class="brand">
             <i>savetaxs</i>
         </div>
+
             <ul class="links">
                 <li>Startup</li>
                 <li>TAXS & Compliances</li>
@@ -23,6 +67,7 @@
                 <li>Property & Personal</li>
                 <li class="login">Sign in</li>
             </ul>
+        
     </nav>
 
     <!-- cover -->
@@ -40,30 +85,100 @@
                      </div>
                  </form>
             </div>
-            <img src="images/home-img.png" alt="svg">
+            <img  class="home-img" src="images/home-img.png" alt="svg">
         </div>
     </header>
 
     <!-- services -->
     <section>
         <p class="title">Our Services</p>
-        <div class="cards">
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
+        <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active" >
+                <div class="cards">
+                       <div class="card">
+                        <p class="head" style="font-size: 20px;text-align:left;color: hsl(223, 100%, 14%);">Private Limited Company    Registration</p>
+                        <p class="price"><i class="fa fa-rupee" style="font-size:30px;color:white;"></i>rfghj</p>
+                        <p class="more">Know more</p>
+                   
+                    </div>
+                    <div class="card">
+                        <p class="head">Private Limited Company Registration</p>
+                        <p class="price"><i class="fa fa-rupee" style="font-size:30px;color:white;"></i>rfghj</p>
+                        <p class="more">Know more</p>
+                    </div>
+                    <div class="card">
+                        <p class="head">Private Limited Company Registration</p>
+                        <h6 class="price"><i class="fa fa-rupee" style="font-size:24px"></i>$2999</h6>
+                        <p class="more">Know more</p>
+                    </div>
+                  </div>
+               </div>
+
+              <div class="carousel-item">
+                <div class="cards">
+                    <div class="card">
+                     <p class="head" >Private Limited Company Registration</p>
+                     <p class="price"><i class="fa fa-rupee" style="font-size:30px;color:white;"></i>rfghj</p>
+                     <p class="more">Know more</p>
+                
+                 </div>
+                 <div class="card">
+                     <p class="head">Private Limited Company Registration</p>
+                     <p class="price"><i class="fa fa-rupee" style="font-size:30px;color:white;"></i>rfghj</p>
+                     <p class="more">Know more</p>
+                 </div>
+                 <div class="card">
+                     <p class="head">Private Limited Company Registration</p>
+                     <h6 class="price"><i class="fa fa-rupee" style="font-size:24px"></i>$2999</h6>
+                     <p class="more">Know more</p>
+                 </div>
+               </div>
             </div>
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
+
+              <div class="carousel-item">
+                <div class="cards">
+                    <div class="card">
+                     <p class="head" >Private Limited Company Registration</p>
+                     <p class="price"><i class="fa fa-rupee" style="font-size:30px;color:white;"></i>rfghj</p>
+                     <p class="more">Know more</p>
+                
+                 </div>
+                 <div class="card">
+                     <p class="head">Private Limited Company Registration</p>
+                     <p class="price"><i class="fa fa-rupee" style="font-size:30px;color:white;"></i>rfghj</p>
+                     <p class="more">Know more</p>
+                 </div>
+                 <div class="card">
+                     <p class="head">Private Limited Company Registration</p>
+                     <h6 class="price"><i class="fa fa-rupee" style="font-size:24px"></i>$2999</h6>
+                     <p class="more">Know more</p>
+                 </div>
+               </div>
+             </div>
             </div>
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
-            </div>
-        </div>
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+          
+          
+
+       
     </section>
 
     <!-- consult -->
@@ -120,7 +235,54 @@
     <section class="trust">
         <div class="content">
             <p class="title">Trusted by the best</p>
+             
+            <div id="demo1" class="carousel slide" data-ride="carousel" data-interval="false">
 
+                <!-- Indicators -->
+                <ul class="carousel-indicators" width="60%">
+                  <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo1" data-slide-to="1"></li>
+                  <li data-target="#demo1" data-slide-to="2"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner1" style="width:100%;margin-block-start:30%; justify-content: space-around;">
+                  <div class="carousel-img">
+                 
+                        <img src="images\png\download.png" alt="ola" style="position:absolute;float:left;"> 
+                   
+                  
+                    <img src="\images\png\216-2164326_fresh-menu-png-logo.png"  alt="ola" style="position:absolute;"> 
+              
+              
+                <img src="images\png\paytm.png" alt="paytm" style="width:50%;height:10%;" > 
+     
+                  <div class="carousel-item">
+                    ghjuygtygh 
+                </div>
+                  <div class="carousel-item">
+                    gtfghu
+                 </div>
+                 <div class="carousel-item">
+                    gtfghu
+                 </div>
+                 <div class="carousel-item">
+                    gtfghu
+                 </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo1" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+              
+              
+    
+           
         </div>
     </section>
 
@@ -149,7 +311,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="display: flex;">
         <ul>
             <li class="head">Popular Services</li>
             <li>Private limited Company Registration</li>

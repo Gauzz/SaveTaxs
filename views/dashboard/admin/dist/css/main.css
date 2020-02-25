@@ -34,6 +34,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-left: 70px;
 }
 .links li {
     font-size: 0.9em;
@@ -84,7 +85,7 @@ header{
     color: #808080;
 }
 
-img{
+.home-img{
     width: 50%;
     margin-left: auto;
 }
@@ -142,43 +143,20 @@ section{
 section .title{
     font-weight: 600;
     color: #fff;
-}
-
-.cards{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.card{
-    height: 370px;
-    width: 270px;
-    background-image: url('../../images/Our-services/package-img.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.card .head{
-    text-align: center;
-    font-size: 1.2em;
-    color: #001445;
-    flex-grow: 1;
+   text-align: center;
+   margin-bottom:50px;
 }
 
 .card .price{
     flex-grow: 3;
     color: #fff;
-    font-size: 3.5em;
+    font-size: 2.5em;
+    margin-top:20px;
 }
 .card .more{
     flex-grow: 1;
 }
-
+ 
 /* Consult */
 
 .consult{
@@ -389,13 +367,15 @@ section .title{
 
 footer{
     width: 100%;
-    display: flex;
+   display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #1f1f1f;
 }
 
 footer ul{
+    display: flex;
+    flex-direction: column;
     list-style: none;
     line-height: 2;
     color: #808080;
@@ -410,5 +390,6 @@ footer ul .head{
     background-color:#2e2e2e;
     color: #808080;
     text-align: center;
-    padding: 20px 0;
+    padding:20px 0px;
+   
 }
