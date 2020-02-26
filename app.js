@@ -8,10 +8,12 @@ var mongoose = require('mongoose');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs')
+const handlebars = require("express-handlebars");
 
 var app = express();
 
 var categories = require('./models/category.js');
+var users = require('./models/user.js');
 
 // connect mongoose
 var db = "mongodb://localhost:27017/savetax";
@@ -26,11 +28,16 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err));
 
 categories.createCollection();
+users.createCollection();
+// create application/json parser
+var jsonParser = bodyParser.json()
 
-// app.get('/views' , function(req,res){
-//   categories.find({} , function(err , docs){
-//     if(err) res.json(err);
-//     else res.render('category.html',{categories:docs})
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+    // app.get('/views' , function(req,res){
+    //   categories.find({} , function(err , docs){
+    //     if(err) res.json(err);
+    //     else res.render('category.html',{categories:docs})
 
 //   });
 // });
@@ -42,24 +49,52 @@ app.use('/user', require('./routes/user'));
 
 // admin dashboard // routes
 
-app.use(express.static(path.join(__dirname, 'views/dashboard/admin')));
-app.set('views', path.join(__dirname, 'views/dashboard/admin'));
+app.use(express.static(path.join(__dirname, 'views')));
+app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'ejs');
 
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
+//app.engine('html', require('ejs').renderFile);
+//app.set('view engine', 'html');
+
+app.engine("hbs", handlebars({
+    extname: "hbs",
+    defaultLayout: "main",
+    layoutsDir: __dirname + "/views"
+}));
+
 app.get('/dashboard', function(req, res) {
-    res.render('index2.html'); // or res.render('index.ejs');
+    res.render('./dashboard/admin/index2.hbs'); // or res.render('index.ejs');
 });
 app.get('/login', function(req, res) {
-    res.render('login.html'); // or res.render('index.ejs');
+    res.render('login.hbs', { title: "Login" }); // or res.render('index.ejs');
+});
+app.post('/login', function(req, res) {
+    if (req.body.email &&
+        req.body.username &&
+        req.body.password &&
+        req.body.passwordConf) {
+        var userData = {
+                email: req.body.email,
+                username: req.body.username,
+                password: req.body.password,
+            }
+            //use schema.create to insert data into the db
+        User.create(userData, function(err, user) {
+            if (err) {
+                return res.send(err)
+            } else {
+                return res.send('logged in');
+            }
+        });
+    }
+    // or res.render('index.ejs');
 });
 app.get('/admincat', function(req, res) {
-    res.render('admincat.html'); // or res.render('index.ejs');
+    res.render('./dashboard/admin/admincat.html'); // or res.render('index.ejs');
 });
 app.get('/category', function(req, res) {
-    res.render('category.html'); // or res.render('index.ejs');
+    res.render('./dashboard/admin/category.html'); // or res.render('index.ejs');
 });
 
 // app.get('/dashboard', function (req, res) {
@@ -71,13 +106,13 @@ app.get('/category', function(req, res) {
 app.get('/dashboard/category', function(req, res) {
     categories.find({}, function(err, docs) {
         if (err) res.json(err);
-        else res.render('category', { categories: docs })
+        else res.render('./dashboard/admin/category.hbs', { title: "Categories", categories: docs })
     });
 });
 
 
-app.get('/blog', function(req, res) {
-    res.render('editblog.html'); // or res.render('index.ejs');
+app.get('/blog/create', function(req, res) {
+    res.render('./dashboard/admin/editblog.html'); // or res.render('index.ejs');
 });
 
 
