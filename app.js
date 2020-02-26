@@ -97,6 +97,9 @@ app.get('/category', function(req, res) {
     res.render('./dashboard/admin/category.html'); // or res.render('index.ejs');
 });
 
+app.get('/index', function(req, res) {
+    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
+});
 // app.get('/dashboard', function (req, res) {
 //   res.render('index2'); // or res.render('index.ejs');
 // });

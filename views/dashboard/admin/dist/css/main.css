@@ -431,6 +431,8 @@ footer {
 
 footer ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
     line-height: 2;
     color: #808080;
 }
