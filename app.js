@@ -13,6 +13,14 @@ const handlebars = require("express-handlebars");
 var app = express();
 
 var categories = require('./models/category.js');
+var chat = require('./models/chat.js');
+var notification = require('./models/notification.js');
+var order = require('./models/order.js');
+var orderHistory = require('./models/orderHistory.js');
+var payment = require('./models/payment.js');
+var paymentHistory = require('./models/paymentHistory.js');
+var service = require('./models/service.js');
+var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
 
 // connect mongoose
@@ -28,6 +36,14 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err));
 
 categories.createCollection();
+chat.createCollection();
+notification.createCollection();
+order.createCollection();
+orderHistory.createCollection();
+payment.createCollection();
+paymentHistory.createCollection();
+service.createCollection();
+userprofile.createCollection();
 users.createCollection();
 // create application/json parser
 var jsonParser = bodyParser.json()

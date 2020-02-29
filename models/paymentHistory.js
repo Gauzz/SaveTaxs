@@ -6,17 +6,17 @@ var paymentHistorySchema = new Schema({
         type: Number
     },
     
-    Date:{
+    date:{
         type: Date
     },
-    Time:{
-        type: Number
+    time:{
+        type:Date
     },
-    Month: {
-        type: Number 
+    month: {
+        type: String 
      }, 
-     Year:{
-         type: Number
+     year:{
+         type: String
      }
 });
 module.exports = mongoose.model('paymentHistory', paymentHistorySchema);

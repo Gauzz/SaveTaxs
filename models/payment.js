@@ -5,17 +5,15 @@ var paymentSchema = new Schema({
     id: {
         type: Number
     },
-    order_Id: {
+    transcation_Id: {
        type: Number 
     }, 
-    quantity:{
+    
+    price:{
         type: Number
     },
-    date:{
-        type: Date
-    },
-    time:{
-        type: Time
+    total_price:{
+        type: Number
     }
 });
 module.exports = mongoose.model('payment', paymentSchema);

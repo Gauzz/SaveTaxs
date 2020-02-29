@@ -12,8 +12,8 @@ var notificationSchema = new Schema({
         type: String
     },
     timestamp:{
-        type: Datetime
+        type: Date
     },
 
 });
-module.exports = mongoose.model('Notification', notificationSchema);
+module.exports = mongoose.model('notification', notificationSchema);

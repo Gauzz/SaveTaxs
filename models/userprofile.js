@@ -36,7 +36,7 @@ var userprofileSchema = new Schema({
         type: String 
      }, 
      DOB: {
-        type: Number 
+        type: Date
      },
      Address: {
         type: String 
@@ -48,10 +48,10 @@ var userprofileSchema = new Schema({
         type: String 
      }, 
      ProfileImage: {
-        type: Integer
+        type: String
      }, 
      Rating: {
-        type: Integer
+        type: String
      }
 });
 module.exports = mongoose.model('userprofile', userprofileSchema);

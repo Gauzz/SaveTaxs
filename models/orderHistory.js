@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var orderSchema = new Schema({
+var orderHistorySchema = new Schema({
     id: {
         type: Number
     },
@@ -11,8 +11,11 @@ var orderSchema = new Schema({
     quantity:{
         type: Number
     },
-    total:{
-        type: Number
+    date:{
+        type: Date
+    },
+    time:{
+        type: Date
     }
 });
-module.exports = mongoose.model('order', orderSchema);
+module.exports = mongoose.model('orderHistory', orderHistorySchema);
