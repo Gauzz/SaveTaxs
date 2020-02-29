@@ -14,8 +14,11 @@ var orderHistorySchema = new Schema({
     date:{
         type: Date
     },
-    time:{
-        type: Date
+    month:{
+        type: String
+    },
+    year:{
+        type: String
     }
 });
 module.exports = mongoose.model('orderHistory', orderHistorySchema);

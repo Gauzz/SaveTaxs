@@ -11,8 +11,11 @@ var orderSchema = new Schema({
     quantity:{
         type: Number
     },
-    total:{
-        type: Number
+    date:{
+        type:Date
+    },
+    time:{
+        type: Date
     }
 });
 module.exports = mongoose.model('order', orderSchema);
