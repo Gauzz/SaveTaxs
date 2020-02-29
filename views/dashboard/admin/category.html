@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Dashboard | Category</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ekko Lightbox -->
+  <link rel="stylesheet" href="../plugins/ekko-lightbox/ekko-lightbox.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .container{
+           margin-left:0px;
+           margin-right:0px;
+           border-right:0px;
+           width:100vw;
+           height:60vh
+       }
+    #sticky-footer{
+        line-height: 2.0;
+        width: 100vw;
+        height:60%;
+        padding-left:50px;
+        flex-shrink: none;
+    }
+   
+     
+   .navbar-brand{
+    margin-left: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .fa-plus-square-o
+    {
+       
+       margin-left:40px;
+       font-size:20px;
+        -webkit-tap-highlight-color: transparent;
+        line-height: 1.6;
+        
+        
+        box-sizing: border-box;
+        vertical-align: middle;
+        
+         
+    }
+    #newcategory{
+      margin-left:60px;
+      width:80px;
+      height:60px;
+      
+    }
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+
+ <div class="container">
+  <div class="row" style="width:100vw;height: 9vh;margin-top: 10px;margin-bottom: 20px;">
+    <div class="col-lg-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <a class="navbar-brand" href="#" style=";"><i>savetaxs</i></a>
+          <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNav" style="margin-left:200px;">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">STARTUP </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TAXS & COMPLIANCES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TRADEMARKS & IP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" >FUNDRASING</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" >CONTRACTS</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" >NGO</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" >PROPERTY & PERSONAL</a>
+                </li>
+              <button class="nav-item" style="background-color: rgb(13, 196, 77);border:none;border-radius:10px;color:white;width:100px;">SIGN IN</button>
+            </ul>
+          </div>
+        </nav>
+  </div>
+</div>
+
+
+<div class="row" style="width:100vw;height:50vh;">
+   
+      <div class="col-lg-6">
+          <div class="category">
+             <i class='fa fa-plus-square-o' onclick="fSub(this)"></i>
+             <label>Category</label> 
+          </div>
+          <div id="newcategory">
+          
+          </div>
+      </div>
+   
+
+</div>
+<script>
+    function  fSub(ab){
+      var x = document.createElement("INPUT");
+          x.setAttribute("type", "text"); 
+     document.getElementById('newcategory').appendChild(x) ;
+         
+         }
+
+</script>
+<footer id="sticky-footer" class="py-20 bg-dark text-white-50">
+    <div>
+      <h2>savetaxs</h2>
+    </div>
+     <div class="row">
+         <div class="col-lg-4">
+         <b>Popular Services</b><br/>
+         <div style="color:grey;">Private Limited Company Registration<br/>
+                                    One person Company Registration<br/>
+                                    Limited Labiality Partnership Registration<br/>
+                                    Partnership Firm<br/>
+                                    Sole Proprietorship firm Registration
+       </div> 
+     </div>
+     <div class="col-lg-4">
+         <b>Company</b><br/>
+         <div style="color:grey;"> About Us<br/>
+                                      Blog<br/>
+                                     Partner with Us <br/>
+                                      Contact Us<br/>
+                                       Sitemap
+       </div>  
+     </div>
+     <div class="col-lg-4">
+         <b>Terms and Policies</b><br/>
+         <div style="color:grey;">Privacy Policy<br/>
+                                Term and Condition<br/>
+                                 Satisfaction Guarantees
+       </div>
+     </div>
+ </div>
+ 
+  </div>
+  
+   </body>
+   </html>

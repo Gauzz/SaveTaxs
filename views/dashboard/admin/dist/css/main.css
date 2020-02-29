@@ -40,6 +40,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-left: 70px;
 }
 
 .links li {
@@ -185,8 +186,13 @@ section .title {
     align-self: center;
     justify-self: center;
     color: #fff;
+<<<<<<< HEAD
     font-size: 3.5em;
   
+=======
+    font-size: 2.5em;
+    margin-top:20px;
+>>>>>>> a8832401a6a0956ff6fced7450f365beccdc99e8
 }
 
 .card .more {
@@ -418,6 +424,11 @@ section .title {
 
 footer {
     width: 100%;
+<<<<<<< HEAD
+=======
+   display: flex;
+    flex-direction: row;
+>>>>>>> a8832401a6a0956ff6fced7450f365beccdc99e8
     justify-content: space-around;
     background-color: #1f1f1f;
 }
@@ -426,6 +437,8 @@ footer ul {
     display: flex;
     flex-direction:column;
     list-style: none;
+    display: flex;
+    flex-direction: column;
     line-height: 2;
     color: #808080;
 }
@@ -440,5 +453,6 @@ footer ul .h {
     background-color: #2e2e2e;
     color: #808080;
     text-align: center;
-    padding: 20px 0;
+    padding:20px 0px;
+   
 }

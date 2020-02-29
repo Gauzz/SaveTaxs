@@ -1,5 +1,0 @@
-Savetaxs logo - font (open sans bold italic)
-Login Text - font (open sans bold italic) Color (#001445)
-Email Id and Password - font (open sans regular normal)
-Don't remmber your password - font (open sans regular normal)
-Login Button - Colour (#28E096) Font (open sans regular normal)

@@ -64,7 +64,7 @@ app.engine("hbs", handlebars({
 }));
 
 app.get('/dashboard', function(req, res) {
-    res.render('./dashboard/admin/index2.html'); // or res.render('index.ejs');
+    res.render('./dashboard/admin/index2.hbs'); // or res.render('index.ejs');
 });
 app.get('/login', function(req, res) {
     res.render('login.hbs', { title: "Login" }); // or res.render('index.ejs');
@@ -94,6 +94,9 @@ app.post('/login', function(req, res) {
 
 
 
+app.get('/index', function(req, res) {
+    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
+});
 // app.get('/dashboard', function (req, res) {
 //   res.render('index2'); // or res.render('index.ejs');
 // });
