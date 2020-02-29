@@ -16,9 +16,8 @@ body {
 nav {
     width: 90%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
+
 }
 
 a {
@@ -35,7 +34,8 @@ a {
 }
 
 .links {
-    width: 70%;
+    height: 10%;
+    width: 80%;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -43,16 +43,20 @@ a {
 }
 
 .links li {
-    font-size: 0.9em;
-    color: #808080;
+    font-size: 1.0em;
+    
     text-transform: uppercase;
-    padding: 6px 5px;
+    padding: 7px 5px;
 }
 
 .links .login {
     color: #fff;
     background: var(--bg-g);
     border-radius: 3px;
+ 
+}
+.dropbtn{
+    color: #808080;
 }
 
 
@@ -85,7 +89,7 @@ header {
 
 .title {
     font-size: 2em;
-    color: #001445
+    color: #001445;
 }
 
 .subtitle {
@@ -159,25 +163,13 @@ section {
 section .title {
     font-weight: 600;
     color: #fff;
+    display:flex;
+    justify-content: center;
 }
-
-.cards {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.card {
-    height: 370px;
-    width: 270px;
-    background-image: url('../../images/Our-services/package-img.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
 }
 
 .card .head {
@@ -185,16 +177,21 @@ section .title {
     font-size: 1.2em;
     color: #001445;
     flex-grow: 1;
+    margin-top:10px;
 }
 
 .card .price {
-    flex-grow: 3;
+    flex-grow: 1;
+    align-self: center;
+    justify-self: center;
     color: #fff;
     font-size: 3.5em;
+  
 }
 
 .card .more {
     flex-grow: 1;
+    margin-top:20px;
 }
 
 
@@ -421,20 +418,20 @@ section .title {
 
 footer {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     background-color: #1f1f1f;
 }
 
 footer ul {
+    display: flex;
+    flex-direction:column;
     list-style: none;
     line-height: 2;
     color: #808080;
 }
 
-footer ul .head {
-    font-size: 1.4em;
+footer ul .h {
+    font-size: 1.2em;
     color: #fff;
 }
 

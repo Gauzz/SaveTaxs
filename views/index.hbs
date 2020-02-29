@@ -1,7 +1,29 @@
-
-    <!-- cover -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+   <!-- cover -->
+<style>
+   .cards {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 10em;
+    }
+    .card {
+        height: 370px;
+        width: 270px;
+        background-image: url('/dashboard/admin/images/package-img.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: rgb(2, 2, 71);
+        align-items: center;
+        justify-content: space-around;
+    }
+     
+    
+    
+</style>
     <header>
-        <div class="container">
+        <div class="container" style="max-width: 90%;">
             <div class="content">
                 <p class="title">Providing 1 stop solution for all the Startup & Legal Compliances</p>
                 <p class="subtitle">
@@ -21,25 +43,93 @@
     <!-- services -->
     <section>
         <p class="title">Our Services</p>
-        <div class="cards">
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
-            </div>
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
-            </div>
-            <div class="card">
-                <p class="head">Private Limited Company Registration</p>
-                <p class="price">$3453</p>
-                <p class="more">Know more</p>
-            </div>
-        </div>
-    </section>
+      <div id="demo" class="carousel slide" data-ride="carousel">
 
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active" ></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="margin-bottom: 80px;">
+      <div class="cards">
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2999</p>
+              <p class="more">Know More</p>
+           </div>
+
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2999</p>
+              <p class="more">Know More</p>
+           </div>
+
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2999</p>
+              <p class="more">Know More</p>
+           </div>
+       </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards">
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2999</p>
+              <p class="more">Know More</p>
+           </div>
+
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2979</p>
+              <p class="more">Know More</p>
+           </div>
+
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2sd9</p>
+              <p class="more">Know More</p>
+           </div>
+       </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards">
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 sd99</p>
+              <p class="more">Know More</p>
+           </div>
+
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2999</p>
+              <p class="more">Know More</p>
+           </div>
+
+           <div class="card">
+              <p class="head">Private Limited company Registration</p>
+              <p class="price">&#x20b9 2999</p>
+              <p class="more">Know More</p>
+           </div>
+       </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+ </section>
     <!-- consult -->
     <section class="consult">
         <form action="">
@@ -124,3 +214,6 @@
     </section>
 
    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

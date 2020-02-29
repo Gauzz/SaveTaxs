@@ -1,0 +1,23 @@
+#flex{
+    flex-direction: column;
+    background-color: rgba(60, 60, 60, 0.7);
+    text-align: center;
+    width:250px;
+    height:35em;
+}
+.items{
+    font-style: italic;
+     font-weight: bold;
+}
+.items a{
+    color:white;
+    text-decoration: none;
+}
+.link{
+    float:right;
+    margin-right: 80px;
+    width:300px;
+    display:flex;
+    justify-content:space-around;
+    margin-top:15px;
+}

@@ -90,12 +90,9 @@ app.post('/login', function(req, res) {
     }
     // or res.render('index.ejs');
 });
-app.get('/admincat', function(req, res) {
-    res.render('./dashboard/admin/admincat.html'); // or res.render('index.ejs');
-});
-app.get('/category', function(req, res) {
-    res.render('./dashboard/admin/category.html'); // or res.render('index.ejs');
-});
+
+
+
 
 // app.get('/dashboard', function (req, res) {
 //   res.render('index2'); // or res.render('index.ejs');
@@ -109,6 +106,26 @@ app.get('/dashboard/category', function(req, res) {
         else res.render('./dashboard/admin/category.hbs', { title: "Categories", categories: docs })
     });
 });
+
+app.get('/adpage', function(req, res) {
+    
+        res.render('./dashboard/admin/adpage.hbs');
+    });
+    app.get('/analytic', function(req, res) {
+    
+        res.render('./dashboard/admin/analytic.hbs');
+    });
+
+
+app.get('views/index', function(req, res) {
+    index.find({}, function(err, docs) {
+        if (err) res.json(err);
+        else res.render('./views/index.hbs', { title: "Index" })
+    });
+});
+ 
+//admin 
+ 
 
 
 app.get('/blog/create', function(req, res) {

@@ -6,21 +6,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/dashboard/admin/dist/css/main.css">
+    
+<style>
+    .head1{
+        font-weight: bold;
+        margin-left:20px;
+    }
+    ul {
+  list-style-type: none;
+  overflow: hidden;
+ 
+}
 
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: block;
+ 
+  text-align: center;
+
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  color:rgb(73, 68, 68);
+  font-weight: bold;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  
+  max-height:650px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 18px;
+  text-decoration: none;
+  display:block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  
+  width: fit-content;
+    display: -webkit-inline-box;
+    top: 60px;
+    
+ 
+}
+
+</style>
+   
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav>
+    <nav style="display:flex;margin-bottom:10px;">
         <div class="brand">
             <i>savetaxs</i>
         </div>
-        <ul class="links">
-            <li>Startup</li>
+        <ul class="links" style="margin-bottom: :0px;margin-top:15px;">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">STARTUP</a>
+                  <div class="dropdown-content">
+                    <div class="internal" style="width: 230px;">  
+                    <p class="head1">Business Registration</p> 
+                    <a href="#">Private Limited Company</a>
+                    <a href="#">Limited Liability Partnership</a>
+                    <a href="#">One Person Company</a>
+                    <a href="#">Nidhi Company</a>
+                    <a href="#">Producer Company</a>
+                    <a href="#">Partnership Firm</a>
+                    <a href="#">Sole Proprietorship</a>
+                   </div>
+
+                   <div class="internal1" style="width: 230px;">  
+                     
+                    <p class="head1">Licenses</p> 
+                    <a href="#">FSSAI(Food License)</a>
+                    <a href="#">IEC(Import/Export Code)</a>
+                    <a href="#">APEDA-RCMC Registration</a>
+                    <a href="#">MSME/SSI Registration</a>
+                    <a href="#">ISO Certification</a>
+                    <a href="#">Digital Signature Certificate</a>
+                    <a href="#">PSARA License</a>
+                    <a href="#">OSP License</a>
+                    <a href="#">Trade License</a>
+                   </div>
+
+                    <div class="internal2" style="width: 230px;">  
+                    <p class="head1">Company Name Search and Logo</p> 
+                    <a href="#">Company Name Search</a>
+                    <a href="#">Logo Design</a>
+                   </div>
+
+                   <div class="internal3" style="width: 230px;">  
+                    <p class="head1">International Business Setup</p> 
+                    <a href="#">US Incorporation</a>
+                    <a href="#">Signature Incorporation</a>
+                    <a href="#">UK Incorporation</a>
+                    <a href="#">Netherlands Incorporation</a>
+                    <a href="#">Hong kong Incorporation</a>
+                    <a href="#">Malaysia Incorporation</a>
+                    <a href="#">China Incorporation</a>
+                    <a href="#">Dubai Incorporation</a>
+                    <a href="#">Australia Incorporation</a>
+                   </div>
+
+                  </div>
+           </li>
             <li>TAXS & Compliances</li>
             <li>Trademark & IP</li>
-            <li>Fundraising</li>
-            <li>Contract</li>
+
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">FUNDRAISING</a>
+                  <div class="dropdown-content">
+                    <div class="internal" style="width: 200px;">  
+                    <p class="head1">Fundraising</p> 
+                    <a href="#"> Fundraising</a>
+                    <a href="#">Pitch Deck</a>
+                    </div>
+
+                    <div class="internal1" style="width: 200px;">  
+                    <p class="head1">Legal</p> 
+                    <a href="#"> Share Purchase Agreement</a>
+                    <a href="#"> Shareholders' Agreement</a>
+                    <a href="#"> Term Sheet Review</a>
+                    <a href="#"> Founders Agreement</a>
+                    </div>
+
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">CONTRACT</a>
+                  <div class="dropdown-content">
+                    <div class="internal" style="width: 200px;">  
+                    <p class="head1">Hiring Documents</p> 
+                    <a href="#"> Employment Contract</a>
+                    <a href="#">Consultancy Agreement</a>
+                    <a href="#">Freelancer Agreement</a>
+                    </div>
+
+                    <div class="internal1" style="width: 200px;">  
+                    <p class="head1">Website Policies</p> 
+                    <a href="#"> Terms of Service & Privacy Policy</a>
+                    <a href="#"> Disclaimer</a>
+                    <a href="#"> Joint Venture Agreement</a>
+                    <a href="#"> General Data Protection Regulation [GDPR]</a>
+                    <a href="#"> Non Disclosure Agreement </a>
+                    </div>
+
+                     <div class="internal2" style="width: 200px;">  
+                    <p class="head1">Business Contracts</p> 
+                    <a href="#"> Memorandum of Understanding</a>
+                    <a href="#"> Franchise Agreement</a>
+                    <a href="#">Joint Venture Agreement</a>
+                    </div>
+
+                     <div class="internal3" style="width: 200px;">  
+                    <p class="head1">Service/Vendor</p> 
+                    <a href="#"> Service Level Agreement</a>
+                    <a href="#"> Master Service Agreement</a>
+                    <a href="#">Vendor Agreement</a>
+                    </div>
             <li>NGO</li>
             <li>Property & Personal</li>
             <li class="login"><a href="/login">Sign in</a></li>
@@ -29,9 +192,9 @@
 
 {{{body}}}
 
- <footer>
+ <footer style="display:inline-flex;">
         <ul>
-            <li class="head">Popular Services</li>
+            <li class="h">Popular Services</li>
             <li>Private limited Company Registration</li>
             <li>One Person Company Registration</li>
             <li>Limited Labiality Partnership Registration</li>
@@ -39,7 +202,7 @@
             <li>Sole Proprietorship Firm Registration</li>
         </ul>
         <ul>
-            <li class="head">Company</li>
+            <li class="h">Company</li>
             <li>About us</li>
             <li>Blog</li>
             <li>Partner with us</li>
@@ -47,7 +210,7 @@
             <li>Sitemap</li>
         </ul>
         <ul>
-            <li class="head">Terms and Ploicies</li>
+            <li class="h">Terms and Ploicies</li>
             <li>Privacy Policy</li>
             <li>Satisfaction Gauarantees</li>
         </ul>
