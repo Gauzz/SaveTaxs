@@ -7,7 +7,7 @@ var paymentHistorySchema = new Schema({
     },
     
     Date:{
-        type: Number
+        type: Date
     },
     Time:{
         type: Number

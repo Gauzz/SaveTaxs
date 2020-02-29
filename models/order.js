@@ -12,10 +12,10 @@ var orderSchema = new Schema({
         type: Number
     },
     Date:{
-        type: Number
+        type: Date
     },
     Time:{
-        type: Number
+        type: Time
     }
 });
 module.exports = mongoose.model('order', orderSchema);

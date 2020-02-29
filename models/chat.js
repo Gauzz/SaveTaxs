@@ -12,17 +12,17 @@ var chatSchema = new Schema({
         type: String
     },
     reciever_id:{
-        type: String
+        type: Number
     },
     sender:{
         type: String
     },
     sender_id:{
-        type: String
+        type:Number
     },
     timestamp:{
-        type: String
-    },
+        type:Datetime
+    }
 
 });
 module.exports = mongoose.model('chat', chatSchema);

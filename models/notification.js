@@ -12,7 +12,7 @@ var notificationSchema = new Schema({
         type: String
     },
     timestamp:{
-        type: Number
+        type: Datetime
     },
 
 });
