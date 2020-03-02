@@ -121,10 +121,18 @@ app.get('/index', function(req, res) {
 
 app.get('/dashboard/category', function(req, res) {
     categories.find({}, function(err, docs) {
-        if (err) res.json(err);
-        else res.render('./dashboard/admin/category.hbs', { title: "Categories", categories: docs })
+        if (err)
+        
+            res.json(err);
+        
+        
+        else
+        res.render('./dashboard/admin/category.hbs', { categories: docs }) 
+       
+        
     });
 });
+
 
 app.get('/adpage', function(req, res) {
     
@@ -134,7 +142,10 @@ app.get('/adpage', function(req, res) {
     
         res.render('./dashboard/admin/analytic.hbs');
     });
-
+    app.get('./dashboard/category', function(req, res) {
+    
+        res.render('./dashboard/admin/category.hbs');
+    });
 
 app.get('views/index', function(req, res) {
     index.find({}, function(err, docs) {

@@ -1,1 +1,91 @@
-{{categories}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .flex{
+        text-align: center;
+        padding:10px;
+    }
+    .btn-continue{
+        border-radius: 10px;
+        border:1px solid;
+        margin-left:100px;
+    }
+    .description{
+        width:230px;
+        border-radius: 5px;
+    }
+    .catname{
+        width:230px;
+       
+    }
+    .parent{
+        width:230px;
+        margin-left:25px;
+    }
+</style>  
+
+
+<div class="container" style="width:100vw;">
+<div class="row" style="width:100vw;height:50vh;">
+   
+  <div class="col-lg-6">
+      <div class="category">
+         <i class='fa fa-plus-square-o' onclick="addCategory()"></i>
+         <label><b>Category</b></label> 
+      </div>
+      <div id="AddCategory" style="border:1px solid;width:300px;display:none;">
+          <div class="flex">
+             <input type="text" placeholder="CategoryName" class="catname">
+          </div>
+          <div class="flex">
+              <div class="parent">
+                 <select class="form-control selectpicker" id="select-country" data-live-search="true">
+                   <option data-tokens="STARTUP">STARTUP</option>
+                   <option data-tokens="TAXS & Compliances">TAXS & Compliances</option>
+                   <option data-tokens="Trademark & IP">Trademark & IP</option>
+                   <option data-tokens="FUNDRAISING">FUNDRAISING</option>
+                   <option data-tokens="CONTRACT">CONTRACT</option>
+                   <option data-tokens="NGO">NGO</option>
+                   <option data-tokens="Property & Personal">Property & Personal</option>
+                   <option data-tokens="None">None</option>
+                </select>
+               
+              </div>
+          </div>
+          <div class="flex">
+              <textarea type="textarea" placeholder="Description" class="description"></textarea>
+          </div>
+          <div class="flex">
+              <button type="button" class="btn btn-continue"><i class="fa fa-long-arrow-right" onclick="fSub(this)" style="font-size:24px;"></i></button>
+          </div>
+      </div>
+      <div id="newcategory">
+      
+      </div>
+  </div>
+
+  <div class="col-lg-6">
+      
+     <p id="jsonfile">
+          {{#each categories}}
+          {{id}}
+           {{/each}} 
+          </p>
+
+  </div>
+
+  </div>
+</div>
+<script>
+  
+function  fSub(ab){
+  
+     }
+function addCategory(){
+    document.getElementById('AddCategory').style.display="block";
+}    
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
