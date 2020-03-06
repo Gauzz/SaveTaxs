@@ -11,11 +11,13 @@ var jsonParser = bodyParser.json()
 
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var app = express();
+app.use(jsonParser);
+app.use(urlencodedParser);
+app.use(router);
 
 router.get('/login', (req, res) => res.send('login'));
 router.get('/registration', (req, res) => res.send('registration'));
-
-
 // router.get('/dashboard/category' , function(req,res){
 //     categories.find({parent_id} , function(err , docs){
 //       if(err) res.json(err);
@@ -24,8 +26,10 @@ router.get('/registration', (req, res) => res.send('registration'));
 //   });
 
 
-router.post('/registration', function(req,res){
+router.post('/registration', function(req, res) {
     res.send(req.body.firstname);
+    console.log(req.body.firstname);
+    //console.log(req.body.firstname);
     // const secondname = req.body.secondname;
     // const email = req.body.email;
     // const password = req.body.password;
@@ -73,10 +77,10 @@ router.post('/registration', function(req,res){
     //             );
 
     //         });
- //       });
-   // }
+    //       });
+    // }
 
-    
+
 
 
 })
