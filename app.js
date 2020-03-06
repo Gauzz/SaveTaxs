@@ -118,6 +118,10 @@ app.post('/login', function(req, res) {
 app.get('/index', function(req, res) {
     res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
 });
+
+app.get('/registration', function(req, res) {
+    res.render('./dashboard/admin/registration.hbs'); // or res.render('index.ejs');
+});
 // app.get('/dashboard', function (req, res) {
 //   res.render('index2'); // or res.render('index.ejs');
 // });
@@ -194,7 +198,9 @@ app.get('/dashboard/category', function(req, res) {
 });
 app.put
 
-    
+ 
+
+
 var port = 3000;
 app.listen(port, function() {
     console.log('start at port ' + port);
