@@ -22,6 +22,46 @@
         width:230px;
         margin-left:25px;
     }
+
+
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
 </style>  
 
 
@@ -33,32 +73,69 @@
          <i class='fa fa-plus-square-o' onclick="addCategory()"></i>
          <label><b>Category</b></label> 
       </div>
+
+      
       <div id="AddCategory" style="border:1px solid;width:300px;display:none;">
           <div class="flex">
-             <input type="text" placeholder="CategoryName" class="catname">
+             <input type="text" placeholder="CategoryName" class="catname" id="name">
           </div>
           <div class="flex">
-              <div class="parent">
-                 <select class="form-control selectpicker" id="select-country" data-live-search="true">
+              <div class="parent" id="parent_id">
+                 <select class="form-control selectpicker" id="select-parent" data-live-search="true">
                    <option data-tokens="STARTUP">STARTUP</option>
+                     <option data-tokens="Business Registrati">Business Registration</option>
+                     <option data-tokens="Licenses">Licenses</option>
+                     <option data-tokens="Company Name Search and Logo">Company Name Search and Logo</option>
+                     <option data-tokens="International Business Setup">International Business Setup</option>
+
+            
                    <option data-tokens="TAXS & Compliances">TAXS & Compliances</option>
+                   <option data-tokens="Mandatory Annual Filings">Mandatory Annual Filings</option>
+                   <option data-tokens="Changes In Pvt Ltd Company">Changes In Pvt Ltd Company</option>
+                   <option data-tokens="Changes In Limited Liability Partnership">Changes In Limited Liability Partnership</option>
+                   <option data-tokens="Convert Your Business">Convert Your Business</option>
+                    <option data-tokens="Accounting & Tax">Accounting & Tax</option>
+                     <option data-tokens="GST">GST</option>
+                      <option data-tokens="Labour compliance">Labour compliance</option>
+                  
+                  
                    <option data-tokens="Trademark & IP">Trademark & IP</option>
+                  <option data-tokens="Trademark">Trademark</option>
+                    <option data-tokens="copyright">copyright</option>
+                      <option data-tokens="patent">patent</option>
+
                    <option data-tokens="FUNDRAISING">FUNDRAISING</option>
+                   <option data-tokens="FUNDRAISING">Fundraising</option>
+                   <option data-tokens="legal">legal</option>
+                   
                    <option data-tokens="CONTRACT">CONTRACT</option>
+                   <option data-tokens="Hiring Documents">Hiring Documents</option>
+                   <option data-tokens="Website Policies">Website Policies</option>
+                   <option data-tokens="Business Contracts">Business Contracts</option>
+                   <option data-tokens="Service/Vendor">Service/Vendor</option>
+
                    <option data-tokens="NGO">NGO</option>
+                    <option data-tokens="registration">registration</option>
+                     <option data-tokens="maintenance">maintenance</option>
+
+                     
                    <option data-tokens="Property & Personal">Property & Personal</option>
+                   <option data-tokens="property">property</option>
+                      <option data-tokens="name change and other corrections">name change and other corrections</option>
+                       <option data-tokens="div">div</option>
                    <option data-tokens="None">None</option>
                 </select>
                
               </div>
           </div>
           <div class="flex">
-              <textarea type="textarea" placeholder="Description" class="description"></textarea>
+              <textarea type="textarea" placeholder="Description" class="description" id="about"></textarea>
           </div>
           <div class="flex">
-              <button type="button" class="btn btn-continue"><i class="fa fa-long-arrow-right" onclick="fSub(this)" style="font-size:24px;"></i></button>
+              <button type="button" class="btn-continue" id="continue"><i class="fa fa-long-arrow-right" style="font-size:24px;"></i></button>
           </div>
       </div>
+      
       <div id="newcategory">
       
       </div>
@@ -66,12 +143,69 @@
 
   <div class="col-lg-6">
       
+<<<<<<< HEAD
      <p id="jsonfile">
           {{#each categories}}
           
           {{name}}
            {{/each}} 
           </p>
+=======
+    <ul id="myUL">
+        
+  <li><span class="caret">STARTUP</span>
+    <ul class="nested">
+      <li><span class="caret">Business Registration</span>
+        <ul class="nested">
+            <li>Private Limited Company</li>
+            <li>Limited Liability Partnership</li>
+            <li>One Person Company</li>
+            <li>Nidhi Company</li>
+            <li>Producer Company</li>
+            <li>Partnership Firm</li>
+            <li>Sole Proprietorship</li>
+        </ul>
+      </li>
+      <li><span class="caret">Licenses</span>
+        <ul class="nested">
+            <li>FSSAI(Food License)</li>
+            <li>IEC(Import/Export Code)</li>
+            <li>APEDA-RCMC Registration</li>
+            <li>MSME/SSI Registration</li>
+            <li>ISO Certification</li>
+            <li>Digital Signature Certificate</li>
+            <li>PSARA License</li>
+            <li>OSP License</li>
+            <li>Trade License</li>
+        </ul>
+      </li>
+
+      <li><span class="caret">Company Name Search and Logo</span>
+        <ul class="nested">
+            <li>Company Name Search</li>
+            <li>Logo Design</li>
+        </ul>
+      </li>
+      <li><span class="caret">International Business Setup</span>
+        <ul class="nested">
+            <li>US Incorporation</li>
+            <li>Signature Incorporation</li>
+        
+            <li>UK Incorporation</li>
+            <li>Netherlands Incorporation</li>
+            <li>Hong kong Incorporation</li>
+            <li>Malaysia Incorporation</li>
+            <li>China Incorporation</li>
+            <li>Dubai Incorporation</li>
+            <li>Australia Incorporation</li>
+            </ul>
+      </li>
+      
+       
+    </ul>
+  </li>
+</ul>
+>>>>>>> a197ca8b6de6da7be873e06b1632424819161cc8
 
   </div>
 
@@ -79,12 +213,40 @@
 </div>
 <script>
   
-function  fSub(ab){
-  
-     }
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+<script>
 function addCategory(){
     document.getElementById('AddCategory').style.display="block";
 }    
+</script>
+<script>
+ var update = document.getElementsByClassName('btn-continue');
+ update.addEventListener('click', function () {
+  // Send PUT Request here
+  var name = $("#name").val();
+  var parent_id = $("#parent_id : selected").text();
+  
+   $.ajax({
+        url : "/dashboard/category",
+        type : 'GET',
+        dataType : 'json',
+        success : function(data) {
+            $("category.csv").append("<tr>" + name + "," + parent_id + "</tr>");
+        },
+        error : function() {
+            console.log('error');
+        }
+    });
+ })
 
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

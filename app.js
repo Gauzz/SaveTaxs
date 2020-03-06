@@ -11,6 +11,8 @@ const fs = require('fs')
 const handlebars = require("express-handlebars");
 
 var app = express();
+ 
+
 
 var categories = require('./models/category.js');
 var chat = require('./models/chat.js');
@@ -45,6 +47,8 @@ paymentHistory.createCollection();
 service.createCollection();
 userprofile.createCollection();
 users.createCollection();
+
+
 // create application/json parser
 var jsonParser = bodyParser.json()
 
@@ -62,6 +66,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 // login and registration
 app.use('/', require('./routes/index'));
 app.use('/user', require('./routes/user'));
+app.use('/category', require('./routes/category'));
 
 // admin dashboard // routes
 
@@ -117,21 +122,6 @@ app.get('/index', function(req, res) {
 //   res.render('index2'); // or res.render('index.ejs');
 // });
 
-//fetch data from db into category.ejs
-
-app.get('/dashboard/category', function(req, res) {
-    categories.find({}, function(err, docs) {
-        if (err)
-        
-            res.json(err);
-        
-        
-        else
-        res.render('./dashboard/admin/category.hbs', { categories: docs }) 
-       
-        
-    });
-});
 
 
 app.get('/adpage', function(req, res) {
@@ -158,11 +148,53 @@ app.get('views/index', function(req, res) {
  
 
 
-app.get('/blog/create', function(req, res) {
-    res.render('./dashboard/admin/editblog.html'); // or res.render('index.ejs');
+app.get('/blog', function(req, res) {
+    res.render('./dashboard/admin/editblog.hbs'); // or res.render('index.ejs');
 });
 
 
+
+
+
+//fetch data from db into category.ejs
+
+app.get('/dashboard/category', function(req, res) {
+    categories.find({}, function(err, docs) {
+        if (err)
+            res.json(err);
+        else
+        res.render('./dashboard/admin/category.hbs', { categories: docs }) 
+    });
+});
+ // Create a new category
+//  app.post('/dashboard/category', (req, res) => {
+//     console.log(req.body)
+//   })
+ 
+  app.post('/dashboard/category', function(req, res) {
+    if (req.body.id &&
+        req.body.name &&
+        req.body.parent_id) {
+        var userData = {
+               id :req.body.id,
+                name: req.body.name,
+                parent_id: req.body.parent_id,
+                
+            }
+            //use schema.create to insert data into the db
+        User.create(userData, function(err, user) {
+            if (err) {
+                return res.send(err)
+            } else {
+                return res.send('saved');
+            }
+        });
+    }
+    // or res.render('category.ejs');
+});
+app.put
+
+    
 var port = 3000;
 app.listen(port, function() {
     console.log('start at port ' + port);
