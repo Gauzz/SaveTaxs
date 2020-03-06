@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="/dashboard/admin/dist/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+=======
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+>>>>>>> a197ca8b6de6da7be873e06b1632424819161cc8
 <style>
     .head1{
         font-weight: bold;
@@ -76,13 +82,16 @@ li.dropdown {
 
 <body>
     <!-- Navbar -->
-    <nav style="display:flex;margin-bottom:10px;">
-        <div class="brand">
+<div class="upper-portion">    
+ <div class="brand">
             <i>savetaxs</i>
         </div>
-        <ul class="links" style="margin-bottom: :0px;margin-top:15px;">
+    <nav class="active">
+       
+        
+        <ul class="links">
             <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">STARTUP</a>
+                <a href="javascript:void(0)" class="dropbtn" >STARTUP</a>
                   <div class="dropdown-content">
                     <div class="internal" style="width: 230px;">  
                     <p class="head1">Business Registration</p> 
@@ -189,7 +198,8 @@ li.dropdown {
             <li class="login"><a href="/login" style="color:white;">Sign in</a></li>
         </ul>
     </nav>
-
+    <div class="menu-troggle">&#9776;</div>
+</div>
 {{{body}}}
 
  <footer style="display:inline-flex;">
@@ -214,10 +224,22 @@ li.dropdown {
             <li>Privacy Policy</li>
             <li>Satisfaction Gauarantees</li>
         </ul>
+        
     </footer>
     <div class="copy">
         Copyright 2020 savetaxs.com
     </div>
+
+ <link rel="stylesheet" href="/dashboard/admin/dist/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('menu-toggle').click(function(){
+        $('nav').toggleClass('active')
+      })
+    })
+    </script>
     </body>
 
 </html>

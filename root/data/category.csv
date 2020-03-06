@@ -8,10 +8,10 @@ id,name,parent_id
 6,Producer Company,2
 7,Partnership Firm,2
 8,Sole Proprietorship,2
-9,Licenses ,1
+9,Licenses,1
 10,FSSAI(Food License),10
 11,IEC(Import/Export Code),10
-12,APEDA-RCMC Registration ,10
+12,APEDA-RCMC Registration,10
 13,MSME/SSI Registration,10
 14,ISO Certification,10
 15,Digital Signature Certificate,10
@@ -37,7 +37,7 @@ id,name,parent_id
 35,Private Limited Company / OPC,35
 36,Limited Liability Partnership,35
 37,Changes In Pvt Ltd Company,34
-38,Add a Director    ,38
+38,Add a Director,38
 39,Remove a Director,38
 40, Increase Authorized Capital,38
 41,Close the Pvt Ltd Company,38
@@ -49,7 +49,7 @@ id,name,parent_id
 47,Changes to LLP Agreement,46
 48,Close the LLP,46
 49,Convert Your Business,34
-50, Proprietorship to Pvt Ltd Company,50
+50,Proprietorship to Pvt Ltd Company,50
 51,Partnership to LLP,50
 52,Private to Public Limited Company,50
 53, Private to One Person Company,50
@@ -66,13 +66,13 @@ id,name,parent_id
 64, GST Filing,63
 65, GST Advisory,63
 66,Labour Compliance,34
-67, Provident Fund (PF) Registration,67
+67,Provident Fund (PF) Registration,67
 68, ESI Registration,67
 69,Professional Tax Registration,67
 70,Shops and Establishments License,67
 71, Employee Stock Option Plan [ESOP],67
 72,Trademark & IP,0
-73,Trademark ,73
+73,Trademark,73
 74, Trademark Registration,74
 75, Search for Trademark,74
 76, Respond to TM Objection,74
@@ -89,14 +89,14 @@ id,name,parent_id
 87, Permanent Patent,85
 88,Fundraising,0
 89,Fundraising,89
-90, Fundraising,90
+90,Fundraising,90
 91, Pitch Deck,90
 92,Legal,89
-93, Share Purchase Agreement,93
+93,Share Purchase Agreement,93
 94,Shareholders' Agreement,93
 95,Term Sheet Review,93
 96, Founders Agreement,93
-97, Contracts,0
+97,Contracts,0
 98,Hiring Documents,98
 99,Employment Contract,99
 100,Consultancy Agreement,99
@@ -123,7 +123,7 @@ id,name,parent_id
 121,Society Registration,118
 122,Maintenance,117
 123, Section 8 Compliance,123
-124, Property and Personal,0
+124,Property and Personal,0
 125, Property,125
 126,Property Title Verification,126
 127,Property Registration,126
