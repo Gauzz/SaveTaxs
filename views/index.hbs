@@ -1,26 +1,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
    <!-- cover -->
 <style>
-   .cards {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-left: 10em;
-    }
-    .card {
-        height: 370px;
-        width: 270px;
-        background-image: url('/dashboard/admin/images/package-img.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: rgb(2, 2, 71);
-        align-items: center;
-        justify-content: space-around;
-    }
-     
-    
-    
+  
 </style>
     <header>
         <div class="container" style="max-width: 90%;">
@@ -41,13 +22,13 @@
     </header>
 
     <!-- services -->
-    <section>
+    <section class="service">
         <p class="title">Our Services</p>
-      <div id="demo" class="carousel slide" data-ride="carousel">
+      <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false" style="width: 100vw;">
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active" ></li>
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
@@ -75,7 +56,7 @@
            </div>
        </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" style="margin-bottom: 80px;">
       <div class="cards">
            <div class="card">
               <p class="head">Private Limited company Registration</p>
@@ -96,7 +77,7 @@
            </div>
        </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" style="margin-bottom: 80px;">
       <div class="cards">
            <div class="card">
               <p class="head">Private Limited company Registration</p>
@@ -132,12 +113,12 @@
  </section>
     <!-- consult -->
     <section class="consult">
-        <form id="Fm" action="">
-            <input class="Fm1" type="text" placeholder="Full Name">
-            <input class="Fm1" type="text" placeholder="Phone Number">
-            <input class="Fm1" type="text" placeholder="Email">
-            <input class="Fm1" type="text" placeholder="City">
-            <button class="Fm1">Submit</button>
+        <form action="">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="City">
+            <button>Submit</button>
         </form>
         <div class="side">
             <p class="title">Get Free Consultation</p>

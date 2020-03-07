@@ -8,8 +8,9 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+   
 <style>
+ 
     .head1{
         font-weight: bold;
         margin-left:20px;
@@ -35,6 +36,7 @@ li a, .dropbtn {
 li a:hover, .dropdown:hover .dropbtn {
   color:rgb(73, 68, 68);
   font-weight: bold;
+  text-decoration: none;
 }
 
 li.dropdown {
@@ -49,7 +51,7 @@ li.dropdown {
   
   max-height:650px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: +3;
   
 }
 
@@ -78,50 +80,64 @@ li.dropdown {
 
 <body>
     <!-- Navbar -->
-<div class="upper-portion">    
+
  <div class="brand">
             <i>savetaxs</i>
         </div>
-    <nav class="active">
-       
-        
+
+    <nav>
+      <div id="menuToggle">
+             <input type="checkbox" />
+
+             <span></span>
+             <span></span>
+             <span></span>
+
+  
+
+          
         <ul class="links">
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn" >STARTUP</a>
-                  <div class="dropdown-content">
-                    <div class="internal" style="width: 230px;">  
-                    <p class="head1">Business Registration</p> 
-                    <a href="#">Private Limited Company</a>
-                    <a href="#">Limited Liability Partnership</a>
-                    <a href="#">One Person Company</a>
-                    <a href="#">Nidhi Company</a>
-                    <a href="#">Producer Company</a>
-                    <a href="#">Partnership Firm</a>
-                    <a href="#">Sole Proprietorship</a>
-                   </div>
+            <li><a href="#" class="dropbtn" >STARTUP</a>
+                  <ul class="dropdown-content">
+                    <li>  
+                    <a href="#" class="head1">Business Registration</a> 
+                    <ul class="dropdown-content">
+                        <a href="#">Private Limited Company</a>
+                        <a href="#">Limited Liability Partnership</a>
+                        <a href="#">One Person Company</a>
+                        <a href="#">Nidhi Company</a>
+                        <a href="#">Producer Company</a>
+                        <a href="#">Partnership Firm</a>
+                        <a href="#">Sole Proprietorship</a>
+                     </ul>
+                   </li>
 
-                   <div class="internal1" style="width: 230px;">  
-                     
-                    <p class="head1">Licenses</p> 
-                    <a href="#">FSSAI(Food License)</a>
-                    <a href="#">IEC(Import/Export Code)</a>
-                    <a href="#">APEDA-RCMC Registration</a>
-                    <a href="#">MSME/SSI Registration</a>
-                    <a href="#">ISO Certification</a>
-                    <a href="#">Digital Signature Certificate</a>
-                    <a href="#">PSARA License</a>
-                    <a href="#">OSP License</a>
-                    <a href="#">Trade License</a>
-                   </div>
+                   <li> 
+                    <a href="" class="head1">Licenses</a> 
+                    <ul class="dropdown-content">
+                         <a href="#">FSSAI(Food License)</a>
+                         <a href="#">IEC(Import/Export Code)</a>
+                         <a href="#">APEDA-RCMC Registration</a>
+                         <a href="#">MSME/SSI Registration</a>
+                          <a href="#">ISO Certification</a>
+                         <a href="#">Digital Signature Certificate</a>
+                           <a href="#">PSARA License</a>
+                         <a href="#">OSP License</a>
+                         <a href="#">Trade License</a>
+                   </ul>
+                  </li>
 
-                    <div class="internal2" style="width: 230px;">  
-                    <p class="head1">Company Name Search and Logo</p> 
+                    <li>  
+                    <a href="" class="head1">Company Name Search and Logo</a> 
+                    <ul class="dropdown-content">
                     <a href="#">Company Name Search</a>
                     <a href="#">Logo Design</a>
-                   </div>
+                    </ul>
+                   </li>
 
-                   <div class="internal3" style="width: 230px;">  
-                    <p class="head1">International Business Setup</p> 
+                   <li>       
+                      <a href="" class="head1">International Business Setup</a> 
+                    <ul class="dropdown-content">
                     <a href="#">US Incorporation</a>
                     <a href="#">Signature Incorporation</a>
                     <a href="#">UK Incorporation</a>
@@ -131,13 +147,95 @@ li.dropdown {
                     <a href="#">China Incorporation</a>
                     <a href="#">Dubai Incorporation</a>
                     <a href="#">Australia Incorporation</a>
-                   </div>
+                    </ul>
+                   </li>
 
-                  </div>
+                  </ul>
            </li>
-            <li>TAXS & Compliances</li>
-            <li>Trademark & IP</li>
 
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">TAXS & Compliances</a>
+                 <ul class="dropdown-content">
+                  
+                  <li>
+                       <a href="#" class="head1">MANDATORY ANNUAL FILINGS</a> 
+                    <ul  class="dropdown-content">
+                      <a href="#"> Private Limited Company/OPC</a>
+                      <a href="#">Limited Liability Company</a>
+                    </ul>
+                    
+                  </li>
+
+                    <li>  
+                      <a href="#" class="head1">Changes In Pvt Ltd Company</a> 
+                      <ul class="dropdown-content">
+                    <a href="#"> Add a Director</a>
+                    <a href="#">Remove a Director</a>
+                    <a href="#">Increase Authorized Capital</a>
+                    <a href="#">Close the Pvt Ltd Company</a>
+                    <a href="#">Change Objective/Activity</a>
+                    <a href="#">Change Address</a>
+                    <a href="#">Change Company Name</a>
+                    </ul>
+                    </li>
+
+                    <li>  
+                    <a href="#" class="head1">Changes In Limited Liability Partnership</a> 
+                    <ul class="dropdown-content">
+                    <a href="#">Add Designated Partner</a>
+                    <a href="#">Changes to LLP Agreement</a>
+                    <a href="#">Close the LLP</a> 
+                    </ul>
+                    </li>
+
+                    <li>  
+                    <a href="#" class="head1">Convert Your Business</a> 
+                    <ul class="dropdown-content">
+                    <a href="#"> Proprietorship to Pvt Ltd Company</a>
+                    <a href="#">Partnership to LLP</a>
+                    <a href="#">Private to Public Limited Company</a>
+                    <a href="#">Private to One Person Company</a>
+                    <a href="#">Compliance Check-Secretarial Audit</a>
+                    <a href="#">Due Diligence</a>
+                    <a href="#">RBI Compliance</a>
+                    </ul>
+                    </li>
+
+                   <li>  
+                    <a href="#" class="head1">Changes In Limited Liability Partnership</a>
+                    <ul class="dropdown-content">
+                    <a href="#">Add Designated Partner</a>
+                    <a href="#">Changes to LLP Agreement</a>
+                    <a href="#">Close the LLP</a> 
+                    </ul>
+                    </li>
+             </ul>
+             </li>
+
+
+
+
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn" >Trademark and IP</a>
+                    <div class="dropdown-content">
+                         <div class="internal" style="width: 200px;">  
+                       <p class="head1">Trademark</p> 
+                        <a href="#">Trademark Registration</a>
+                        <a href="#">Search for Trademark</a>
+                        <a href="#">Respond to TM Objection</a>
+                        <a href="#">Trademarkm Watch</a>
+                        <a href="#">Trademark Renewal</a>
+                        <a href="#">Trademark Assignment</a>
+                        <a href="#">USA Trademark</a>
+                       <a href="#">Logo Design</a>
+                    </div>
+
+                    <div class="internal1" style="width:200px;">
+                      <p class="head1">Copyright</p>
+                      <a href="#">copyright Registration</a>
+                    </div>
+                   </div> 
+              </li>
             
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">FUNDRAISING</a>
@@ -169,7 +267,7 @@ li.dropdown {
 
                     <div class="internal1" style="width: 200px;">  
                     <p class="head1">Website Policies</p> 
-                    <a href="#"> Terms of Service & Privacy Policy</a>
+                    <a href="#"> Terms of Service and Privacy Policy</a>
                     <a href="#"> Disclaimer</a>
                     <a href="#"> Joint Venture Agreement</a>
                     <a href="#"> General Data Protection Regulation [GDPR]</a>
@@ -189,13 +287,71 @@ li.dropdown {
                     <a href="#"> Master Service Agreement</a>
                     <a href="#">Vendor Agreement</a>
                     </div>
-            <li>NGO</li>
-            <li>Property & Personal</li>
+            
+            
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">NGO</a>
+              <div class="dropdown-content">
+                    <div class="internal" style="width: 200px;">  
+                    <p class="head1">Registration</p> 
+                    <a href="#"> NGO</a>
+                    <a href="#">Section 8</a>
+                    <a href="#">Trust Registration</a>
+                    <a href="#">Society Registration</a>
+                    </div>
+                   
+                   <div class="internal1" style="width: 200px;">
+                    <p class="head1">Maintenance</p>
+                     <a href="#">Section 8 Compliance</a>
+
+                   </div>
+              </div>
+              
+              
+              </li>
+             <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Property and Personal</a>
+              <div class="dropdown-content">
+                    <div class="internal" style="width: 200px;">  
+                    <p class="head1">Property</p> 
+                    <a href="#"> Property Title Verification</a>
+                    <a href="#">Property Registration</a>
+                    <a href="#">Succession Certificate</a>
+                    <a href="#">Legal Heir Certificate</a>
+                    <a href="#">Will Drafting and Registration</a>
+                    </div>
+                   
+                   <div class="internal1" style="width: 200px;">
+                    <p class="head1">Name Change and Other Corrections</p>
+                     <a href="#">Name Change</a>
+                     <a href="#">Religion Change</a>
+                     <a href="#">Gender Change</a>
+
+                   </div>
+                   
+                   <div class="internal1" style="width: 200px;">
+                    <a href="#">
+                      Div
+                    </a>
+              </div>
+              </li>
             <li class="login"><a href="/login" style="color:white;">Sign in</a></li>
         </ul>
     </nav>
-    <div class="menu-troggle">&#9776;</div>
+    
 </div>
+  
+
+   <script src="https://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
+				});
+			});
+		</script>
+
 {{{body}}}
 
  <footer style="display:inline-flex;">
@@ -226,16 +382,8 @@ li.dropdown {
         Copyright 2020 savetaxs.com
     </div>
 
- <link rel="stylesheet" href="/dashboard/admin/dist/css/main.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js">
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('menu-toggle').click(function(){
-        $('nav').toggleClass('active')
-      })
-    })
-    </script>
+    <link rel="stylesheet" href="/dashboard/admin/dist/css/main.css">
+  
     </body>
 
 </html>
