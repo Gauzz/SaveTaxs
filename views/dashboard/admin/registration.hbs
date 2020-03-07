@@ -43,40 +43,30 @@ margin-left:30px;
 }
 
 </style>
-<script type="text/javascript">
-
-function save(){
-var user = document.getElementById("user").value;
-var pwd = document.getElementById("pwd").value;
-
-alert("username"+user+"password"+pwd);
-}
-
-</script>
 
 <div id="body">
-<form name="regi" action="/user/registration" method="post">
+<form name="registration" action="/user/registration" method="POST">
 <h2>Registration Form</h2>
 <div class="containr">
-<label class="a" for="r1" id="fn">First Name :</label>
+<label class="a" for="secondname" id="firstname">First Name :</label>
 <input class="b" type="text" name="firstname" id="r1"><br/><br>
 
-<label class="a" for="r2" id="ln">Last Name :</label>
+<label class="a" for="secondname" id="secondname">Last Name :</label>
 <input class="b" type="text" name="secondname" id="r2"><br/><br>
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="a" for="r5" id="em">Email :</label>
-<input class="b" type="text" name="email" id="r5"><br/><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="a" for="email" id="email">Email :</label>
+<input class="b" type="email" name="email" id="email"><br/><br>
 
-&nbsp;<label  class="a" for="r4" id="pwd">Password :</label>
-<input class="b" type="password" name="password" id="r4"><br/><br>
+&nbsp;<label  class="a" for="password" id="password">Password :</label>
+<input class="b" type="password" name="password" id="password"><br/><br>
 
-<label  class="a" for="r4" id="pwd"> Confrime Password :</label>
-<input class="b" type="password" name="password2" id="r4"><br/>
+<label  class="a" for="password2" id="password2"> Confrime Password :</label>
+<input class="b" type="password" name="password2" id="password2"><br/>
 
 
      <button id="z" type="submit" value="Submit" id="button">Register</button>
-<a href="login.html">Back to Home</a>
+<a href="login.hbs">Back to Home</a>
 </div>
 </form>
 </div>

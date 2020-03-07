@@ -78,8 +78,8 @@
                 <img src="/dashboard/admin/images/png/cust-icon-blue.png" alt="logocust" style="margin-top:30px;margin-bottom:50px;width:160px;height:60px;">
 
                 <h3 style="color:#001445;font-family:open sans;font-weight: bold;font-style: italic;">Login</h3><br/>
-                <input type="text" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
-                <input type="text" placeholder="Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="email" id="email" name="email" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="password" id="password" name="password" placeholder="Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
                 <div style="margin-bottom:20px;">
                     <a href="" style="text-decoration: underline;color:grey;">Don't remember your password?</a>
                 </div>
@@ -89,7 +89,7 @@
 
 
         <div class="col-lg-6" style="height:500px;margin:0px;padding:0px;outline-style:none;">
-            <form action="login.html" class="partner" style="width:100%;height:100%;background-color:#F96554;">
+            <form action="/user/login" class="partner" style="width:100%;height:100%;background-color:#F96554;" method="POST">
                 <img class="img1" src="/dashboard/admin/images/png/part-icon.png" alt="Part-icon image" onclick="loginPart(this)">
             </form>
 
@@ -97,8 +97,8 @@
                 <img src="/dashboard/admin/images/png/part-icon-blue.png" alt="logopart" style="margin-bottom:50px;width:200px;height:80px;">
 
                 <h3 style="color:#001445;font-family:open sans;font-weight: bold;font-style: italic;">Login</h3><br/>
-                <input type="text" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
-                <input type="text" placeholder="Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="email" id="email" name="email" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="password" id="password" name="passroed" placeholder="Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
                 <div style="margin-bottom:20px;">
                     <a href="" style="text-decoration: underline;color:grey;">Don't remember your password?</a>
                 </div>
@@ -126,3 +126,24 @@
 
         }
     </script>
+<script>
+  function reqtrial(){
+$.ajax({
+    url : "/user/login",
+    type: "POST",
+    data : {
+      firstname:"jack",
+      lastname:"sparrow"
+    },
+    success: function(data, textStatus, jqXHR)
+    {
+      console.log(data+"");
+        //data - response from server
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+ 
+    }
+});}
+reqtrial();
+</script>>

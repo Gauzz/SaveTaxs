@@ -4,7 +4,9 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
+const passport = require('passport');
 var bodyParser = require('body-parser');
+
 
 let User = require('../models/user');
 var jsonParser = bodyParser.json()
@@ -27,63 +29,73 @@ router.get('/registration', (req, res) => res.send('registration'));
 
 
 router.post('/registration', function(req, res) {
-    res.send(req.body.firstname);
-    console.log(req.body.firstname);
-    //console.log(req.body.firstname);
-    // const secondname = req.body.secondname;
-    // const email = req.body.email;
-    // const password = req.body.password;
-    // const password2 = req.body.password2;
+    const firstname = req.body.firstname;
+   const secondname = req.body.secondname;
+    const email = req.body.email;
+    const password = req.body.password;
+    const password2 = req.body.password2;
 
-    // req.checkBody('firstname', 'First Name is require').notEmpty();
-    // req.checkBody('secondname', 'Second Name is require').notEmpty();
-    // req.checkBody('email', 'Email is require').notEmpty();
-    // req.checkBody('email', 'Email is not valid').isEmail();
-    // req.checkBody('password', 'Password is require').notEmpty();
-    // req.checkBody('passwor2', 'Password is not match').equals(req.body.password);
+    req.checkBody('firstname', 'First Name is require').notEmpty();
+    req.checkBody('secondname', 'Second Name is require').notEmpty();
+    req.checkBody('email', 'Email is require').notEmpty();
+    req.checkBody('email', 'Email is not valid').isEmail();
+    req.checkBody('password', 'Password is require').notEmpty();
+    req.checkBody('password2', 'Password is not match').equals(req.body.password);
 
-    // let errors = req.validationErrors();
+    let errors = req.validationErrors();
 
-    // if(errors){
-    //   res.render('/regitration',{
-    //       errors:errors
-    //   });
-    // }else{
+    if(errors){
+      res.send(errors)
+    }else{
 
-    //     let newuser = new user({
-    //         firstname:firstname,
-    //         secondname:secondname,
-    //         email:email,
-    //         password:password
+        let newuser = new User({
+            firstname:firstname,
+            secondname:secondname,
+            email:email,
+            password:password,
+            password2:password2
 
-    //     });
-    //     bcrypt.genSalt(10, function(){
-    //         bcrypt.hash(newuser.password, salt, function(err, hash){
-    //             if(error){
-    //                 console.log(error);
-    //             }
-    //             newuser.password = hash;
-    //             newuser.save(function(err){
-    //                 if(error){
-    //                     console.log(err);
-    //                     return;
+        });
 
-    //                 }else{
-    //                     req.flash('sucess', 'you are register and you can login ');
-    //                     req.redirect('/login');
-    //                 }
+        bcrypt.genSalt(10, function(err, salt){
+            bcrypt.hash(newuser.password, salt, function(err, hash){
+                if(err){
+                    console.log(error);
+                }
+               newuser.password = hash;
+               newuser.save(function(err){
+                   if(err){
+                         console.log(err);
+                         return;
 
-    //             }
-    //             );
+                    }else{
+                      // req.flash('sucess', 'you are register and you can login ');
+                        res.redirect('/user/login');
+                    }
 
-    //         });
-    //       });
-    // }
+                }
+                );
+
+           });
+     
+         });
+   
+      }
 
 
 
 
 })
+
+
+
+router.post('/login', function(req, res, next){
+   passport.authenticate('local', {
+      successRedirect:'/',
+      failureRedirect:'/user/login',
+      failureFlash:true
+   })(req, res, next);
+});
 
 
 module.exports = router;
