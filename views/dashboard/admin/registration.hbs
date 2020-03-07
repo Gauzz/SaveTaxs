@@ -1,0 +1,103 @@
+<style>
+
+#body{
+margin: 100px;
+text-align: center;
+align: center;
+background-color:#E6E6FA;
+}
+.b[type=text],[type=password],[type=number]{
+width: 100%;
+margin: 8px 0;
+padding: 7px 10px;
+display: inline-block;
+border:1px solid #ccc;
+box-sizing: border-box;
+}
+
+a{
+  color: black;
+}
+#z{
+background-color:#4CAF50;
+width: 10%;
+padding: 9px 5px;
+margin:5px 0;
+cursor:pointer;
+border:none;
+color:#ffffff;
+margin-left: 80px;
+}
+
+#z:hover{
+opacity:0.8;
+}
+
+#fn,#ln,#un,#pwd,#em,#mn,#fm,#cy{
+font-family:’Lato’, sans-serif;
+color: gray;
+}
+
+#em{
+margin-left:30px;
+}
+
+</style>
+<script type="text/javascript">
+
+function save(){
+var user = document.getElementById("user").value;
+var pwd = document.getElementById("pwd").value;
+
+alert("username"+user+"password"+pwd);
+}
+
+</script>
+
+<div id="body">
+<form name="regi" action="/user/registration" method="post">
+<h2>Registration Form</h2>
+<div class="containr">
+<label class="a" for="r1" id="fn">First Name :</label>
+<input class="b" type="text" name="firstname" id="r1"><br/><br>
+
+<label class="a" for="r2" id="ln">Last Name :</label>
+<input class="b" type="text" name="secondname" id="r2"><br/><br>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="a" for="r5" id="em">Email :</label>
+<input class="b" type="text" name="email" id="r5"><br/><br>
+
+&nbsp;<label  class="a" for="r4" id="pwd">Password :</label>
+<input class="b" type="password" name="password" id="r4"><br/><br>
+
+<label  class="a" for="r4" id="pwd"> Confrime Password :</label>
+<input class="b" type="password" name="password2" id="r4"><br/>
+
+
+     <button id="z" type="submit" value="Submit" id="button">Register</button>
+<a href="login.html">Back to Home</a>
+</div>
+</form>
+</div>
+<script>
+  function reqtrial(){
+$.ajax({
+    url : "/user/registration",
+    type: "POST",
+    data : {
+      firstname:"jack",
+      lastname:"sparrow"
+    },
+    success: function(data, textStatus, jqXHR)
+    {
+      console.log(data+"");
+        //data - response from server
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+ 
+    }
+});}
+reqtrial();
+</script>>
