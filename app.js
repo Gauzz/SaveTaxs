@@ -2,7 +2,7 @@ var http = require('http');
 var express = require('express');
 const expressLayouts = require('express-ejs-layouts');
  const flash = require('connect-flash');
-// const session = require('express-session');
+const session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 const path = require('path');
@@ -119,7 +119,7 @@ app.get('/login', function(req, res) {
 //                 username: req.body.username,
 //                 password: req.body.password,
 //             }
-//             use schema.create to insert data into the db
+//            use schema.create to insert data into the db
 //         User.create(userData, function(err, user) {
 //             if (err) {
 //                 return res.send(err)
@@ -128,7 +128,7 @@ app.get('/login', function(req, res) {
 //             }
 //         });
 //     }
-//     or res.render('index.ejs');
+//    or res.render('index.ejs');
 // });
 
 

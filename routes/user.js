@@ -4,15 +4,17 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
+const flash = require('connect-flash');
 const passport = require('passport');
 var bodyParser = require('body-parser');
+
 
 
 let User = require('../models/user');
 var jsonParser = bodyParser.json()
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
 var app = express();
 app.use(jsonParser);
 app.use(urlencodedParser);
@@ -69,7 +71,7 @@ router.post('/registration', function(req, res) {
                          return;
 
                     }else{
-                      // req.flash('sucess', 'you are register and you can login ');
+                       req.flash('sucess', 'you are register and you can login ');
                         res.redirect('/user/login');
                     }
 
