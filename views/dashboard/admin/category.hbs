@@ -10,7 +10,7 @@
         border:1px solid;
         margin-left:100px;
     }
-    .description{
+    .formid{
         width:230px;
         border-radius: 5px;
     }
@@ -76,6 +76,11 @@ ul, #myUL {
 
       
       <div id="AddCategory" style="border:1px solid;width:300px;display:none;">
+         <form action="/dashboard/category" method="POST" > 
+
+         <div class="flex">
+              <input type="text" placeholder="ID" class="formid" ></input>
+          </div>
           <div class="flex">
              <input type="text" placeholder="CategoryName" class="catname" id="name">
           </div>
@@ -128,12 +133,11 @@ ul, #myUL {
                
               </div>
           </div>
+          
           <div class="flex">
-              <textarea type="textarea" placeholder="Description" class="description" id="about"></textarea>
+              <button type="submit" class="btn-continue" id="continue"><i class="fa fa-long-arrow-right" style="font-size:24px;"></i></button>
           </div>
-          <div class="flex">
-              <button type="button" class="btn-continue" id="continue"><i class="fa fa-long-arrow-right" style="font-size:24px;"></i></button>
-          </div>
+         </form> 
       </div>
       
       <div id="newcategory">
@@ -231,7 +235,11 @@ function addCategory(){
         type : 'GET',
         dataType : 'json',
         success : function(data) {
-            $("category.csv").append("<tr>" + name + "," + parent_id + "</tr>");
+            res.render('category.hbs'),{
+               id,
+               name,
+               parent_id
+           }
         },
         error : function() {
             console.log('error');

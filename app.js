@@ -30,6 +30,13 @@ var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
 
 
+
+
+mongoose.set('useNewUrlParser',true);
+mongoose.set('useFindAndModify',false);
+mongoose.set('useCreateIndex',true);
+
+
 // connect mongoose
 var db = "mongodb://localhost:27017/savetax";
 
@@ -103,7 +110,7 @@ app.use('/category', require('./routes/category'));
 
 
 app.get('/dashboard', function(req, res) {
-    res.render('./dashboard/admin/index2.hbs'); // or res.render('index.ejs');
+    res.render('./dashboard/admin/index.hbs'); // or res.render('index.ejs');
 });
 
 app.get('/login', function(req, res) {
@@ -134,9 +141,6 @@ app.get('/login', function(req, res) {
 
 
 
-app.get('/index', function(req, res) {
-    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
-});
 
 app.get('/registration', function(req, res) {
     res.render('./dashboard/admin/registration.hbs'); // or res.render('index.ejs');
@@ -149,9 +153,9 @@ app.get('/registration', function(req, res) {
 
 
 
-app.get('/adpage', function(req, res) {
+app.get('/adminpage', function(req, res) {
 
-    res.render('./dashboard/admin/adpage.hbs');
+    res.render('./dashboard/admin/adminpage.hbs');
 });
 app.get('/analytic', function(req, res) {
 
@@ -216,4 +220,13 @@ app.post('/dashboard/category', function(req, res) {
         });
     }
     // or res.render('category.ejs');
+});
+
+
+app.get('/dashboard/customer', function(req, res) {
+    res.render('./dashboard/customer/customerpage.hbs'); // or res.render('index.ejs');
+});
+
+app.get('/customer/category', function(req, res) {
+    res.render('./dashboard/customer/category.hbs'); // or res.render('index.ejs');
 });
