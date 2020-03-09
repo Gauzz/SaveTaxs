@@ -1,14 +1,18 @@
 var http = require('http');
 var express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-// const flash = require('connect-flash');
-// const session = require('express-session');
+ const flash = require('connect-flash');
+const session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs')
 const handlebars = require("express-handlebars");
+var expressValidator = require('express-validator');
+const passport = require('passport');
+const config = require('./config/database');
+
 
 var app = express();
 
@@ -25,13 +29,11 @@ var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
 
+
 // connect mongoose
 var db = "mongodb://localhost:27017/savetax";
 
-// mongoose.connect(db, {useNewUrlParser: true} , function(err){
-//     if (err) throw err;
-//     else console.log('mongodb connected');
-// });
+
 
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Mongodb connected"))
@@ -61,6 +63,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //   });
 // });
+app.use(expressValidator());  //this line to be addded
 app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
@@ -79,6 +82,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
+//passport config
+require('./config/passport')(passport);
+// passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 // login and registration
 app.use('/', require('./routes/index'));
 app.use('/user', require('./routes/user'));
@@ -95,30 +105,31 @@ app.use('/category', require('./routes/category'));
 app.get('/dashboard', function(req, res) {
     res.render('./dashboard/admin/index2.hbs'); // or res.render('index.ejs');
 });
+
 app.get('/login', function(req, res) {
     res.render('login.hbs', { title: "Login" }); // or res.render('index.ejs');
 });
-app.post('/login', function(req, res) {
-    if (req.body.email &&
-        req.body.username &&
-        req.body.password &&
-        req.body.passwordConf) {
-        var userData = {
-                email: req.body.email,
-                username: req.body.username,
-                password: req.body.password,
-            }
-            //use schema.create to insert data into the db
-        User.create(userData, function(err, user) {
-            if (err) {
-                return res.send(err)
-            } else {
-                return res.send('logged in');
-            }
-        });
-    }
-    // or res.render('index.ejs');
-});
+// app.post('/login', function(req, res) {
+//     if (req.body.email &&
+//         req.body.username &&
+//         req.body.password &&
+//         req.body.passwordConf) {
+//         var userData = {
+//                 email: req.body.email,
+//                 username: req.body.username,
+//                 password: req.body.password,
+//             }
+//            use schema.create to insert data into the db
+//         User.create(userData, function(err, user) {
+//             if (err) {
+//                 return res.send(err)
+//             } else {
+//                 return res.send('logged in');
+//             }
+//         });
+//     }
+//    or res.render('index.ejs');
+// });
 
 
 
