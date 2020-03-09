@@ -1,8 +1,13 @@
 const LocalStrategy = require('passport-local').Strategy;
+const mongoose = require('mongoose');
 const User = require('../models/user');
-const config = require('../config/database').default; 
+const config = require('../config/database'); 
 const bcrypt = require('bcryptjs'); 
 const flash = require('connect-flash');
+const Joi = require('@hapi/joi');
+
+const { findOne, findById } = ('../models/user');
+
 
 
 
@@ -11,38 +16,40 @@ const flash = require('connect-flash');
 
 module.exports = function(passport){
     //local stratgy
-passport.use(new LocalStrategy
-  (function(email, password, done){
-// match user
-let query = {email:email};
-User.findOne(query, function(err, user){
-if (err) throw err;
-if(!user){
-    return done(null, false, {message: 'Nouser found'});
-}
-//match password
-bcrypt.compare(password, user.password, function(err, isMatch){
-  if (err) throw err;
-  if (isMatch) {
-      return done(null, user);
-  }else{
-      return done(null, false, {message: 'wrong password'});
+passport.use(
+  new LocalStrategy({usernameField: 'email'}, (email, password, done)=> {
+//match user
+User.findOne({email: email})
+.then(user => {
+  if(!user) {
+    return done(null, false, {
+      message: 'that email is not register' });
+    }
+// match password
 
+bcrypt.compare(password, user.password, (err, isMatch) =>{
+  if(err) throw err;
+  if(isMatch){
+    return done(null, user);
+  }else{
+    return done(null, false, { message:'password incorrect'});
   }
 });
+})
+.catch(err => Console.log(err));
+  })
+  );
 
-});
-}));
 
-
-passport.serializeUser(function(user, done) {
+  passport.serializeUser((user, done) =>{
     done(null, user.id);
   });
-  
-  passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
+
+  passport.deserializeUser((id, done) =>{
+    User.findById(id, (err, user) =>{
       done(err, user);
-    });
+    } );
   });
 }
+
 

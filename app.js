@@ -12,11 +12,15 @@ const handlebars = require("express-handlebars");
 var expressValidator = require('express-validator');
 const passport = require('passport');
 const config = require('./config/database');
+const Joi = require('@hapi/joi');
+
+Joi.objectId = require('joi-objectid')(Joi);
 
 
 var app = express();
 
-
+//passport config
+require('./config/passport')(passport);
 
 var categories = require('./models/category.js');
 var chat = require('./models/chat.js');
@@ -29,6 +33,11 @@ var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
 
+
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', true);
+mongoose.set('useCreateIndex', true);
 
 // connect mongoose
 var db = "mongodb://localhost:27017/savetax";
@@ -55,7 +64,31 @@ users.createCollection();
 var jsonParser = bodyParser.json()
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
+
+//express session
+app.use(session({
+    secret:'secret',
+    resave:true,
+    saveUninitialized: true
+}));
+
+// passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//connect flash
+app.use(flash());
+
+// global vars
+
+app.use((req, res, next) =>{
+    res.locals.success_msg = req.flash('sucess_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+
+});
     // app.get('/views' , function(req,res){
     //   categories.find({} , function(err , docs){
     //     if(err) res.json(err);
@@ -82,11 +115,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-//passport config
-require('./config/passport')(passport);
-// passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
+
+
 
 
 // login and registration
@@ -119,7 +149,7 @@ app.get('/login', function(req, res) {
 //                 username: req.body.username,
 //                 password: req.body.password,
 //             }
-//            use schema.create to insert data into the db
+//             use schema.create to insert data into the db
 //         User.create(userData, function(err, user) {
 //             if (err) {
 //                 return res.send(err)
@@ -128,7 +158,7 @@ app.get('/login', function(req, res) {
 //             }
 //         });
 //     }
-//    or res.render('index.ejs');
+//     or res.render('index.ejs');
 // });
 
 
@@ -139,7 +169,7 @@ app.get('/index', function(req, res) {
 });
 
 app.get('/registration', function(req, res) {
-    res.render('./dashboard/admin/registration.hbs'); // or res.render('index.ejs');
+    res.render('registration.hbs'); // or res.render('index.ejs');
 });
 // app.get('/dashboard', function (req, res) {
 //   res.render('index2'); // or res.render('index.ejs');
