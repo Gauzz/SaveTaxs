@@ -7,10 +7,14 @@ const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const passport = require('passport');
 var bodyParser = require('body-parser');
+var assert = require('assert'); 
+const Joi = require('@hapi/joi');
 
 
 
-let User = require('../models/user');
+
+
+let User  = require('../models/user');
 var jsonParser = bodyParser.json()
 
 // create application/x-www-form-urlencoded parser
@@ -20,8 +24,9 @@ app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
 
-router.get('/login', (req, res) => res.send('login'));
-router.get('/registration', (req, res) => res.send('registration'));
+router.get('/login', (req, res) => res.render('login.hbs'));
+
+router.get('/registration', (req, res) => res.render('registration.hbs'));
 // router.get('/dashboard/category' , function(req,res){
 //     categories.find({parent_id} , function(err , docs){
 //       if(err) res.json(err);
@@ -30,74 +35,89 @@ router.get('/registration', (req, res) => res.send('registration'));
 //   });
 
 
-router.post('/registration', function(req, res) {
-    const firstname = req.body.firstname;
-   const secondname = req.body.secondname;
-    const email = req.body.email;
-    const password = req.body.password;
-    const password2 = req.body.password2;
+router.post('/registration', (req, res)  =>{
+    const{firstname, secondname, email, password, password2 } = req.body;
+    let errors = [];
+     
+    //check require field
+    if (!firstname || !secondname || !email  || !password || !password2){
+        errors.push({msg: 'fill in all field'});
 
-    req.checkBody('firstname', 'First Name is require').notEmpty();
-    req.checkBody('secondname', 'Second Name is require').notEmpty();
-    req.checkBody('email', 'Email is require').notEmpty();
-    req.checkBody('email', 'Email is not valid').isEmail();
-    req.checkBody('password', 'Password is require').notEmpty();
-    req.checkBody('password2', 'Password is not match').equals(req.body.password);
-
-    let errors = req.validationErrors();
-
-    if(errors){
-      res.send(errors)
-    }else{
-
-        let newuser = new User({
-            firstname:firstname,
-            secondname:secondname,
-            email:email,
-            password:password,
-            password2:password2
+    }
+ 
+    if(errors.length>0){
+        res.render('registration.hbs', {
+            errors,
+            firstname,
+            secondname,
+            email,
+            password,
+            password2
 
         });
 
-        bcrypt.genSalt(10, function(err, salt){
-            bcrypt.hash(newuser.password, salt, function(err, hash){
-                if(err){
-                    console.log(error);
-                }
-               newuser.password = hash;
-               newuser.save(function(err){
-                   if(err){
-                         console.log(err);
-                         return;
+    }else{
+//validation passed
 
-                    }else{
-                       req.flash('sucess', 'you are register and you can login ');
-                        res.redirect('/user/login');
-                    }
+User.findOne({email:email})
+.then(user =>{
+    if(user){
+        //user exists
+        errors.push({ msg: 'user exist'});
+        res.render('registration.hbs', {
+            errors,
+            firstname,
+            secondname,
+            email,
+            password,
+            password2
 
-                }
-                );
+        });
+    }else{
+        const newUser = new User({
+            firstname,
+        secondname,
+        email,
+        password,
+        password2
 
-           });
-     
-         });
-   
-      }
+        }
+        );
+    
 
-
-
-
+//hash password
+bcrypt.genSalt(10, (err, salt) => 
+bcrypt.hash(newUser.password, salt, (err, hash ) => {
+if(err) throw err;
+//set pass hash
+newUser.password = hash;
+//save user
+newUser.save()
+.then(user => {
+    req.flash('sucess', 'you are now register ');
+    res.redirect('/user/login');
 })
+.catch(err => console.log(err));
 
+}))
+    }
+} );
 
+    }
 
-router.post('/login', function(req, res, next){
-   passport.authenticate('local', {
-      successRedirect:'/',
-      failureRedirect:'/user/login',
-      failureFlash:true
-   })(req, res, next);
 });
+    
 
+
+//login
+router.post('/login', (req, res, next) =>{
+    console.log("tried login in");
+    passport.authenticate('local',{
+        successRedirect: '/dashboard',
+        failureRedirect:'/',
+        failureFlash:true
+    });(req, res, next);
+    res.send('coudnt run passport');
+});
 
 module.exports = router;

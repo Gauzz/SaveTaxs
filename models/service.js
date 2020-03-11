@@ -12,4 +12,5 @@ var serviceSchema = new Schema({
         type: String
     }
 });
+
 module.exports = mongoose.model('service', serviceSchema);
