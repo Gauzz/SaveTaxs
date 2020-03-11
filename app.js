@@ -35,17 +35,16 @@ var users = require('./models/user.js');
 
 
 
-<<<<<<< HEAD
+
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', true);
 mongoose.set('useCreateIndex', true);
-=======
+
 
 mongoose.set('useNewUrlParser',true);
 mongoose.set('useFindAndModify',false);
 mongoose.set('useCreateIndex',true);
 
->>>>>>> 574590f7c86b7861eb7c4efbd482748a1d798b23
 
 // connect mongoose
 var db = "mongodb://localhost:27017/savetax";
