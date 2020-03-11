@@ -227,6 +227,10 @@ app.get('/dashboard/customer', function(req, res) {
     res.render('./dashboard/customer/customerpage.hbs'); // or res.render('index.ejs');
 });
 
+app.get('/customer/profile', function(req, res) {
+    res.render('./dashboard/customer/profile.hbs'); // or res.render('index.ejs');
+});
+
 app.get('/customer/category', function(req, res) {
     res.render('./dashboard/customer/category.hbs'); // or res.render('index.ejs');
 });
