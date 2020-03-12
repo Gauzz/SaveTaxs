@@ -14,10 +14,14 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/registration.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    </head>
+    
+</head>
 
     <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
         <div class="wrapper">
@@ -166,7 +170,8 @@
                             <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                             <li class="nav-item has-treeview menu-open">
-                                <a href="/dashboard/admin/index2.html" class="nav-link active">
+                                <a href="#" class="nav-link active" onclick="toggleDashboardView(this)">
+                                    <!-- /dashboard/admin/index2.html -->
                                     <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
                                         Dashboard
@@ -300,7 +305,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item has-treeview">
-                                        <a href="http://127.0.0.1:3000/dashboard/admin/editblog.html" class="nav-link">
+                                        <a href="#" class="nav-link" onclick="toggleBlogMgmtView(this)">
                                             <i class="nav-icon fas fa-tree"></i>
                                             <p>
                                                 Blog Management
@@ -308,6 +313,17 @@
                                             </p>
 
                                         </a>
+                                    <li>
+                                    <li class="nav-item has-treeview" >
+                                            <a href="#" class="nav-link" onclick="toggleDashboardView(this)">
+                                                <i class="nav-icon fas fa-tree"></i>
+                                                <p>
+                                                   User Management
+                                                    <i class="fas fa-angle-left right"></i>
+                                                </p>
+    
+                                            </a>
+                                    <li>
 
                                         <li class="nav-item has-treeview">
                                             <a href="#" class="nav-link">
@@ -432,13 +448,13 @@
                 </div>
                 <!-- /.sidebar -->
             </aside>
-
+            <section id="analytics-tab">
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
+                <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <div class="content-header">
-                    <div class="container-fluid">
-                        <div class="row mb-2">
+                    <div class="content-header">
+                        <div class="container-fluid">
+                           <div class="row mb-2">
                             <div class="col-sm-6">
 
                                 <h1 class="m-0 text-dark">Dashboard v2</h1>
@@ -457,12 +473,13 @@
                         </div>
                         <!-- /.row -->
                     </div>
+                
                     <!-- /.container-fluid -->
                 </div>
                 <!-- /.content-header -->
-
+            
                 <!-- Main content -->
-                <section class="content">
+            <section class="content">
                     <div class="container-fluid">
                         <!-- Info boxes -->
                         <div class="row">
@@ -536,12 +553,12 @@
 
                                         <div class="card-tools">
                                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                                          </button>
+                                                <i class="fas fa-minus"></i>
+                                            </button>
                                                                   <div class="btn-group">
                                                                       <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                                                <i class="fas fa-wrench"></i>
-                      </                        </button>
+                                                                            <i class="fas fa-wrench"></i>
+                                                                        </button>
                                                                       <div class="dropdown-menu dropdown-menu-right" role="menu">
                                                                         <a href="#" class="dropdown-item">Action</a>
                                                                       <a href="#" class="dropdown-item">Another action</a>
@@ -1167,7 +1184,7 @@
                                                     <div class="product-info">
                                                         <a href="javascript:void(0)" class="product-title">
                                                   Xbox One <span class="badge badge-danger float-right">
-                        $350
+$350
                       </span>
                                               </a>
                                                         <span class="product-description">
@@ -1205,14 +1222,85 @@
                             <!-- /.row -->
                         </div>
                         <!--/. container-fluid -->
-                </section>
+            </section>
                 <!-- /.content -->
+        
+            </div>
+            </section>
+            <div class="main" id="wrapper">
+                <section id="user-management-tab">
+                    <div class="form-container">
+                        <span class="form-heading">Registration</span>
+                        <form action="/user/registration" method="POST" id="reg-form">
+                            <div class="input-group">
+                                <label class="a" for="firstname" id="firstname">First Name :</label>
+                                  <input class="b" type="text" name="firstname" id="r1">
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <label class="a" for="secondname" id="secondname">Last Name :</label>
+                                <input class="b" type="text" name="secondname" id="r2">
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <label class="a" for="email" id="email">Email :</label>
+                                <input class="b" type="email" name="email" id="email">
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <label  class="a" for="password" id="password">Password :</label>
+                                <input class="b" type="password" name="password" id="password">
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <label  class="a" for="password2" id="password2"> Confirm Password :</label>
+                                <input class="b" type="password" name="password2" id="password2">
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <button id="z" type="submit" value="Submit" id="button">Submit</button>
+                            </div>
+                        </form>
+                </section>       
+            </div>
+            <section id="blog-management-tab">
+                <div class="medium-feeds">
+                    <h1>Medium Feeds</h1>
                 </div>
+            </section>
+                            <!-- <div class="Switch-login">
+                                <a href="login.hbs">Already have an account? <span>Login</span></a> 
+                            </div> -->
+                        
+                        <!--<form name="registration" action="/user/registration" method="POST">
+                            <h2>Registration Form</h2>
+                            <div class="regform">
+                             <h2 class="name">Name</h2>
+                                <label class="a" for="secondname" id="firstname">First Name :</label>
+                                <input class="b" type="text" name="firstname" id="r1"><br/><br>
+                            
+                                <label class="a" for="secondname" id="secondname">Last Name :</label>
+                                <input class="b" type="text" name="secondname" id="r2"><br/><br>
+                            
+                            
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="a" for="email" id="email">Email :</label>
+                                <input class="b" type="email" name="email" id="email"><br/><br>
+                            
+                                &nbsp;<label  class="a" for="password" id="password">Password :</label>
+                                <input class="b" type="password" name="password" id="password"><br/><br>
+                            
+                                <label  class="a" for="password2" id="password2"> Confrime Password :</label>
+                                <input class="b" type="password" name="password2" id="password2"><br/>
+                            
+                            
+                                <button id="z" type="submit" value="Submit" id="button">Register</button>
+                                <a href="login.hbs">Back to Home</a> 
+                            </form>-->
+                
                 <!-- /.content-wrapper -->
 
                 <!-- Control Sidebar -->
-                <aside class="
-control-sidebar control-sidebar-dark">
+                <aside class="control-sidebar control-sidebar-dark">
                 </aside>
                 <!-- /.control-sidebar -->
 
@@ -1240,9 +1328,65 @@ control-sidebar control-sidebar-dark">
             <script src="plugins/raphael/raphael.min.js"></script>
             <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
             <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
-            <!-- ChartJS -->
-             <!-- PAGE SCRIPTS -->
+            
+<!---- ChartJS -->
+            <!-- PAGE SCRIPTS  -->
                 <script src="dist/js/pages/dashboard2.js"></script>
+                <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+                <script>
+                    var analytics_tab = document.getElementById("analytics-tab");
+                    var user_management = document.getElementById("user-management-tab");
+                    user_management.style.display = "none"; 
+                        
+                    // document.getElementById("analytics-tab").style.display="none";
+                    function toggleDashboardView(evt) {
+                        if (analytics_tab.style.display === "none") {
+                            analytics_tab.style.display = "block";
+                            user_management.style.display = "none"; 
+                        } 
+                        else {
+                            analytics_tab.style.display = "none";
+                            user_management.style.display = "block";
+                        }
+                    }
+                    var blog_management = document.getElementById("blog-management-tab");
+                    
+                        
+                    // document.getElementById("analytics-tab").style.display="none";
+                    function toggleBlogMgmtView(evt) {
+                        analytics_tab.style.display = "none";
+                        user_management.style.display = "none"; 
+                        if (blog_management.style.display === "none") {
+                            analytics_tab.style.display = "none";
+                            user_management.style.display = "none";
+                            blog_management.style.display = "block";  
+                        } 
+                        else {
+                            toggleDashboardView(evt);
+                        }
+                    }
+                </script>
+                <script>
+                    function reqtrial(){
+                  $.ajax({
+                      url : "/user/registration",
+                      type: "POST",
+                      data : {
+                        firstname:"jack",
+                        lastname:"sparrow"
+                      },
+                      success: function(data, textStatus, jqXHR)
+                      {
+                        console.log(data+"");
+                          //data - response from server
+                      },
+                      error: function (jqXHR, textStatus, errorThrown)
+                      {
+                   
+                      }
+                  });}
+                  reqtrial();
+                  </script>>
     </body>
 
 </html>

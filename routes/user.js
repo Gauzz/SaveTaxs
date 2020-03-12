@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 var bodyParser = require('body-parser');
 var assert = require('assert'); 
-const Joi = require('@hapi/joi');
+
 
 
 
@@ -24,9 +24,9 @@ app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
 
-router.get('/login', (req, res) => res.render('login.hbs'));
+router.get('/login', (_req, res) => res.render('login.hbs'));
 
-router.get('/registration', (req, res) => res.render('registration.hbs'));
+router.get('/registration', (_req, res) => res.render('registration.hbs'));
 // router.get('/dashboard/category' , function(req,res){
 //     categories.find({parent_id} , function(err , docs){
 //       if(err) res.json(err);
@@ -86,14 +86,14 @@ User.findOne({email:email})
     
 
 //hash password
-bcrypt.genSalt(10, (err, salt) => 
+bcrypt.genSalt(10, (_err, salt) => 
 bcrypt.hash(newUser.password, salt, (err, hash ) => {
 if(err) throw err;
 //set pass hash
 newUser.password = hash;
 //save user
 newUser.save()
-.then(user => {
+.then(_user => {
     req.flash('sucess', 'you are now register ');
     res.redirect('/user/login');
 })
@@ -111,13 +111,11 @@ newUser.save()
 
 //login
 router.post('/login', (req, res, next) =>{
-    console.log("tried login in");
     passport.authenticate('local',{
         successRedirect: '/dashboard',
-        failureRedirect:'/',
+        failureRedirect:'/user/login',
         failureFlash:true
     });(req, res, next);
-    res.send('coudnt run passport');
 });
 
 module.exports = router;

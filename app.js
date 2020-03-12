@@ -8,13 +8,11 @@ var mongoose = require('mongoose');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs')
-const handlebars = require("express-handlebars");
+const handlebars = require('express-handlebars');
 var expressValidator = require('express-validator');
 const passport = require('passport');
 const config = require('./config/database');
-const Joi = require('@hapi/joi');
 
-Joi.objectId = require('joi-objectid')(Joi);
 
 
 var app = express();
@@ -33,13 +31,18 @@ var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e6bd81c25edefaecea783648c503f3406e9d8674
 mongoose.set('useNewUrlParser',true);
 mongoose.set('useFindAndModify',false);
 mongoose.set('useCreateIndex',true);
 
 
 // connect mongoose
-var db = "mongodb://localhost:27017/savetax";
+var db = 'mongodb://localhost:27017/savetax';
 
 
 
@@ -63,7 +66,7 @@ users.createCollection();
 var jsonParser = bodyParser.json()
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: true })
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //express session
 app.use(session({
@@ -132,7 +135,7 @@ app.use('/category', require('./routes/category'));
 
 
 app.get('/dashboard', function(req, res) {
-    res.render('./dashboard/admin/index.hbs'); // or res.render('index.ejs');
+    res.render('./dashboard/admin/index2.hbs'); // or res.render('index.ejs');
 });
 
 app.get('/login', function(req, res) {
@@ -163,6 +166,9 @@ app.get('/login', function(req, res) {
 
 
 
+app.get('/index', function(req, res) {
+    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
+});
 
 app.get('/registration', function(req, res) {
     res.render('registration.hbs'); // or res.render('index.ejs');
@@ -175,9 +181,9 @@ app.get('/registration', function(req, res) {
 
 
 
-app.get('/adminpage', function(req, res) {
+app.get('/adpage', function(req, res) {
 
-    res.render('./dashboard/admin/adminpage.hbs');
+    res.render('./dashboard/admin/adpage.hbs');
 });
 app.get('/analytic', function(req, res) {
 

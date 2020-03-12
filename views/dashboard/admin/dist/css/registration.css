@@ -1,0 +1,74 @@
+#wrapper{
+    width: 90% auto;
+    height:90vh;
+    margin:2.5rem 1rem 1rem 2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} 
+.form-container{
+    width: 90%;
+    max-width: 90vh;
+    background-image: url('../../dist/img/arti-bg.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 2rem 4rem;
+    box-shadow: 0 1px 1.5rem rgba(0,0,0,0.1);
+    border-radius: 3rem;
+    z-index: 1;
+} 
+.form-container::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width:90%;
+    height:30rem;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    z-index: -1;
+} 
+.form-container > span{
+    position:relative;
+    padding: 2rem 4rem;
+    margin-top: .5rem;
+    color: #fff;
+    font-size: 3rem;
+}
+.form #reg-form{
+    transform: translateX(8rem);
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1.5rem rgba(0,0,0,0.1);  
+} 
+
+.input-group{
+    padding-inline: .5rem;
+    margin-top: .5rem;
+    justify-content: left;
+}
+.input-group >input{
+    position:relative;
+    width:90%;
+    padding: .5rem 1rem;
+    align-items: right;
+    justify-content: space-around;
+    margin:0, 1rem,.5rem,.25rem;
+    float: right; 
+}
+/* .Switch-login > a{
+    position:relative;
+    width:90%;
+    padding: .5rem 1rem;
+    
+} */
+.input-group > #firstname{
+    font-weight: bolder;
+    color: #fff;
+}
+
+.input-group > #secondname{
+    font-weight: bolder;
+    color: #fff;
+}
