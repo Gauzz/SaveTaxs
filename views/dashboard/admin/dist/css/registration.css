@@ -1,7 +1,7 @@
 #wrapper{
-    width: 90%;
-    height:100vh;
-    margin:0 auto;
+    width: 90% auto;
+    height:90vh;
+    margin:2.5rem 1rem 1rem 2rem;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +22,8 @@
     position:absolute;
     top:0;
     left:0;
-    width:100%;
-    height:50rem;
+    width:90%;
+    height:30rem;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     z-index: -1;
@@ -57,12 +57,12 @@
     margin:0, 1rem,.5rem,.25rem;
     float: right; 
 }
-.Switch-login > a{
+/* .Switch-login > a{
     position:relative;
     width:90%;
     padding: .5rem 1rem;
     
-}
+} */
 .input-group > #firstname{
     font-weight: bolder;
     color: #fff;

@@ -305,7 +305,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item has-treeview">
-                                        <a href="http://127.0.0.1:3000/dashboard/admin/editblog.html" class="nav-link">
+                                        <a href="#" class="nav-link" onclick="toggleBlogMgmtView(this)">
                                             <i class="nav-icon fas fa-tree"></i>
                                             <p>
                                                 Blog Management
@@ -450,9 +450,9 @@
             <!-- Content Wrapper. Contains page content -->
                 <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <div class="content-header">
-                    <div class="container-fluid">
-                        <div class="row mb-2">
+                    <div class="content-header">
+                        <div class="container-fluid">
+                           <div class="row mb-2">
                             <div class="col-sm-6">
 
                                 <h1 class="m-0 text-dark">Dashboard v2</h1>
@@ -1229,8 +1229,7 @@ $350
                 <section id="user-management-tab">
                     <div class="form-container">
                         <span class="form-heading">Registration</span>
-                        <form action="/user/registration" method="POST" id="
-                        reg-form">
+                        <form action="/user/registration" method="POST" id="reg-form">
                             <div class="input-group">
                                 <label class="a" for="firstname" id="firstname">First Name :</label>
                                 <input class="b" type="text" name="firstname" id="r1">
@@ -1257,12 +1256,20 @@ $350
                                 <span class="bar"></span>
                             </div>
                             <div class="input-group">
-                                <button id="z" type="submit" value="Submit" id="button">Register</button>
-                            </div>
-                            <div class="Switch-login">
-                                <a href="login.hbs">Already have an account? <span>Login</span></a> 
+                                <button id="z" type="submit" value="Submit" id="button">Submit</button>
                             </div>
                         </form>
+                </section>       
+            </div>
+            <section id="blog-management-tab">
+                <div class="medium-feeds">
+                    <h1>Medium Feeds</h1>
+                </div>
+            </section>
+                            <!-- <div class="Switch-login">
+                                <a href="login.hbs">Already have an account? <span>Login</span></a> 
+                            </div> -->
+                        
                         <!--<form name="registration" action="/user/registration" method="POST">
                             <h2>Registration Form</h2>
                             <div class="regform">
@@ -1286,12 +1293,8 @@ $350
                             
                                 <button id="z" type="submit" value="Submit" id="button">Register</button>
                                 <a href="login.hbs">Back to Home</a> 
-                            
                             </form>-->
-                        </div>
-                </section>
-            </div>
-            
+                
                 <!-- /.content-wrapper -->
 
                 <!-- Control Sidebar -->
@@ -1335,7 +1338,6 @@ $350
                         
                     // document.getElementById("analytics-tab").style.display="none";
                     function toggleDashboardView(evt) {
-                        
                         if (analytics_tab.style.display === "none") {
                             analytics_tab.style.display = "block";
                             user_management.style.display = "none"; 
@@ -1343,6 +1345,22 @@ $350
                         else {
                             analytics_tab.style.display = "none";
                             user_management.style.display = "block";
+                        }
+                    }
+                    var blog_management = document.getElementById("blog-management-tab");
+                    
+                        
+                    // document.getElementById("analytics-tab").style.display="none";
+                    function toggleBlogMgmtView(evt) {
+                        analytics_tab.style.display = "none";
+                        user_management.style.display = "none"; 
+                        if (blog_management.style.display === "none") {
+                            analytics_tab.style.display = "none";
+                            user_management.style.display = "none";
+                            blog_management.style.display = "block";  
+                        } 
+                        else {
+                            toggleDashboardView(evt);
                         }
                     }
                 </script>
