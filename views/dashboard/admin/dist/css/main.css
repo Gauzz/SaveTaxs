@@ -15,8 +15,8 @@ body {
 /* Navbar */
 
 nav {
-     margin-left:300px;
-     width: 90vw;
+     margin-left:200px;
+     width: 80vw;
    
 }
 
@@ -37,24 +37,24 @@ nav a {
 
 }
 
-.links {
+ ul .links {
     height: 10%;
-    width: 80%;
+    width: calc(100vw - 20px);
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-left: 50px;
+    
     
    
     
 }
 
 .links li {
-    font-size: 1.0em;
+    font-size: 1.2em;
     
     text-transform: uppercase;
-    padding: 7px 5px;
+    padding: 7px 22px;
 }
 
 .links .login {
