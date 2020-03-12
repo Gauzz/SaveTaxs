@@ -170,7 +170,7 @@
                             <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                             <li class="nav-item has-treeview menu-open">
-                                <a href="#" class="nav-link active" onclick="toggleDashboardView(this)">
+                                <a id="analytics_a" class="nav-link active" onclick="toggleDashboardView(this)">
                                     <!-- /dashboard/admin/index2.html -->
                                     <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
@@ -305,7 +305,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item has-treeview">
-                                        <a href="#" class="nav-link" onclick="toggleBlogMgmtView(this)">
+                                        <a id="blog_management_a" class="nav-link" onclick="toggleDashboardView(this)">
                                             <i class="nav-icon fas fa-tree"></i>
                                             <p>
                                                 Blog Management
@@ -315,7 +315,7 @@
                                         </a>
                                     <li>
                                     <li class="nav-item has-treeview" >
-                                            <a href="#" class="nav-link" onclick="toggleDashboardView(this)">
+                                            <a id="user_management_a" class="nav-link" onclick="toggleDashboardView(this)">
                                                 <i class="nav-icon fas fa-tree"></i>
                                                 <p>
                                                    User Management
@@ -1263,9 +1263,9 @@ $350
                         </form>
                 </section>       
             </div>
-            <section id="blog-management-tab">
-                <div class="medium-feeds">
-                    <h1>Medium Feeds</h1>
+            <section id="blog-management-tab" onclick="mediumFeedView(this)">
+                <div id="medium-feeds">                    
+                    
                 </div>
             </section>
                             <!-- <div class="Switch-login">
@@ -1336,35 +1336,32 @@ $350
                 <script>
                     var analytics_tab = document.getElementById("analytics-tab");
                     var user_management = document.getElementById("user-management-tab");
+                    var blog_management = document.getElementById("blog-management-tab");
+                    blog_management.style.display="none";
                     user_management.style.display = "none"; 
-                        
+                         
+                      
                     // document.getElementById("analytics-tab").style.display="none";
                     function toggleDashboardView(evt) {
-                        if (analytics_tab.style.display === "none") {
-                            analytics_tab.style.display = "block";
-                            user_management.style.display = "none"; 
-                        } 
-                        else {
-                            analytics_tab.style.display = "none";
-                            user_management.style.display = "block";
-                        }
-                    }
-                    var blog_management = document.getElementById("blog-management-tab");
+                       analytics_tab.style.display = "none";
+                       user_management.style.display = "none"; 
+                       blog_management.style.display = "none";  
                     
-                        
-                    // document.getElementById("analytics-tab").style.display="none";
-                    function toggleBlogMgmtView(evt) {
-                        analytics_tab.style.display = "none";
-                        user_management.style.display = "none"; 
-                        if (blog_management.style.display === "none") {
-                            analytics_tab.style.display = "none";
-                            user_management.style.display = "none";
-                            blog_management.style.display = "block";  
-                        } 
-                        else {
-                            toggleDashboardView(evt);
+                        var target_element= evt; 
+                        switch(target_element.id){
+                            case "user_management_a":
+                            user_management.style.display = "block"; 
+                            break;
+                            case "analytics_a":
+                            analytics_tab.style.display = "block"; 
+                            break;
+                            case "blog_management_a":
+                            blog_management.style.display = "block"; 
+                            break;
                         }
                     }
+                        
+                   
                 </script>
                 <script>
                     function reqtrial(){
@@ -1387,6 +1384,12 @@ $350
                   });}
                   reqtrial();
                   </script>>
+                  <script>
+                      function mediumFeedView(en){
+                          document.getElementById('medium-feeds').innerHTML=
+
+                      }
+                  </script>
     </body>
 
 </html>

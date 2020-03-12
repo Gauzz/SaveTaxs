@@ -31,11 +31,8 @@ var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> e6bd81c25edefaecea783648c503f3406e9d8674
 mongoose.set('useNewUrlParser',true);
 mongoose.set('useFindAndModify',false);
 mongoose.set('useCreateIndex',true);
