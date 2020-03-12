@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs')
-const handlebars = require("express-handlebars");
+const handlebars = require('express-handlebars');
 var expressValidator = require('express-validator');
 const passport = require('passport');
 const config = require('./config/database');
@@ -31,12 +31,14 @@ var payment = require('./models/payment.js');
 var paymentHistory = require('./models/paymentHistory.js');
 var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
-var users = require('./models/user.js').default;
+var users = require('./models/user.js');
 
 
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
+
+mongoose.set('useNewUrlParser',true);
+mongoose.set('useFindAndModify',false);
+mongoose.set('useCreateIndex',true);
+
 
 // connect mongoose
 var db = 'mongodb://localhost:27017/savetax';
@@ -245,4 +247,17 @@ app.post('/dashboard/category', function(req, res) {
         });
     }
     // or res.render('category.ejs');
+});
+
+
+app.get('/dashboard/customer', function(req, res) {
+    res.render('./dashboard/customer/customerpage.hbs'); // or res.render('index.ejs');
+});
+
+app.get('/customer/profile', function(req, res) {
+    res.render('./dashboard/customer/profile.hbs'); // or res.render('index.ejs');
+});
+
+app.get('/customer/category', function(req, res) {
+    res.render('./dashboard/customer/category.hbs'); // or res.render('index.ejs');
 });

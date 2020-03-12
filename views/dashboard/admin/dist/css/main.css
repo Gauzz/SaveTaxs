@@ -20,7 +20,7 @@ nav {
    
 }
 
-a {
+nav a {
     text-decoration: none;
     color: white;
 }
@@ -109,7 +109,7 @@ header {
     color: #808080;
 }
 
-img {
+#img1 {
     width: 50%;
     margin-left: auto;
 }
