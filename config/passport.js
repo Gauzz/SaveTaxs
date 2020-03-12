@@ -6,12 +6,6 @@ const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 
 
-
-
-
-
-
-
 module.exports = function(passport){
     //local stratgy
 passport.use(
