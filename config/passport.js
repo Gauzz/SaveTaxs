@@ -4,9 +4,7 @@ const User = require('../models/user');
 const config = require('../config/database'); 
 const bcrypt = require('bcryptjs'); 
 const flash = require('connect-flash');
-const Joi = require('@hapi/joi');
 
-const { findOne, findById } = ('../models/user');
 
 
 

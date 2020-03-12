@@ -12,9 +12,7 @@ const handlebars = require('express-handlebars');
 var expressValidator = require('express-validator');
 const passport = require('passport');
 const config = require('./config/database');
-const Joi = require('@hapi/joi');
 
-Joi.objectId = require('joi-objectid')(Joi);
 
 
 var app = express();
