@@ -1,5 +1,5 @@
  module.exports = {
-     MongoURI: 'mongodb://localhost:27017/savetax'
-     
+     database: 'mongodb://localhost:27017/savetax',
+     secret:'your secret'
  }
  

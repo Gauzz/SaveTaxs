@@ -7,4 +7,8 @@ const router = express.Router();
 router.get('/', (req, res) => res.render('index.hbs',
  { title: "SaveTaxs" 
 }));
+
+router.get('/dashboard', (req, res) => res.render('index.hbs',
+ { title: "SaveTaxs" 
+}));
 module.exports = router;

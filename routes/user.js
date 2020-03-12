@@ -110,12 +110,11 @@ newUser.save()
 
 
 //login
-router.post('/login', (req, res, next) =>{
+router.post('/login', 
     passport.authenticate('local',{
-        successRedirect: '/dashboard',
+        successRedirect: '/registration',
         failureRedirect:'/user/login',
         failureFlash:true
-    });(req, res, next);
-});
+    }));
 
 module.exports = router;

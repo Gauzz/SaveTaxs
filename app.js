@@ -39,7 +39,7 @@ mongoose.set('useCreateIndex',true);
 
 
 // connect mongoose
-var db = 'mongodb://localhost:27017/savetax';
+const db = 'mongodb://localhost:27017/savetax'; 
 
 
 
@@ -65,11 +65,14 @@ var jsonParser = bodyParser.json()
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+//body parse
+app.use(express.urlencoded({extended: false}));
+
 //express session
 app.use(session({
     secret:'secret',
-    resave:true,
-    saveUninitialized: true
+    resave:false,
+    saveUninitialized: false
 }));
 
 // passport middleware
