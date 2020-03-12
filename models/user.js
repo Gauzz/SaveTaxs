@@ -49,7 +49,7 @@ function validateUser(user) {
 }
  
 
- module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
  exports.validate = validateUser;
 
 
