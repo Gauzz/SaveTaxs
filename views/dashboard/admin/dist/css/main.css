@@ -15,9 +15,9 @@ body {
 /* Navbar */
 
 nav {
-     margin-left:200px;
-     width: 80vw;
-   
+     
+     width: calc(100vw - 20px);
+     
 }
 
 nav a {
@@ -36,28 +36,31 @@ nav a {
     width: 100px;
 
 }
-
+.wrapper{
+    margin-top:10px;
+    margin-left: 200px;
+}
  ul .links {
     height: 10%;
-    width: calc(100vw - 20px);
+    width: calc(100vw - 30px);
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
-    
-   
-    
+  
+
 }
 
 .links li {
-    font-size: 1.2em;
+    font-size: 1.0em;
     
     text-transform: uppercase;
-    padding: 7px 22px;
+    padding: 7px 15px;
 }
 
 .links .login {
+    float: right;
+    margin-right: 30px;
     
     background: var(--bg-g);
     border-radius: 3px;
