@@ -1,13 +1,14 @@
-<style>
+{{!-- <style>
 
 #body{
-margin: 100px;
+margin: 150px;
+width:auto;
 text-align: center;
 align: center;
 background-color:#E6E6FA;
 }
-.b[type=text],[type=password],[type=number]{
-width: 100%;
+.b[type=text],[type=password],[type=number],[type=email]{
+width: 30%;
 margin: 8px 0;
 padding: 7px 10px;
 display: inline-block;
@@ -45,32 +46,36 @@ margin-left:30px;
 </style>
 
 <div id="body">
+
 <form name="registration" action="/user/registration" method="POST">
 <h2>Registration Form</h2>
-<div class="containr">
-<label class="a" for="secondname" id="firstname">First Name :</label>
-<input class="b" type="text" name="firstname" id="r1"><br/><br>
 
+<div class="containr">
+<div class="form-group" >
+<label class="a" for="secondname" id="firstname">First Name :</label>
+<input class="b"  value=""  type="text" name="firstname" id="r1"><br/><br>
+</div>
 <label class="a" for="secondname" id="secondname">Last Name :</label>
-<input class="b" type="text" name="secondname" id="r2"><br/><br>
+<input class="b" value="" type="text" name="secondname" id="r2"><br/><br>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="a" for="email" id="email">Email :</label>
-<input class="b" type="email" name="email" id="email"><br/><br>
+<input class="b" value="" type="email" name="email" id="email"><br/><br>
 
 &nbsp;<label  class="a" for="password" id="password">Password :</label>
-<input class="b" type="password" name="password" id="password"><br/><br>
+<input class="b" value="" type="password" name="password" id="password"><br/><br>
 
-<label  class="a" for="password2" id="password2"> Confrime Password :</label>
-<input class="b" type="password" name="password2" id="password2"><br/>
+<label  class="a" for="password2" id="password2"> Re-Enter :</label>
+<input class="b" value="" type="password" name="password2" id="password2"><br/>
 
 
      <button id="z" type="submit" value="Submit" id="button">Register</button>
 <a href="login.hbs">Back to Home</a>
 </div>
 </form>
-</div>
-<script>
+</div> --}}
+
+{{!-- <script>
   function reqtrial(){
 $.ajax({
     url : "/user/registration",
@@ -90,4 +95,137 @@ $.ajax({
     }
 });}
 reqtrial();
-</script>>
+</script> --}}
+
+
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .img1 {
+            position: absolute;
+            top: calc( 50vh - 100px);
+            left: calc( 23vw - 100px);
+            width: 200px;
+            height: 200px;
+        }
+        
+        .btn-registration {
+            color: white;
+            background-color: #28E096;
+            text-align: center;
+            border: none;
+            width: 150px;
+            height: 40px;
+        }
+        
+        .container {
+            margin-left: 0px;
+            margin-right: 0px;
+            border-right: 0px;
+        }
+        
+        .registrationcust {
+            margin-left: 100px;
+            display: none;
+        }
+        
+        .registrationpart {
+            margin-left: 100px;
+            display: none;
+        }
+        
+        .nav-link {
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+       
+        
+        .navbar-brand {
+            margin-left: 60px;
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <link rel="stylesheet" href="/dashboard/admin/dist/css/main.css">
+   
+
+
+    <div class="row"  style="width:100vw">
+
+        <div class="col-lg-6" style="width:100%;height:650px;margin:0px;padding:0px;outline:none;">
+            <div class="customer" action="/user/registration" style="width:100%;height:100%;background-color: #6610f2;">
+
+                <img class="img1" src="/dashboard/admin/images/png/customer_signup.png" alt="Cust-icon image" onclick="registrationCust(this)">
+            </div>
+
+            <form  class="registrationcust" style="width:100%;height:100%;" method="POST" action="/user/registration">
+                <img src="/dashboard/admin/images/png/customer_signup_blue.png" alt="logocust" style="margin-top:30px;margin-bottom:50px;width:160px;height:60px;">
+
+                <h3 style="color:#001445;font-family:open sans;font-weight: bold;font-style: italic;">Registration</h3><br/>
+                <input type="text" name="firstname" placeholder="Frist Name" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="text" name="secondname" placeholder="Last Name" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="email" name="email" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="password" name="password" placeholder="Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="password"  name="password2" placeholder="Re-Enter Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <div style="margin-bottom:20px;">
+                </div>
+                <button type="submit" class="btn-registration" >Registration</button><br/><br/>
+              
+                            </form>
+        </div>
+
+
+        <div  class="col-lg-6" style="height:650px;margin:0px;padding:0px;outline-style:none;">
+            <form action="/user/registration" method="POST" class="partner" style="width:100%;height:100%;background-color:#F96554;" >
+                <img class="img1" src="/dashboard/admin/images/png/partner_signup.png" alt="Part-icon image" onclick="registrationPart(this)">
+            </form>
+
+            <form action="/user/registration" method="POST" class="registrationpart" style="width:100%;height:100%;">
+                <img src="/dashboard/admin/images/png/partner_signup_blue.png" alt="logopart" style="margin-bottom:50px;width:200px;height:80px;">
+
+                <h3 style="color:#001445;font-family:open sans;font-weight: bold;font-style: italic;">Registration</h3><br/>
+                <input type="text"  name="firstname" placeholder="First Name" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="email"  name="secondname" placeholder="Second Name" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="email"  name="email" placeholder="Email ID" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="password" name="passroed" placeholder="Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <input type="password" name="passroed2" placeholder="Re-Enter Password" style="width:50%;height:40px;border:solid grey;margin-bottom:25px;padding-left:10px;"><br/>
+                <div style="margin-bottom:20px;">
+                </div>
+                <button type="submit" class="btn-registration" >Registration</button><br/><br/>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        function openDash(){
+            window.location.href="http://127.0.0.1:3000/dashboard/admin/index2.html"
+        }
+        function registrationCust(asd) {
+            document.getElementsByClassName('registrationcust')[0].style.display = "block";
+            document.getElementsByClassName('customer')[0].style.display = "none";
+            document.getElementsByClassName('partner')[0].style.display = "block";
+            document.getElementsByClassName('registrationpart')[0].style.display = "none";
+        }
+
+        function registrationPart(bsd) {
+            document.getElementsByClassName('registrationpart')[0].style.display = "block";
+            document.getElementsByClassName('partner')[0].style.display = "none";
+            document.getElementsByClassName('customer')[0].style.display = "block";
+            document.getElementsByClassName('registrationcust')[0].style.display = "none";
+
+        }
+    </script>
+

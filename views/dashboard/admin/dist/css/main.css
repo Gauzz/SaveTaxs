@@ -66,6 +66,12 @@ nav a {
     border-radius: 3px;
  
 }
+.links .registration {
+    
+    background: var(--bg-g);
+    border-radius: 3px;
+ margin-right: 10px;
+}
 .dropbtn{
     color: #808080;
 }
