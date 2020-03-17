@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<h ead>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -21,6 +21,10 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     
+
+    <link rel="alternate" type="application/rss+xml"
+     title="Medium.com » Feed » LateralX "
+     href="https://medium.com/feed/LateralX">
 </head>
 
     <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -1263,7 +1267,7 @@ $350
                         </form>
                 </section>       
             </div>
-            <section id="blog-management-tab" onclick="mediumFeedView(this)">
+            <section id="blog-management-tab">
                 <div id="medium-feeds">                    
                     
                 </div>
@@ -1383,12 +1387,34 @@ $350
                       }
                   });}
                   reqtrial();
-                  </script>>
+                  </script>
                   <script>
-                      function mediumFeedView(en){
-                          document.getElementById('medium-feeds').innerHTML=
+                      mediumFeedView();
+                      function mediumFeedView(){
 
-                      }
+                      feedUrl = 'https://medium.com/feed/LateralX';
+
+                      $.ajax(feedUrl, {
+                     accepts: {
+                     xml: "application/rss+xml"
+                  },
+
+                     dataType: "xml",
+
+                     success: function(data) {
+                     $(data)
+                     .find("item")
+                     .each(function() {
+                     var $this = $(this);
+                      item ={
+                          title: $this.find("title").text(),
+                      };
+                      $('#medium-feeds').append($('<h2/>').text(item.title));
+ 
+              });  
+           }
+        });
+    }
                   </script>
     </body>
 

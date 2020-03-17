@@ -5,7 +5,7 @@
  
   <!-- Navbar -->
     <nav1 style="display:flex;background-color:rgba(39, 124, 46, 0.2);justify-content:space-between;width:100%;">
-        <div class="brand" style="margin-left:40px;cursor:pointer;">
+        <div class="hamburger" style="margin:20px;cursor:pointer;">
         <i class="fa fa-bars" style="font-size:28px;" onclick="displayMenu(this)"></i>
         </div>
         <ul class="link">
@@ -16,8 +16,9 @@
     </nav1>
 <div class="row">
   
-
+  <div class="col-lg-2">
     <ul class="nav-tabs tabs-left" id="flex"  style="display:none;left:0px;">
+       
         <li class="items">
            <a href="#" data-toggle="tab">Status</a>
         </li><br/>
@@ -56,82 +57,77 @@
         
      </ul>
 
+</div>
 
 <div class="col-lg-10">
           <!-- Tab panes -->
-      <div class="tab-content" >
-            <div class="tab-pane" id="customerprofile">
-                <div class="profile-info">
-                     <div class="profile-image">                      
-                                 <img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="profileImg">  
-                           
-                         <div class="flex">
-                            <li><b>NAME</b></li><br/>
-                            <li>mobileNo.</li>
-                            <li>Chat</li>
-                            <li>E-mail</li>
-                          </div>
+<div class="tab-content" >
+  <div class="tab-pane" id="customerprofile">
+               
+   <div class="wrap">
+     <div class="nested">
+        <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile">
+            <h4 style="padding: 10px;"><i class="fas fa-edit"></i> Edit Profile</h4>
+        </div>
+        <div>
+            <li><b>NAME</b></li><br/>
+            <li><i class="fa fa-phone" aria-hidden="true" style="font-size:24px;"></i></li>
+            <li><i class="fas fa-envelope" style="font-size:24px;"></i></li>
+            <li><i class="far fa-comment-dots" style="font-size:24px;"></i></li>
+        </div>
+        <div>
+            <li><input type="text"></li><br>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
 
-                        <div class="flex">
-                          <div class="row"> 
-                           <div class="col-lg-6" style="padding: 0;"> 
-                            <li>Age </li>
-                            <li>Location</li>
-                            <li>Occupation</li>
-                            <li >
-                                Submission:</li>
-                                <a href="#" style="margin:5px;"><i class="fab fa-twitter"></i></a>
-                                <a href="#" style="margin:5px;"><i class="fab fa-facebook"></i></a>
-                                <a href="#" style="margin:5px;"><i class="fab fa-instagram"></i></a>
-                                <a href="#" style="margin:5px;"><i class="fab fa-whatsapp"></i></a>
-                                 <a href="#" style="margin:5px;"><i class="fab fa-linkedin"></i></a>
-                           </div>
-
-                           <div class="col-lg-6">
-                            <li><input type="text"></li>
-                             <li><input type="text"></li>
-                              <li><input type="text"></li>
-                           </div>
-                          </div>
-                        </div>
-                         
-                    </div>
-                        <div class="BasicInfo">
-                            <div class="subInfo">
-                                <li>Address: <input type="text"></li>
-                                <li>Country: <input type="text"></li>
-                                <li>District: <input type="text"></li>
-                                <li class="G">Gender:
-                                   <ul>
-                                   <li><input type="checkbox">Female</li>
-                                   <li><input type="checkbox">Male</li>
-                                   <li><input type="checkbox">Other</li>
-                                   </ul>
-                                </li>
-
-                            </div>
-
-                        </div>
-                
-                      
-                </div>
-            </div>
-
-            <div class="tab-pane" id="customerVideoConference">
-
-
-
-            </div>
+        </div>
+        <div>
+            <li><i class="fas fa-map-marker-alt"  style="font-size:24px;"></i> </li>
+            <li>Age</li>
+            <li>Occupation</li>
+            <li>Submission:</li>
+                 <a href="#" style="margin:5px;"><i class="fab fa-twitter"></i></a>
+                 <a href="#" style="margin:5px;"><i class="fab fa-facebook"></i></a>
+                 <a href="#" style="margin:5px;"><i class="fab fa-instagram"></i></a>
+                 <a href="#" style="margin:5px;"><i class="fab fa-whatsapp"></i></a>
+                 <a href="#" style="margin:5px;"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            
+        </div>
+    </div>
+    <div class="nested">
+        <div>
+              <li>Address: </li>
+              <li>Country:</li>
+              <li>District:</li><br>
+              <li>Gender:</li>
+        </div>
+        <div>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="checkbox" class="Gender">Female<input class="Gender" type="checkbox">Male<input class="Gender" type="checkbox">Other</li>
+        </div>
       </div>
+    </div>
+      
+  </div>
  </div>
- <div class="clearfix"></div>
-    
 </div>
+
 
  <script>
      function displayMenu(av){
+        if(document.getElementById('flex').style.display==="none"){
         document.getElementById('flex').style.display="block";
-
+        }
+        else{
+          document.getElementById('flex').style.display="none";
+        }
      }
  </script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
