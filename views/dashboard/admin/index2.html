@@ -24,10 +24,19 @@
 
 
     <link rel="alternate" type="application/rss+xml" title="Medium.com » Feed » LateralX " href="https://medium.com/feed/LateralX">
+<style>
+.wrapper{
+    margin: 10px;
+
+}
+.content-header{
+    margin: 10px;
+}
+</style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-    <div class="wrapper">
+<div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -307,7 +316,9 @@
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item has-treeview">
+                                <li class="nav-item has-treeview ">
+                            
+
                                     <a id="blog_management_a" class="nav-link" onclick="toggleDashboardView(this)">
                                         <i class="nav-icon fas fa-tree"></i>
                                         <p>
@@ -316,6 +327,7 @@
                                         </p>
 
                                     </a>
+                                
                                     <li>
                                         <li class="nav-item has-treeview">
                                             <a id="user_management_a" class="nav-link" onclick="toggleDashboardView(this)">
@@ -1266,13 +1278,18 @@ $350
                     </form>
             </section>
             </div>
-            <section id="blog-management-tab">
-                <center> Opened the blog management tab</center>
+            <section id="blog-management-tab" class="mt-auto content-wrapper ">
 
-                <div id="medium-feeds">
-                    <div id="retainable-rss-embed" data-rss="https://medium.com/feed/LateralX" data-maxcols="3" data-layout="grid" data-poststyle="inline" data-readmore="Read the rest" data-buttonclass="btn btn-primary" data-offset="-100"></div>
+                <div id="medium-feeds" >
+                    
+                    <div id="retainable-rss-embed" data-rss="https://medium.com/feed/LateralX" data-maxcols="2" data-layout="grid" data-poststyle="inline"  data-readmore="Read the rest" data-buttonclass="btn btn-success" data-offset="-200" class="mt-auto " ></div>
                 </div>
+            
             </section>
+        
+
+        
+
             <!-- <div class="Switch-login">
                                 <a href="login.hbs">Already have an account? <span>Login</span></a> 
                             </div> -->
