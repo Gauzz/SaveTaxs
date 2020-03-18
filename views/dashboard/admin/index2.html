@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE 
+>
 <html lang="en">
 
 
@@ -1324,7 +1325,6 @@ $350
             <script src="dist/js/adminlte.js"></script>
 
             <!-- OPTIONAL SCRIPTS -->
-            <script src="dist/js/demo.js"></script>
 
             <!-- PAGE PLUGINS -->
             <!-- jQuery Mapael -->
@@ -1367,11 +1367,11 @@ $350
                         
                    
                 </script>
-                <script>
+                <!-- <script>
                     function reqtrial(){
                   $.ajax({
                       url : "/user/registration",
-                      type: "POST",
+                      type: "GET",
                       data : {
                         firstname:"jack",
                         lastname:"sparrow"
@@ -1388,11 +1388,11 @@ $350
                   });}
                   reqtrial();
                   </script>
-                  <script>
-                      mediumFeedView();
+                 -->
+                 <script>
                       function mediumFeedView(){
 
-                      feedUrl = 'https://medium.com/feed/LateralX';
+                     var feedUrl = 'https://medium.com/feed/LateralX';
 
                       $.ajax(feedUrl, {
                      accepts: {
@@ -1400,16 +1400,15 @@ $350
                   },
 
                      dataType: "xml",
-
-                     success: function(data) {
+                      success: function(data) {
                      $(data)
                      .find("item")
                      .each(function() {
                      var $this = $(this);
                       item ={
-                          title: $this.find("title").text(),
+                          title: $this.find("title").textcontent(),
                       };
-                      $('#medium-feeds').append($('<h2/>').text(item.title));
+                      $('#medium-feeds').append($('<h2/>').textcontent(item.title));
  
               });  
            }
