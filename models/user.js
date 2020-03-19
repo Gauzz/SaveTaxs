@@ -23,6 +23,10 @@ const UserSchema =  new mongoose.Schema({
         type: String,
         required: true
     
+    },
+    usertype:{
+        type:String,
+        required:true
     }
 });
 
