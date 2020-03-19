@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
 
-    <link rel="alternate" type="application/rss+xml" title="Medium.com » Feed » LateralX " href="https://medium.com/feed/LateralX">
+    
 <style>
 .wrapper{
     margin: 10px;
@@ -433,12 +433,7 @@
                                                         </li>
                     </ul>
                     </li>
-
-
-
-
-
-                    <li class="nav-header">LABELS</li>
+                   <li class="nav-header">LABELS</li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon far fa-circle text-danger"></i>
@@ -1282,7 +1277,7 @@ $350
 
                 <div id="medium-feeds" >
                     
-                    <div id="retainable-rss-embed" data-rss="https://medium.com/feed/LateralX" data-maxcols="2" data-layout="grid" data-poststyle="inline"  data-readmore="Read the rest" data-buttonclass="btn btn-success" data-offset="-200"  ></div>
+                    <div id="retainable-rss-embed" data-rss="https://medium.com/feed/LateralX" data-maxcols="2" data-layout="grid" data-poststyle="inline"  data-readmore="Read the rest" data-buttonclass="btn btn-success" data-offset="-200" class="mt-auto " ></div>
                 </div>
             
             </section>
@@ -1404,34 +1399,9 @@ $350
                   reqtrial();
                   </script>
                  -->
-        <script>
-            mediumFeedView();
+    
 
-            function mediumFeedView() {
-
-                var feedUrl = 'https://medium.com/feed/LateralX';
-
-                $.ajax(feedUrl, {
-                    accepts: {
-                        xml: "application/rss+xml"
-                    },
-
-                    dataType: "xml",
-                    success: function(data) {
-                        $(data)
-                            .find("item")
-                            .each(function() {
-                                var $this = $(this);
-                                item = {
-                                    title: $this.find("title").textcontent(),
-                                };
-                                $('#medium-feeds').append($('<h2/>').textcontent(item.title));
-
-                            });
-                    }
-                });
-            }
-        </script>
+                
         <script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 </body>
 
