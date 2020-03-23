@@ -103,7 +103,7 @@ app.use(expressValidator());  //this line to be addded
 app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
-var port = 3000;
+var port = 9000;
 app.engine("hbs", handlebars({
     extname: "hbs",
     defaultLayout: "main",
@@ -210,6 +210,19 @@ app.get('/blog', function(req, res) {
     res.render('./dashboard/admin/editblog.hbs'); // or res.render('index.ejs');
 });
 
+
+app.get('/contact', function(req, res) {
+    res.render('./dashboard/admin/contact.hbs'); // or res.render('index.ejs');
+});
+app.get('/helpdesk', function(req, res) {
+    res.render('./dashboard/admin/helpdesk.hbs'); // or res.render('index.ejs');
+});
+app.get('/pressrelease', function(req, res) {
+    res.render('./dashboard/admin/pressrelease.hbs'); // or res.render('index.ejs');
+});
+app.get('/about', function(req, res) {
+    res.render('./dashboard/admin/about.hbs'); // or res.render('index.ejs');
+});
 
 
 

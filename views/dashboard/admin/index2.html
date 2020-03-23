@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <link rel="stylesheet" href="dist/css/registration.css">
+        <link rel="stylesheet" href="/dashboard/admin/dist/css/adpage.css">
+
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -26,10 +28,125 @@
 <style>
 .wrapper{
     margin: 10px;
+    height: 0px;
+
 }
 .content-header{
     margin: 10px;
 }
+
+.nested{
+    border: solid 1px whitesmoke;
+      background-color:whitesmoke;
+      box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+      -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      border-radius: 5px;
+
+    
+}
+
+.grid-container {
+  display: grid;
+  width:280px;
+  height:350px;
+      border: solid 1px whitesmoke;
+      background-color:whitesmoke;
+      box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+      -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      list-style-type: none;
+border-radius: 5px;
+margin-left: 50px;
+margin-top: 10px;
+}
+
+.itm{
+    color: black;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.a{
+    list-style: none;
+    color: black;
+}
+.manue-box{
+        display: inline-block;
+    margin-left: 50px;
+
+
+}
+
+.grid-containers {
+  display: grid;
+  width:280px;
+  height:350px;
+      border: solid 1px whitesmoke;
+      background-color:whitesmoke;
+      box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+      -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+      list-style-type: none;
+border-radius: 5px;
+margin-left: 50px;
+margin-top: 10px;
+}
+
+.itms{
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.ab{
+    list-style: none;
+    color: black;
+}
+.manue-boxs{
+    display: inline-block;
+    margin-left: 50px;
+
+
+}
+.ims{
+    width: 50%;
+    height: 80px;
+    float: left;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.btn-container{
+  height:44px;
+  width:166.23px;
+  float: right;
+}
+a:active{
+  color:#ffd323;
+}
+button{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  cursor:pointer;
+  border-radius: 45%;
+  padding:6px;
+  font-size:15px;
+  background-color: green;
+  color:white;
+  font-family:cursive;
+  box-sizing:border-box;
+
+  
+}
+
 </style>
 </head>
 
@@ -1021,42 +1138,128 @@ $350
 
                 </div>
         </section>
-        <div class="main" id="wrapper">
-            <section id="user-management-tab">
-                <div class="form-container">
-                    <span class="form-heading">Registration</span>
-                    <form action="/user/registration" method="POST" id="reg-form">
-                        <div class="input-group">
-                            <label class="a" for="firstname" id="firstname">First Name :</label>
-                            <input class="b" type="text" name="firstname" id="r1">
-                            <span class="bar"></span>
+            <section id="user-management-tab" class="content-wrapper">
+
+                <div class="grid-containers col-lg-6" >
+                    <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" class="ims">
+                        
+                 </div>
+                    <li class="itms"> <a href="#" class="ab"> Varification status</a></li>
+                    <li class="itms"><a href="#" class="ab">Recent order</a></li>
+                    <li class="itms"> <a href="#" class="ab"> Task allocation</a></li>
+                    <div class="btn-container">
+                        <button id="customer_view" onclick="toggleDashboardView(this)">Continue</button>
                         </div>
-                        <div class="input-group">
-                            <label class="a" for="secondname" id="secondname">Last Name :</label>
-                            <input class="b" type="text" name="secondname" id="r2">
-                            <span class="bar"></span>
+                  </div class="manue-boxs">
+                  <div class="grid-containers col-lg-6" >
+                    <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" class="ims">
+                    </div>
+                    <li class="itms"> <a href="#" class="ab"> Varification status</a></li>
+                    <li class="itms"><a href="#" class="ab">Recent order</a></li>
+                    <li class="itms"> <a href="#" class="ab"> Task allocation</a></li>
+                    <div class="btn-container">
+                        <button id="customer_view" onclick="toggleDashboardView(this)">Continue</button>
                         </div>
-                        <div class="input-group">
-                            <label class="a" for="email" id="email">Email :</label>
-                            <input class="b" type="email" name="email" id="email">
-                            <span class="bar"></span>
+                  </div>
+                  <div class="grid-containers col-lg-6" >
+                    <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" class="ims">
+                    </div>
+                    <li class="itms"> <a href="#" class="ab"> Varification status</a></li>
+                    <li class="itms"><a href="#" class="ab">Recent order</a></li>
+                    <li class="itms"> <a href="#" class="ab"> Task allocation</a></li>
+                    <div class="btn-container">
+                        <button id="customer_view" style="float: right;" onclick="toggleDashboardView(this)">Continue</button>
                         </div>
-                        <div class="input-group">
-                            <label class="a" for="password" id="password">Password :</label>
-                            <input class="b" type="password" name="password" id="password">
-                            <span class="bar"></span>
-                        </div>
-                        <div class="input-group">
-                            <label class="a" for="password2" id="password2"> Confirm Password :</label>
-                            <input class="b" type="password" name="password2" id="password2">
-                            <span class="bar"></span>
-                        </div>
-                        <div class="input-group">
-                            <button id="z" type="submit" value="Submit" id="button">Submit</button>
-                        </div>
-                    </form>
-            </section>
+                  </div>
+         
+</section>
+
+
+           
+
+            <section  id="customer-view-tab" class="content-wrapper" style="display: inline-block;">
+             <div class="col-lg-12">
+             <div class="wrap">
+                
+               <div class="nested col-12 allSides" >
+                  <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile">
+                  </div>
+                  <div>
+                      <li><b>About</b></li><br/>
+                      <li><i class="glyphicon glyphicon-earphone" style="font-size:24px;"></i></li><br/>
+                      <li><i class="fas fa-envelope" style="font-size:24px;"></i></li><br/>
+                      <li><i class="fas fa-map-marker-alt"  style="font-size:24px;"></i> </li><br/>
+                  </div>
+                  <div id="icon"  style="float: right;">
+                    <i class='far fa-bell' style="font-size:25px; 
+                    margin: 0 20px 0 0; "></i>
+                    <i class="far fa-comment-dots" style="font-size:25px;  
+                    margin: 0 20px 0 0; "></i>
+                    <i class="far fa-edit"  style="font-size:25px;  
+                    margin: 0 20px 0 0; "></i>
+                    <i class="far fa-trash-alt" style="font-size:25px;  
+                    margin: 0 20px 0 0; "></i>
+
+                  </div>
+
+              </div> 
+            
+              <div class="grid-container col-lg-6">
+               
+                <li class="itm"><a href="#" class="a">Order</a></li>
+                <li class="itm" > <a href="#" class="a">Status</a></li>
+                <li class="itm"> <a href="#" class="a"> Task allocation</a></li>
+                <li class="itm"> <a href="#" class="a"> Doc</a></li>
+                <li class="itm"> <a href="#" class="a">Payment</a></li>
+
+              </div class="manue-box">
+              <div class="grid-container col-lg-6">
+               
+                <li class="itm"><a href="#" class="a">Order</a></li>
+                <li class="itm" > <a href="#" class="a">Status</a></li>
+                <li class="itm"> <a href="#" class="a"> Task allocation</a></li>
+                <li class="itm"> <a href="#" class="a"> Doc</a></li>
+                <li class="itm"> <a href="#" class="a">Payment</a></li>
+
+              </div>
+              <div class="grid-container col-lg-6">
+               
+                <li class="itm"><a href="#" class="a">Order</a></li>
+                <li class="itm" > <a href="#" class="a">Status</a></li>
+                <li class="itm"> <a href="#" class="a"> Task allocation</a></li>
+                <li class="itm"> <a href="#" class="a"> Doc</a></li>
+                <li class="itm"> <a href="#" class="a">Payment</a></li>
+
+              </div>
+              
             </div>
+           </div>
+          </div>
+          
+
+         
+         
+          
+          
+           <script>
+               function displayMenu(av){
+                  if(document.getElementById('flex').style.display==="none"){
+                  document.getElementById('flex').style.display="block";
+                  }
+                  else{
+                    document.getElementById('flex').style.display="none";
+                  }
+               }
+           </script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+                
+        
+            </section>
+
+            
+            
             <section id="blog-management-tab" class=" content-wrapper ">
 
                 <div id="medium-feeds" >
@@ -1151,9 +1354,12 @@ $350
             var user_management = document.getElementById("user-management-tab");
             var blog_management = document.getElementById("blog-management-tab");
             var video_management = document.getElementById("video-management-tab");
+            var customer_view = document.getElementById("customer-view-tab");
+
             blog_management.style.display = "none";
             user_management.style.display = "none";
             video_management.style.display = "none";
+             customer_view.style.display = "none";
 
             // document.getElementById("analytics-tab").style.display="none";
             function toggleDashboardView(evt) {
@@ -1161,6 +1367,8 @@ $350
                 user_management.style.display = "none";
                 blog_management.style.display = "none";
                 video_management.style.display = "none";
+                customer_view.style.display = "none";
+
 
                 var target_element = evt;
                 switch (target_element.id) {
@@ -1175,6 +1383,9 @@ $350
                         break;
                     case "chat_video_a":
                     video_management.style.display = "block";
+                        break;
+                    case "customer_view":
+                        customer_view.style.display = "block";
                         break;
                 }
             }

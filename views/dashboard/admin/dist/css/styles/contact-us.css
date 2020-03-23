@@ -1,0 +1,73 @@
+img{
+width: auto;
+margin-bottom: 3rem!important;
+}
+
+
+
+.mapouter{
+    position: static;;
+    text-align:center;
+    height:500px;
+    width:1300px;
+}.gmap_canvas {
+    height:500px;
+    width:1300px;
+}
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.b {
+    font-family: lato,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 3rem!important;
+
+
+    }
+
+    .form-contact .form-control {
+        border: 1px solid #e5e6e9;
+        border-radius: 0;
+        height: 48px;
+        padding-left: 18px;
+        font-size: 13px;
+        background: 0 0;
+    
+
+    }
+    .form-contact .form-group {
+        margin-bottom: 30px;
+    }
+
+    .form-contact textarea {
+        border-radius: 0;
+        height: 100%!important;
+    }
+    .w-100 {
+        width: 100%!important;
+    }
+    .contact-info {
+        margin-bottom: 25px;
+    }
+    .contact-title {
+        font-size: 27px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2em;
+    }
+    h1, h2, h3, h4, h5 {
+        font-family: yeseva one,cursive;
+        color: #1f1f1f;
+    }
+    .contact-section {
+        padding: 130px 0 100px;
+    }
