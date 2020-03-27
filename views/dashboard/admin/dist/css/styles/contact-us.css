@@ -4,16 +4,6 @@ margin-bottom: 3rem!important;
 }
 
 
-
-.mapouter{
-    position: static;;
-    text-align:center;
-    height:500px;
-    width:1300px;
-}.gmap_canvas {
-    height:500px;
-    width:1300px;
-}
 h2 {
     display: block;
     margin-block-start: 0.83em;

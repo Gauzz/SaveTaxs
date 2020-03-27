@@ -224,7 +224,9 @@ app.get('/about', function(req, res) {
     res.render('./dashboard/admin/about.hbs'); // or res.render('index.ejs');
 });
 
-
+app.get('/notification', function(req, res) {
+    res.render('./dashboard/admin/notification.hbs'); // or res.render('index.ejs');
+});
 
 
 //fetch data from db into category.ejs

@@ -5,14 +5,38 @@ var orderSchema = new Schema({
     id: {
         type: Number
     },
-    order_Id: {
+    order_id: {
        type: Number 
     }, 
-    quantity:{
+    order_name:{
+        type: String
+    },
+    order_status:{
+        type: String
+    },
+    user_id:{
+        type: Number
+    },
+    package_amount:{
         type: Number
     },
     date:{
         type:Date
+    },
+    documents:{
+        type: String
+    },
+    partner_name:{
+        type: String
+    },
+    varification_status:{
+        type: String
+    },
+    document_id:{
+        type: Number
+    },
+    payment_status:{
+        type: String
     },
     time:{
         type: Date

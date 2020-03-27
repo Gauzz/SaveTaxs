@@ -4,6 +4,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    min-height: 0px;
 } 
 .form-container{
     width: 90%;
@@ -15,6 +16,8 @@
     box-shadow: 0 1px 1.5rem rgba(0,0,0,0.1);
     border-radius: 3rem;
     z-index: 1;
+    margin-left: 200px;
+    margin-top: 50px;
 } 
 .form-container::before{
     content: '';
@@ -39,7 +42,7 @@
     padding: 1.5rem 1rem;
     background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 1px 1.5rem rgba(0,0,0,0.1);  
+    box-shadow: 0 1px 1.5rem rgba(250, 248, 248, 0.1);  
 } 
 
 .input-group{
@@ -70,4 +73,8 @@
 .input-group > #secondname{
     font-weight: bolder;
     color: #fff;
+}
+
+.txt{
+    color: rgb(230, 230, 230);
 }
