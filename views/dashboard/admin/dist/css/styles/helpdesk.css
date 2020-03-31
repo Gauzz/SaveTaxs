@@ -1,5 +1,6 @@
 .hero-wraps {
     position: relative;
+    height:250px;
 }
 .sectiona {
     position: relative;
@@ -17,6 +18,7 @@ article, aside, figcaption,  div {
     font-family: "Rubik", sans-serif;
     font-size: 14px;
     line-height: 22px;
+    margin-top: 30px;
 }
 .bg-primary {
     background-color: #007bff!important;
@@ -27,7 +29,15 @@ div {
 
 .hero-bg {
     background-image: url('/dashboard/admin/images/png/contact-us-banner.jpg');
+    height: 250px;
 
+}
+.hero-contenta{
+    background-color: rgb(85, 250, 85);
+    height: 250px;
+    opacity: 0.5;
+   padding: 60px;
+   z-index: 2;
 }
 .hero-wraps .hero-bg {
     z-index: 0;
@@ -150,13 +160,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    display: block;
+    display: flex;
+    justify-content: center;
     font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+   
+    
 }
 
 .ml-auto, .mx-auto {
@@ -164,6 +176,8 @@ h1 {
 }
 .mr-auto, .mx-auto {
     margin-right: auto!important;
+    display: flex;
+    justify-content: center;
 }
 @media (min-width: 1200px){ 
 .col-xl-6 {
