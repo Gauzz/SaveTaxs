@@ -227,7 +227,9 @@ app.get('/about', function(req, res) {
 app.get('/notification', function(req, res) {
     res.render('./dashboard/admin/notification.hbs'); // or res.render('index.ejs');
 });
-
+app.get('/servicespackage', function(req, res) {
+    res.render('./dashboard/admin/servicespackage.hbs'); // or res.render('index.ejs');
+});
 
 //fetch data from db into category.ejs
 
