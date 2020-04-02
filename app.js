@@ -228,42 +228,89 @@ app.get('/notification', function(req, res) {
     res.render('./dashboard/admin/notification.hbs'); // or res.render('index.ejs');
 });
 
+app.get('/chat', function(req, res) {
+    res.render('./dashboard/admin/chat.hbs'); // or res.render('index.ejs');
+});
 
-app.get('/shop_and_establishment_Registration', function(req, res) {
-    res.render('./dashboard/admin/services/shopANDestablishment.hbs'); // or res.render('index.ejs');
+
+app.get('/cart', function(req, res) {
+    res.render('./dashboard/admin/cart.hbs'); // or res.render('index.ejs');
+    
 });
-app.get('/SSI/MSME_Registration', function(req, res) {
-    res.render('./dashboard/admin/services/msme.hbs'); // or res.render('index.ejs');
+
+app.get('/payment', function(req, res) {
+    res.render('./dashboard/admin/payment.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/importer/exporter_Code', function(req, res) {
-    res.render('./dashboard/admin/services/importerCode.hbs'); // or res.render('index.ejs');
+
+app.get('/service_package', function(req, res) {
+    res.render('./dashboard/admin/service_package.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/ISO_Certification', function(req, res) {
-    res.render('./dashboard/admin/services/ISO.hbs'); // or res.render('index.ejs');
+app.get('/service_package1', function(req, res) {
+    res.render('./dashboard/admin/service_package1.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Trade_License', function(req, res) {
-    res.render('./dashboard/admin/services/trade.hbs'); // or res.render('index.ejs');
+app.get('/service_package2', function(req, res) {
+    res.render('./dashboard/admin/service_package2.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/NGO', function(req, res) {
-    res.render('./dashboard/admin/services/NGO.hbs'); // or res.render('index.ejs');
+
+app.get('/service_package3', function(req, res) {
+    res.render('./dashboard/admin/service_package3.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Trademark_Registration', function(req, res) {
-    res.render('./dashboard/admin/services/trademark.hbs'); // or res.render('index.ejs');
+
+
+app.get('/service_package4', function(req, res) {
+    res.render('./dashboard/admin/service_package4.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Account', function(req, res) {
-    res.render('./dashboard/admin/services/accounts.hbs'); // or res.render('index.ejs');
+app.get('/service_package5', function(req, res) {
+    res.render('./dashboard/admin/service_package5.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Copyrights', function(req, res) {
-    res.render('./dashboard/admin/services/copyright.hbs'); // or res.render('index.ejs');
+
+app.get('/service_package6', function(req, res) {
+    res.render('./dashboard/admin/service_package6.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Web_And_App', function(req, res) {
-    res.render('./dashboard/admin/services/web-and-app.hbs'); // or res.render('index.ejs');
+app.get('/service_package7', function(req, res) {
+    res.render('./dashboard/admin/service_package7.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Name_Change', function(req, res) {
-    res.render('./dashboard/admin/services/nameChange.hbs'); // or res.render('index.ejs');
+app.get('/service_package8', function(req, res) {
+    res.render('./dashboard/admin/service_package8.hbs'); // or res.render('index.ejs');
+  
 });
-app.get('/Will_Probate', function(req, res) {
-    res.render('./dashboard/admin/services/will.hbs'); // or res.render('index.ejs');
+app.get('/service_package9', function(req, res) {
+    res.render('./dashboard/admin/service_package9.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package10', function(req, res) {
+    res.render('./dashboard/admin/service_package10.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package11', function(req, res) {
+    res.render('./dashboard/admin/service_package11.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package12', function(req, res) {
+    res.render('./dashboard/admin/service_package12.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package13', function(req, res) {
+    res.render('./dashboard/admin/service_package13.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package14', function(req, res) {
+    res.render('./dashboard/admin/service_package14.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package15', function(req, res) {
+    res.render('./dashboard/admin/service_package15.hbs'); // or res.render('index.ejs');
+  
+});app.get('/service_package16', function(req, res) {
+    res.render('./dashboard/admin/service_package16.hbs'); // or res.render('index.ejs');
+  
+});
+
+app.get('/servicespackage', function(req, res) {
+    res.render('./dashboard/admin/servicespackage.hbs'); // or res.render('index.ejs');
 });
 app.get('/Legal_Heir', function(req, res) {
     res.render('./dashboard/admin/services/legalHeir.hbs'); // or res.render('index.ejs');
