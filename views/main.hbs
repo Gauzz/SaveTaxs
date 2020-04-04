@@ -14,69 +14,7 @@
       margin: 0;
       padding: 0;
     }
-    .head1{
-        font-weight: bold;
-        margin-left:20px;
-    }
-    ul {
-  list-style-type: none;
-  overflow: hidden;
-
-}
-
-.links li {
-  float: left;
-}
-
-li a, .dropbtn {
-  display: block;
-
-  text-align: center;
-
-  text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-  color:rgb(73, 68, 68);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 300px;
-
-  max-height:650px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: +3;
-
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 18px;
-  text-decoration: none;
-  display:block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-
-  width: fit-content;
-    display: -webkit-inline-box;
-    top: 60px;
-
-
-}
-
+  
 </style>
 
 </head>
@@ -100,11 +38,12 @@ li.dropdown {
 
   <div class="wrapper">
         <ul class="links">
-            <li><a href="#" class="dropbtn" >STARTUP</a>
-                  <ul class="dropdown-content">
-                    <li>
-                    <a href="#" class="head1">Business Registration</a>
-                    <ul class="dropdown-content">
+           <li class="dropdown">
+             <a href="javascript:void(0)" class="dropbtn">STARTUP</a>
+                  <div class="dropdown-content">
+                   <div class="internal" style="width: 200px;">
+                    <p class="head1">Business Registration</p>
+                   
                         <a href="#">Private Limited Company</a>
                         <a href="#">Limited Liability Partnership</a>
                         <a href="#">One Person Company</a>
@@ -112,12 +51,12 @@ li.dropdown {
                         <a href="#">Producer Company</a>
                         <a href="#">Partnership Firm</a>
                         <a href="#">Sole Proprietorship</a>
-                     </ul>
-                   </li>
+                    </div>
+                     
 
-                   <li>
-                    <a href="" class="head1">Licenses</a>
-                    <ul class="dropdown-content">
+                  <div class="internal" style="width: 200px;">
+                    <p class="head1">Licenses</p>
+                   
                          <a href="#">FSSAI(Food License)</a>
                          <a href="#">IEC(Import/Export Code)</a>
                          <a href="#">APEDA-RCMC Registration</a>
@@ -127,20 +66,19 @@ li.dropdown {
                            <a href="#">PSARA License</a>
                          <a href="#">OSP License</a>
                          <a href="#">Trade License</a>
-                   </ul>
-                  </li>
+                  </div>
 
-                    <li>
-                    <a href="" class="head1">Company Name Search and Logo</a>
-                    <ul class="dropdown-content">
+                    <div class="internal" style="width: 200px;">
+                    <p class="head1">Company Name Search and Logo</p>
+                    
                     <a href="#">Company Name Search</a>
                     <a href="#">Logo Design</a>
-                    </ul>
-                   </li>
+                   </div>
 
-                   <li>
-                      <a href="" class="head1">International Business Setup</a>
-                    <ul class="dropdown-content">
+                   
+                  <div class="internal" style="width: 200px;">
+                    <p class="head1">International Business Setup</p>
+                    
                     <a href="#">US Incorporation</a>
                     <a href="#">Signature Incorporation</a>
                     <a href="#">UK Incorporation</a>
@@ -150,50 +88,50 @@ li.dropdown {
                     <a href="#">China Incorporation</a>
                     <a href="#">Dubai Incorporation</a>
                     <a href="#">Australia Incorporation</a>
-                    </ul>
-                   </li>
-
-                  </ul>
+                   </div>
+              </div>
            </li>
 
             <li class="dropdown">
               <a href="javascript:void(0)" class="dropbtn">TAXS & Compliances</a>
-                 <ul class="dropdown-content">
+                  <div class="dropdown-content">
+                         <div class="internal" style="width: 200px;">
+                           <p class="head1">MANDATORY ANNUAL FILINGS</p>
+                        
+                             <a href="#"> Private Limited Company/OPC</a>
+                             <a href="#">Limited Liability Company</a>
+                         </div>
+                   
 
-                  <li>
-                       <a href="#" class="head1">MANDATORY ANNUAL FILINGS</a>
-                    <ul  class="dropdown-content">
-                      <a href="#"> Private Limited Company/OPC</a>
-                      <a href="#">Limited Liability Company</a>
-                    </ul>
+                  
+                     <div class="internal" style="width: 200px;">
+                       <p class="head1">Changes In Pvt Ltd Company</p>
+                     
+                         <a href="#"> Add a Director</a>
+                         <a href="#">Remove a Director</a>
+                         <a href="#">Increase Authorized Capital</a>
+                         <a href="#">Close the Pvt Ltd Company</a>
+                         <a href="#">Change Objective/Activity</a>
+                         <a href="#">Change Address</a>
+                         <a href="#">Change Company Name</a>
+                         </div>
+                         
+                    
 
-                  </li>
+                   
+                         <div class="internal" style="width: 200px;">
+                           <p class="head1">Changes In Limited Liability Partnership</p>
+                    
+                             <a href="#">Add Designated Partner</a>
+                             <a href="#">Changes to LLP Agreement</a>
+                             <a href="#">Close the LLP</a>
+                         </div>
+                  
 
-                    <li>
-                      <a href="#" class="head1">Changes In Pvt Ltd Company</a>
-                      <ul class="dropdown-content">
-                    <a href="#"> Add a Director</a>
-                    <a href="#">Remove a Director</a>
-                    <a href="#">Increase Authorized Capital</a>
-                    <a href="#">Close the Pvt Ltd Company</a>
-                    <a href="#">Change Objective/Activity</a>
-                    <a href="#">Change Address</a>
-                    <a href="#">Change Company Name</a>
-                    </ul>
-                    </li>
-
-                    <li>
-                    <a href="#" class="head1">Changes In Limited Liability Partnership</a>
-                    <ul class="dropdown-content">
-                    <a href="#">Add Designated Partner</a>
-                    <a href="#">Changes to LLP Agreement</a>
-                    <a href="#">Close the LLP</a>
-                    </ul>
-                    </li>
-
-                    <li>
-                    <a href="#" class="head1">Convert Your Business</a>
-                    <ul class="dropdown-content">
+              
+                 <div class="internal" style="width: 200px;">
+                  <p class="head1">Convert Your Business</p>
+                    
                     <a href="#"> Proprietorship to Pvt Ltd Company</a>
                     <a href="#">Partnership to LLP</a>
                     <a href="#">Private to Public Limited Company</a>
@@ -201,18 +139,20 @@ li.dropdown {
                     <a href="#">Compliance Check-Secretarial Audit</a>
                     <a href="#">Due Diligence</a>
                     <a href="#">RBI Compliance</a>
-                    </ul>
-                    </li>
+                   </div>
+                   
 
-                   <li>
-                    <a href="#" class="head1">Changes In Limited Liability Partnership</a>
-                    <ul class="dropdown-content">
-                    <a href="#">Add Designated Partner</a>
-                    <a href="#">Changes to LLP Agreement</a>
-                    <a href="#">Close the LLP</a>
-                    </ul>
-                    </li>
-             </ul>
+                     
+                         <div class="internal" style="width: 200px;">
+                           <p class="head1">Changes In Limited Liability Partnership</p>
+                    
+                               <a href="#">Add Designated Partner</a>
+                               <a href="#">Changes to LLP Agreement</a>
+                               <a href="#">Close the LLP</a>
+                         </div>
+                     </div>
+
+               
              </li>
 
 
@@ -223,7 +163,7 @@ li.dropdown {
                     <div class="dropdown-content">
                          <div class="internal" style="width: 200px;">
                        <p class="head1">Trademark</p>
-                        <a href="/admin/services/trademark.hbs">Trademark Registration</a>
+                        <a href="/Trademark">Trademark Registration</a>
                         <a href="#">Search for Trademark</a>
                         <a href="#">Respond to TM Objection</a>
                         <a href="#">Trademarkm Watch</a>
@@ -235,7 +175,7 @@ li.dropdown {
 
                     <div class="internal1" style="width:200px;">
                       <p class="head1">Copyright</p>
-                      <a href="/admin/services/copyright.hbs">copyright Registration</a>
+                      <a href="/Copyright">copyright Registration</a>
                     </div>
                    </div>
               </li>
@@ -317,9 +257,9 @@ li.dropdown {
               <div class="dropdown-content">
                     <div class="internal" style="width: 200px;">
                     <p class="head1">Property</p>
-                    <a href="/admin/services/propertyVerify.hbs"> Property Title Verification</a>
-                    <a href="/admin/services/propertyReg.hbs">Property Registration</a>
-                    <a href="/admin/services/succession.hbs">Succession Certificate</a>
+                    <a href="/PropertyVerify"> Property Title Verification</a>
+                    <a href="/PropertyRegistration">Property Registration</a>
+                    <a href="/Succession">Succession Certificate</a>
                     <a href="/admin/services/legalHeir.hbs">Legal Heir Certificate</a>
                     <a href="/admin/services/will.hbs">Will Drafting and Registration</a>
                     </div>
@@ -328,7 +268,7 @@ li.dropdown {
                     <p class="head1">Name Change and Other Corrections</p>
                      <a href="/admin/services/nameChange.hbs">Name Change</a>
                      <a href="/admin/services/nameChange.hbs">Religion Change</a>
-                     <a href="/admin/services/genderChange.hbs">Gender Change</a>
+                     <a href="/GenderChange">Gender Change</a>
 
                    </div>
                    
@@ -356,12 +296,12 @@ li.dropdown {
         </ul>
         <ul>
             <li class="h">Company</li>
-            <li><a href="/about" style="color: #808080;">About Us</a></li>
-            <li><a href="/blog" style="color: #808080;">Blog</a></li>
-            <li><a style="color: #808080;">Partner with us</a></li>
-            <li><a href="/contact"  style="color: #808080;">Contact Us</a></li>
+            <li><a href="/about" class="foota">About Us</a></li>
+            <li><a href="/blog" class="foota" >Blog</a></li>
+            <li><a class="foota" >Partner with us</a></li>
+            <li><a href="/contact" class="foota" >Contact Us</a></li>
 
-            <li><a style="color: #808080;">Sitemap</a></li>
+            <li><a class="foota">Sitemap</a></li>
         </ul>
         <ul>
             <li class="h">Terms and Ploicies</li>

@@ -182,9 +182,9 @@ app.get('/registration', function(req, res) {
 
 
 
-app.get('/adpage', function(req, res) {
+app.get('/Temperary', function(req, res) {
 
-    res.render('./dashboard/admin/adpage.hbs');
+    res.render('./dashboard/customer/temperary.hbs');
 });
 
 
@@ -325,7 +325,7 @@ app.get('/Public', function(req, res) {
 app.get('/PropertyVerify', function(req, res) {
     res.render('./dashboard/admin/services/propertyVerify.hbs'); // or res.render('index.ejs');
 });
-app.get('/propertyRegistration', function(req, res) {
+app.get('/PropertyRegistration', function(req, res) {
     res.render('./dashboard/admin/services/propertyReg.hbs'); // or res.render('index.ejs');
 });
 app.get('/MoneyRecovery', function(req, res) {
@@ -380,7 +380,9 @@ app.get('/Accounts', function(req, res) {
 app.get('/Trademark', function(req, res) {
     res.render('./dashboard/admin/services/trademark.hbs'); // or res.render('index.ejs');
 });
-
+app.get('/NameChange', function(req, res) {
+    res.render('./dashboard/admin/services/nameChange.hbs'); // or res.render('index.ejs');
+});
 //fetch data from db into category.ejs
 
 app.get('/dashboard/category', function(req, res) {
