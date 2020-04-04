@@ -186,10 +186,8 @@ app.get('/adpage', function(req, res) {
 
     res.render('./dashboard/admin/adpage.hbs');
 });
-app.get('/analytic', function(req, res) {
 
-    res.render('./dashboard/admin/analytic.hbs');
-});
+
 app.get('./dashboard/category', function(req, res) {
 
     res.render('./dashboard/admin/category.hbs');
@@ -354,7 +352,40 @@ app.get('/Caste', function(req, res) {
 app.get('/CaveatPetition', function(req, res) {
     res.render('./dashboard/admin/services/CaveatPetition.hbs'); // or res.render('index.ejs');
 });
+app.get('/Trade_License', function(req, res) {
+    res.render('./dashboard/admin/services/trade.hbs'); // or res.render('index.ejs');
+});
+app.get('/Will', function(req, res) {
 
+    res.render('./dashboard/admin/will.hbs');
+});
+app.get('/Web-and-App', function(req, res) {
+    res.render('./dashboard/admin/services/web-and-app.hbs'); // or res.render('index.ejs');
+});
+app.get('/Shop-And-Establishment', function(req, res) {
+    res.render('./dashboard/admin/services/shopANDestablishment.hbs'); // or res.render('index.ejs');
+});
+app.get('/NGO', function(req, res) {
+    res.render('./dashboard/admin/services/NGO.hbs'); // or res.render('index.ejs');
+});
+app.get('/SSI-MSME', function(req, res) {
+    res.render('./dashboard/admin/services/msme.hbs'); // or res.render('index.ejs');
+});
+app.get('/ISO', function(req, res) {
+    res.render('./dashboard/admin/services/ISO.hbs'); // or res.render('index.ejs');
+});
+app.get('/IMPORTERCODE', function(req, res) {
+    res.render('./dashboard/admin/services/importerCode.hbs'); // or res.render('index.ejs');
+});
+app.get('/Copyright', function(req, res) {
+    res.render('./dashboard/admin/services/copyright.hbs'); // or res.render('index.ejs');
+});
+app.get('/Accounts', function(req, res) {
+    res.render('./dashboard/admin/services/accounts.hbs'); // or res.render('index.ejs');
+});
+app.get('/Trademark', function(req, res) {
+    res.render('./dashboard/admin/services/trademark.hbs'); // or res.render('index.ejs');
+});
 
 //fetch data from db into category.ejs
 
