@@ -1,7 +1,12 @@
 
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  
+  <link rel="stylesheet" href="/dashboard/admin/dist/css/styles/servicesstyl.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 {{!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -11,55 +16,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"> --}}
 
 
-<style>
-    .card1{ 
-    width: 20rem; 
-    background-color:white;
-        }
 
-#frm{
-    padding-left: 60px;
-}
-#clr{
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-family:sans-serif;
-}
-#c{
-    padding: 20px;
-    margin-left: 80px;
-      margin-right: 100px;
-
-    background-color:#fff;
-}
-ul,.a{
-    list-style-type: none;
-    list-style-position: inside;
-       padding: 20px;
-
-}
-
-ul li,.a{
-  padding: 5px;
-  margin-left: 80px;
-  margin-right: 100px;
-  }
-h4, h3, h5,h6 {
-   margin-left: 150px;
-     margin-right: 70px;
-
-}
-
-p{
-      margin-left: 80px;
-      margin-right: 70px;
-
-}
-h6{
-
- line-height: 1.25em;
-}
-</style>
 <div id="clr"> 
 <section class="bg-default py-5" style="color: #00008b; height:500px"  >
     <div class="container my-5" >
@@ -68,14 +25,12 @@ h6{
                 <div class="row">
                     <div class="col-md-8 text-light">
                         <h1 class="pt-3 mt-5">Income Tax Return	</h1>
-                        <h6 style="margin-left: 0px;">An income tax return is a document that helps a taxpayer to declare his income, expenses, tax deductions, investments, etc. Under Income Tax Act 1961, under various scenarios, it is mandatory for a tax payer to file a return. he tax returns have to be filed by a specific date depending on the type of assesses:</h6>
-                        <p style="margin-left: 0px;">• 31st July without tax audit</p>
-                        <p style="margin-left: 0px;">• 30th September with the tax audit</p>
+                       
                         </div>
                      <div class="col-md-4">
                         <div class="row">
                 <div class="col-md-12" id="frm">
-                    <div class="card1 shadow-lg" >
+                    <div class="card3 shadow-lg" >
                         <div class="card-body one">
                         <div class="filter-sidebar ">
                             <h3 style="margin-left: 10px;">Order select</h3>
@@ -125,6 +80,25 @@ h6{
     </div>
 </section>
 <div id="c">
+    <div class="row p-5" >
+<div class="col-lg-3"> 
+        
+            <div class="menu0"><a href="#m1">Overview</a></div>
+            <div class="menu0"><a href="#m2">Procedure to file ITR</a></div>
+            <div class="menu0"><a href="#m3">acknowledgment</a></div>
+                        <div class="menu0"><a href="#m4">Who should file</a></div>
+
+            <div class="menu0"><a href="#m5">Document required</a></div>
+</div>
+<div id="details">
+    <div id="m1">
+         <h3>Income Tax Return	</h3>
+                        <h6>An income tax return is a document that helps a taxpayer to declare his income, expenses, tax deductions, investments, etc. Under Income Tax Act 1961, under various scenarios, it is mandatory for a tax payer to file a return. he tax returns have to be filed by a specific date depending on the type of assesses:</h6>
+                        <p>• 31st July without tax audit</p>
+                        <p>• 30th September with the tax audit</p>
+                       
+    </div>
+<div id="m2">
     <h4>Procedure to file ITR</h4>
     <ul class="a">
         <li>1. Calculation of Income and Tax</li>
@@ -137,12 +111,10 @@ h6{
         <li>8. Upload the XML file on the income tax portal and filing</li>
 
     </ul>
-
-
-<div>
-     <h4>Income Tax Return acknowledgment</h4>
+    </div>
+<div id="m3">
+<h4>Income Tax Return acknowledgment</h4>
 <h6 style="font-size:18px;">Once ITR is filed, an acknowledgment slip in duplicate is issued. It consists of details like:</h6>
-
 <ul class="a">
     <li>1. Name</li>
     <li>2. Address </li>
@@ -157,7 +129,7 @@ h6{
 </div>
 
 
-<div>
+<div id="m4">
      <h4>Who should file income tax return?</h4>
     <h6>IAs per the Income Tax Department the entities required to file IT returns annually are:</h6>
 
@@ -173,8 +145,8 @@ h6{
 
 </ul>
 </div>
-<div>
-     <h4>Documents required for Income Tax Filing in India	</h4>
+<div id="m5">
+     <h4>Documents required for Income Tax Filing in India<i class="material-icons">attachment</i></h4>
 
 <ul class="a">
     <li>1.	Bank statements</li>
@@ -195,3 +167,5 @@ h6{
 
 </div>
 </div>
+    </div>
+    </div>

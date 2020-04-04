@@ -2,7 +2,12 @@
 
 
   
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="/dashboard/admin/dist/css/styles/servicesstyl.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 {{!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,55 +16,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"> --}}
 
 
-<style>
-    .card1{ 
-    width: 20rem; 
-    background-color:white;
-        }
 
-#frm{
-    padding-left: 60px;
-}
-#clr{
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-family:sans-serif;
-}
-#c{
-    padding: 20px;
-    margin-left: 80px;
-      margin-right: 100px;
-
-    background-color:#fff;
-}
-ul,.a{
-    list-style-type: none;
-    list-style-position: inside;
-       padding: 20px;
-
-}
-
-ul li,.a{
-  padding: 5px;
-  margin-left: 80px;
-  margin-right: 100px;
-  }
-h4, h3, h5,h6 {
-   margin-left: 150px;
-     margin-right: 70px;
-
-}
-
-p{
-      margin-left: 80px;
-      margin-right: 70px;
-
-}
-h6{
-
- line-height: 1.25em;
-}
-</style>
 <div id="clr"> 
 <section class="bg-default py-5" style="color: #00008b; height:500px"  >
     <div class="container my-5" >
@@ -68,12 +25,12 @@ h6{
                 <div class="row">
                     <div class="col-md-8 text-light">
                         <h1 class="pt-3 mt-5">Limited Liability Partnership</h1>
-                        <h5 style="margin-left: 0px;">Limited Liability Partnership is governed by the Limited Liability Partnership Act 2008. As the name suggests, gives a business the benefit of limited liability of a company and the flexibility of a partnership.  </h5>
+
                         </div>
                      <div class="col-md-4">
                         <div class="row">
                 <div class="col-md-12" id="frm">
-                    <div class="card1 shadow-lg" >
+                    <div class="card3 shadow-lg" >
                         <div class="card-body one">
                         <div class="filter-sidebar ">
                             <h3 style="margin-left: 10px;">Order select</h3>
@@ -123,7 +80,19 @@ h6{
     </div>
 </section>
 <div id="c">
-    <h4 >Benefits of Registering under Limited Liability Partnership</h4>
+<div class="row p-5" >
+<div class="col-lg-3"> 
+            <div class="menu0"><a href="#m1">Overview</a></div>
+            <div class="menu0"><a href="#m2">How to Register</a></div>
+            <div class="menu0"><a href="#m3">Document required</a></div>
+            <div class="menu0"><a href="#m4">Register for office</a></div>
+            <div class="menu0"><a href="#m5">Why Choose Us</a></div>
+</div>
+<div id="details">
+<div id="m1">
+<h3>Limited Liability Partnership</h3>
+<h6>Limited Liability Partnership is governed by the Limited Liability Partnership Act 2008. As the name suggests, gives a business the benefit of limited liability of a company and the flexibility of a partnership.  </h6>
+<h4 >Benefits of Registering under Limited Liability Partnership</h4>
     <ul class="a">
         <li>1. The biggest advantage of LLP is that the partners of the LLP have limited liability, that means any partner is not liable to pay the debts of the company from their personal assets. </li>
         <li>2. Unlike forming a company, forming a LLP is an easy process and less time consuming with a minimum incorporating fees of Rs.500.</li>
@@ -131,8 +100,9 @@ h6{
         <li>4. All decisions and management of the company are exercised by the directors of the company whereas shareholders receive very less power. </li>
         <li>5. In LLP there is no restriction upon admitting a partner into the company or leaving the firm or even transferring the ownership on others. </li>
     </ul>
-<h4>How to Register an LLP</h3>
-<div>
+</div>
+<div id="m2">
+<h4>How to Register an LLP</h4>
 <ul class="a">
     <li><b>Step 1: </b> Obtain a Digital Signature Certificate (DSC).</li>
     <p>Before registering, each designated partner of the proposed LLP must apply for digital signature because all the documents are needed to be submitted online. These Digital Signature Certificates are to be obtained by recognized government certifying agencies only. </p>
@@ -155,12 +125,12 @@ h6{
 
 </ul>
 </div>
-<h4>Documents required to Register Limited Liability Partnership</h4>
+<div id="m3">
+
+<h4>Documents required to Register Limited Liability Partnership<i class="material-icons">attachment</i>
+</h4>
 <h5>The list of documents required to register a Limited Liability Partnership are as under – </h5><br/>
-
-<div>
-     <h4>For Partners (All the documents must be self-attested, scanned and uploaded)</h4>
-
+<h5>For Partners (All the documents must be self-attested, scanned and uploaded)</h5>
 <ul class="a">
     <li>1. PAN Card or passport (Foreign Nationals & NRIs)</li>
     <li>2. Apply for the DIN (Director Identification Number)</li>
@@ -168,10 +138,8 @@ h6{
     <li>4. Filing of the EMoa and EAOA to register private limited company</li>
 </ul>
 </div>
-
-<div>
-     <h4>For Registered Office (All documents must be scanned and uploaded)	</h4>
-
+<div id="m4">
+<h4>For Registered Office (All documents must be scanned and uploaded)	</h4>
 <ul class="a">
     <li>1. Bank Statement/ Telephone Bill/ Electricity or Gas Bill</li>
     <li>2. Notarised Rental Agreement in English</li>
@@ -179,10 +147,10 @@ h6{
     <li>4. Sale Deed/ Property Deed in English</li>
 </ul>
 </div>
+<div id="m5">
 
 <h4>Why Choose Us for LLP registration</h4>
 <h6>With us, registering your LLP is not just an easy hustle free process, but a quick one too. We take care of your end-to-end needs with a super affordable package that includes – </h6>
-<div>
 <ul class="a">
     <li>1. DSC for one director and DIN for up to three directors</li>
     <li>2. Drafting of MoA & AoA</li>
@@ -192,5 +160,7 @@ h6{
 
 </div>
 
+</div>
+</div>
 </div>
 </div>

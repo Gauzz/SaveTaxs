@@ -1,0 +1,103 @@
+.card3{ 
+    width: 20rem; 
+    background-color:white;
+        }
+
+#frm{
+    padding-left: 60px;
+}
+#clr{
+    margin-bottom: 50px;
+    font-family:sans-serif;
+    margin-top: 5px;
+
+}
+#c{
+    padding: 20px;
+    margin-left: 80px;
+      margin-right: 100px;
+      margin-top: 5px;
+
+    background-color:#fff;
+}
+ul,.a{
+    list-style-type: none;
+    list-style-position: inside;
+       padding: 20px;
+       margin-top: 5px;
+
+
+}
+
+
+ul li,.a{
+  padding: 5px;
+  margin-left: 80px;
+  margin-right: 100px;
+  margin-top: 5px;
+
+  }
+h3, h4 , h5{
+   margin-left: 150px;
+     margin-right: 70px;
+
+}
+p{
+    margin-left: 150px;
+    margin-right: 70px;
+
+}
+
+h6{
+     margin-left: 150px;
+     margin-right: 70px;
+    
+ line-height: 1.25em;
+}
+h3, h4{
+    font-weight: bold;
+}
+
+.col-lg-3{
+    
+    display: flex;
+    flex-direction: column;
+    padding-left:20px;
+    margin-left: -70px;
+    margin-top: -10px;
+ 
+}
+.menu0{
+    background-color: rgb(230, 228, 228);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    line-height: 1.0;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    height: 90px;
+    padding: 30px 6px;
+
+}
+.menu0 a{
+    text-decoration: none;
+    color: black;
+    
+}
+.menu0:hover{
+    text-decoration: none;
+    background-color: white;
+    border-left:3px solid darkblue; 
+    box-shadow:1px 3px 2px 1px rgb(209, 209, 209);
+    z-index: 8;
+}
+.menu0 a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+#details{
+    margin-top: -500px;
+    margin-left: 100px;
+     margin-right: 70px;
+}
