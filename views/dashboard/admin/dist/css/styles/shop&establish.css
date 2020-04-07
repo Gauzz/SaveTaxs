@@ -5,14 +5,23 @@
 
 #top1{
     color: white; 
-    padding: 150px 60px;
+    text-align: center;
     line-height: 2;
+    padding: 220px 50px;
     font-size: 18px;
+}
+#btn{
+    background-color: green;
+    color: white;
+    padding: 5px 40px;
+    margin-left:250px;
+    border: none;
+    border-radius: 5px;
 }
 .card0{
     background-color: white;
     padding: 20px 20px;
-    margin: 80px;
+    margin: 100px;
     border-radius: 4px;
 }
 input[type=button]{

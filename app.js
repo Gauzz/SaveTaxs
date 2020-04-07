@@ -41,7 +41,7 @@ mongoose.set('useCreateIndex',true);
 
 // connect mongoose
 const db = 'mongodb://localhost:27017/savetax'; 
-
+ 
 
 
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -181,13 +181,6 @@ app.get('/registration', function(req, res) {
 
 
 
-
-app.get('/Temperary', function(req, res) {
-
-    res.render('./dashboard/customer/temperary.hbs');
-});
-
-
 app.get('./dashboard/category', function(req, res) {
 
     res.render('./dashboard/admin/category.hbs');
@@ -241,74 +234,81 @@ app.get('/payment', function(req, res) {
   
 });
 
-app.get('/service_package', function(req, res) {
-    res.render('./dashboard/admin/service_package.hbs'); // or res.render('index.ejs');
+//Menu Services Route
+app.get('/privatelimcom', function(req, res) {
+    res.render('./dashboard/admin/services/privatelimcom.hbs'); // or res.render('index.ejs');
   
 });
-app.get('/service_package1', function(req, res) {
-    res.render('./dashboard/admin/service_package1.hbs'); // or res.render('index.ejs');
+app.get('/llp', function(req, res) {
+    res.render('./dashboard/admin/services/llp.hbs'); // or res.render('index.ejs');
   
 });
-app.get('/service_package2', function(req, res) {
-    res.render('./dashboard/admin/service_package2.hbs'); // or res.render('index.ejs');
-  
-});
-
-app.get('/service_package3', function(req, res) {
-    res.render('./dashboard/admin/service_package3.hbs'); // or res.render('index.ejs');
+app.get('/oneperson', function(req, res) {
+    res.render('./dashboard/admin/services/oneperson.hbs'); // or res.render('index.ejs');
   
 });
 
-
-app.get('/service_package4', function(req, res) {
-    res.render('./dashboard/admin/service_package4.hbs'); // or res.render('index.ejs');
-  
-});
-app.get('/service_package5', function(req, res) {
-    res.render('./dashboard/admin/service_package5.hbs'); // or res.render('index.ejs');
+app.get('/partnership', function(req, res) {
+    res.render('./dashboard/admin/services/partnership.hbs'); // or res.render('index.ejs');
   
 });
 
-app.get('/service_package6', function(req, res) {
-    res.render('./dashboard/admin/service_package6.hbs'); // or res.render('index.ejs');
+
+app.get('/propertoship', function(req, res) {
+    res.render('./dashboard/admin/services/propertoship.hbs'); // or res.render('index.ejs');
   
 });
-app.get('/service_package7', function(req, res) {
-    res.render('./dashboard/admin/service_package7.hbs'); // or res.render('index.ejs');
-  
-});
-app.get('/service_package8', function(req, res) {
-    res.render('./dashboard/admin/service_package8.hbs'); // or res.render('index.ejs');
-  
-});
-app.get('/service_package9', function(req, res) {
-    res.render('./dashboard/admin/service_package9.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package10', function(req, res) {
-    res.render('./dashboard/admin/service_package10.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package11', function(req, res) {
-    res.render('./dashboard/admin/service_package11.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package12', function(req, res) {
-    res.render('./dashboard/admin/service_package12.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package13', function(req, res) {
-    res.render('./dashboard/admin/service_package13.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package14', function(req, res) {
-    res.render('./dashboard/admin/service_package14.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package15', function(req, res) {
-    res.render('./dashboard/admin/service_package15.hbs'); // or res.render('index.ejs');
-  
-});app.get('/service_package16', function(req, res) {
-    res.render('./dashboard/admin/service_package16.hbs'); // or res.render('index.ejs');
+app.get('/nidhicom', function(req, res) {
+    res.render('./dashboard/admin/services/nidhicom.hbs'); // or res.render('index.ejs');
   
 });
 
-app.get('/servicespackage', function(req, res) {
-    res.render('./dashboard/admin/servicespackage.hbs'); // or res.render('index.ejs');
+app.get('/producercom', function(req, res) {
+    res.render('./dashboard/admin/services/producercom.hbs'); // or res.render('index.ejs');
+  
+});
+app.get('/otherservice', function(req, res) {
+    res.render('./dashboard/admin/services/otherservice.hbs'); // or res.render('index.ejs');
+  
+});
+app.get('/digisignatur', function(req, res) {
+    res.render('./dashboard/admin/services/digisignatur.hbs'); // or res.render('index.ejs');
+  
+});
+app.get('/businessfund', function(req, res) {
+    res.render('./dashboard/admin/services/businessfund.hbs'); // or res.render('index.ejs');
+  
+});app.get('/fssai', function(req, res) {
+    res.render('./dashboard/admin/services/fssai.hbs'); // or res.render('index.ejs');
+  
+});app.get('/itr', function(req, res) {
+    res.render('./dashboard/admin/services/itr.hbs'); // or res.render('index.ejs');
+  
+});app.get('/esi', function(req, res) {
+    res.render('./dashboard/admin/services/esi.hbs'); // or res.render('index.ejs');
+  
+});app.get('/pf', function(req, res) {
+    res.render('./dashboard/admin/services/pf.hbs'); // or res.render('index.ejs');
+  
+});app.get('/tax', function(req, res) {
+    res.render('./dashboard/admin/services/tax.hbs'); // or res.render('index.ejs');
+  
+});app.get('/professnaltax', function(req, res) {
+    res.render('./dashboard/admin/services/professnaltax.hbs'); // or res.render('index.ejs');
+  
+
+});app.get('/tds', function(req, res) {
+    res.render('./dashboard/admin/services/tds.hbs'); // or res.render('index.ejs');
+  
+});
+
+app.get('/legalnotic', function(req, res) {
+    res.render('./dashboard/admin/services/legalnotic.hbs'); // or res.render('index.ejs');
+});
+
+
+app.get('/patent', function(req, res) {
+    res.render('./dashboard/admin/services/patent.hbs'); // or res.render('index.ejs');
 });
 app.get('/Legal_Heir', function(req, res) {
     res.render('./dashboard/admin/services/legalHeir.hbs'); // or res.render('index.ejs');
@@ -333,6 +333,9 @@ app.get('/MoneyRecovery', function(req, res) {
 });
 app.get('/GenderChange', function(req, res) {
     res.render('./dashboard/admin/services/genderChange.hbs'); // or res.render('index.ejs');
+});
+app.get('/residential', function(req, res) {
+    res.render('./dashboard/admin/services/residential.hbs'); // or res.render('index.ejs');
 });
 app.get('/Conjugal', function(req, res) {
     res.render('./dashboard/admin/services/conjugal.hbs'); // or res.render('index.ejs');
@@ -383,6 +386,13 @@ app.get('/Trademark', function(req, res) {
 app.get('/NameChange', function(req, res) {
     res.render('./dashboard/admin/services/nameChange.hbs'); // or res.render('index.ejs');
 });
+app.get('/businessplan', function(req, res) {
+    res.render('./dashboard/admin/services/businessplan.hbs'); // or res.render('index.ejs');
+});
+app.get('/businessloan', function(req, res) {
+    res.render('./dashboard/admin/services/businessloan.hbs'); // or res.render('index.ejs');
+});
+
 //fetch data from db into category.ejs
 
 app.get('/dashboard/category', function(req, res) {

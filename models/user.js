@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const Schema = mongoose.Schema;
  
 const UserSchema =  new mongoose.Schema({
     firstname: {
@@ -23,11 +23,8 @@ const UserSchema =  new mongoose.Schema({
         type: String,
         required: true
     
-    },
-    usertype:{
-        type:String,
-        required:true
     }
+   
 });
 
 
