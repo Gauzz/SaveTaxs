@@ -8,6 +8,7 @@ body {
     box-sizing: border-box;
     font-family: 'Calibri', sans-serif;
     scroll-behavior: smooth;
+    font-size: 15px;
    
 }
 
@@ -16,7 +17,7 @@ body {
 
 nav {
      
-     width: calc(100vw - 20px);
+     width: calc(100vw - 40px);
      
 }
 
@@ -135,7 +136,7 @@ text-align: left;
 
 width: fit-content;
 display: -webkit-inline-box;
-top: 40px;
+top: 35px;
 z-index: 9;
 
 }
@@ -185,11 +186,12 @@ z-index: 9;
 }
 
 #img1 {
-    width: 50%;
+    width: 100%;
     margin-left: auto;
+    padding: 30px 10px;
 }
 
-header .group {
+.main .group {
     width: 100%;
     border: solid 1px #12142d;
     display: flex;
@@ -198,23 +200,24 @@ header .group {
     background: #fff;
 }
 
-header .group input {
+.main .group input {
     align-self: center;
     justify-self: flex-start;
     background: transparent;
     border: none;
     padding: 8px 8px;
+    width: 90%;
 }
 
-header .group input::placeholder {
+.main .group input::placeholder {
     font-family: 'Calibri', sans-serif;
 }
 
-header .group input:focus {
+.main .group input:focus {
     outline: none;
 }
 
-header .group button {
+.main .group button {
     align-self: flex-end;
     justify-self: flex-end;
     font-family: 'Calibri', sans-serif;
@@ -227,7 +230,7 @@ header .group button {
     border-radius: 0;
 }
 
-header .group button:focus {
+.main .group button:focus {
     outline: none;
 }
 
@@ -283,7 +286,7 @@ section .title {
     font-size: 1.2em;
     color: #001445;
     flex-grow: 1;
-    margin-top:10px;
+    margin-top:13px;
 }
 
 .card .price {
@@ -292,12 +295,12 @@ section .title {
     justify-self: center;
     color: #fff;
     font-size: 2.5em;
-    margin-top:20px;
+    margin-top:40px;
 }
 
 .card .more {
     flex-grow: 1;
-    margin-top:20px;
+    margin-top:80px;
 }
 
 
@@ -382,6 +385,7 @@ section .title {
 }
 
 .badges {
+    margin-top: 30px;
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -393,11 +397,14 @@ section .title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 1;
 }
 
 .badgeimg {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
+}
+.one{
     background-image: url('../../images/Business-Served/client-served-icon.svg');
     background-repeat: no-repeat;
     background-size: 900%;
@@ -416,18 +423,19 @@ section .title {
     background-repeat: no-repeat;
     background-size: 650%;
     background-position: center;
+    
 }
 
 .badge .count {
     font-size: 3em;
     font-weight: 600;
-    line-height: 0.1;
     color: #001445;
 }
 
 .badge .sub {
     color: #808080;
-    line-height: 0.1;
+    line-height: 1;
+    font-size: 18px;
 }
 
 
@@ -762,7 +770,7 @@ footer ul .h {
 
 
 
-    header{
+    .main{
         
         height: 70vh;
     }

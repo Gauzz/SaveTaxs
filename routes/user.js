@@ -56,7 +56,8 @@ router.post('/registration', (req, res)  =>{
 
         });
 
-    }else{
+    }
+    else{
 //validation passed
 
 User.findOne({email:email})

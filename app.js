@@ -31,7 +31,7 @@ var paymentHistory = require('./models/paymentHistory.js');
 var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
-
+var ngo = require('./models/ngo.js');
 
 
 mongoose.set('useNewUrlParser',true);
@@ -58,7 +58,7 @@ paymentHistory.createCollection();
 service.createCollection();
 userprofile.createCollection();
 users.createCollection();
-
+ngo.createCollection();
 
 // create application/json parser
 var jsonParser = bodyParser.json()
@@ -126,6 +126,7 @@ app.set('view engine', 'ejs');
 app.use('/', require('./routes/index'));
 app.use('/user', require('./routes/user'));
 app.use('/category', require('./routes/category'));
+app.use('/ngo',require('./routes/ngo'));
 
 // admin dashboard // routes
 
@@ -135,34 +136,15 @@ app.use('/category', require('./routes/category'));
 
 
 
-app.get('/dashboard', function(req, res) {
-    res.render('./dashboard/admin/index2.hbs'); // or res.render('index.ejs');
+app.get('/dashboard/admin/index', function(req, res) {
+    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
 });
 
 app.get('/login', function(req, res) {
     res.render('login.hbs', { title: "Login" }); // or res.render('index.ejs');
 });
-// app.post('/login', function(req, res) {
-//     if (req.body.email &&
-//         req.body.username &&
-//         req.body.password &&
-//         req.body.passwordConf) {
-//         var userData = {
-//                 email: req.body.email,
-//                 username: req.body.username,
-//                 password: req.body.password,
-//             }
-//             use schema.create to insert data into the db
-//         User.create(userData, function(err, user) {
-//             if (err) {
-//                 return res.send(err)
-//             } else {
-//                 return res.send('logged in');
-//             }
-//         });
-//     }
-//     or res.render('index.ejs');
-// });
+ 
+
 
 
 
@@ -174,9 +156,9 @@ app.get('/index', function(req, res) {
 app.get('/registration', function(req, res) {
     res.render('registration.hbs'); // or res.render('index.ejs');
 });
-// app.get('/dashboard', function (req, res) {
-//   res.render('index2'); // or res.render('index.ejs');
-// });
+ app.get('/dashboard', function (req, res) {
+   res.render('index2'); // or res.render('index.ejs');
+ });
 
 
 
@@ -391,6 +373,9 @@ app.get('/businessplan', function(req, res) {
 });
 app.get('/businessloan', function(req, res) {
     res.render('./dashboard/admin/services/businessloan.hbs'); // or res.render('index.ejs');
+});
+app.get('/GSTReturn', function(req, res) {
+    res.render('./dashboard/admin/services/GSTReturn.hbs'); // or res.render('index.ejs');
 });
 
 //fetch data from db into category.ejs

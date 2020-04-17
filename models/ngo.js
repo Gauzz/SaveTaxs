@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var ngoSchema = new Schema({
     id:{
-        type:Number
+        type: Number
     },
     database_name :{
         type: String
