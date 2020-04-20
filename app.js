@@ -31,7 +31,7 @@ var paymentHistory = require('./models/paymentHistory.js');
 var service = require('./models/service.js');
 var userprofile = require('./models/userprofile.js');
 var users = require('./models/user.js');
-var ngo = require('./models/ngo.js');
+
 
 
 mongoose.set('useNewUrlParser',true);
@@ -58,7 +58,7 @@ paymentHistory.createCollection();
 service.createCollection();
 userprofile.createCollection();
 users.createCollection();
-ngo.createCollection();
+
 
 // create application/json parser
 var jsonParser = bodyParser.json()
@@ -126,7 +126,7 @@ app.set('view engine', 'ejs');
 app.use('/', require('./routes/index'));
 app.use('/user', require('./routes/user'));
 app.use('/category', require('./routes/category'));
-app.use('/ngo',require('./routes/ngo'));
+
 
 // admin dashboard // routes
 
@@ -136,8 +136,8 @@ app.use('/ngo',require('./routes/ngo'));
 
 
 
-app.get('/dashboard/admin/index', function(req, res) {
-    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
+app.get('/dashboard/admin/index2.html', function(req, res) {
+    res.render('./dashboard/admin/index2.html'); // or res.render('index.ejs');
 });
 
 app.get('/login', function(req, res) {
@@ -147,7 +147,9 @@ app.get('/login', function(req, res) {
 
 
 
-
+app.get('/customerFeedback', function(req, res){
+    res.render('./dashboard/customer/customerfeedback.hbs');
+});
 
 app.get('/index', function(req, res) {
     res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
