@@ -7,8 +7,7 @@ const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const passport = require('passport');
 var bodyParser = require('body-parser');
-var assert = require('assert'); 
-
+const crypto = require("crypto");
 
 
 
@@ -44,7 +43,14 @@ router.post('/registration', (req, res)  =>{
         errors.push({msg: 'fill in all field'});
 
     }
- 
+    if (password != password2) {
+        errors.push({ msg: 'Passwords do not match' });
+      }
+
+      if (password.length < 6) {
+        errors.push({ msg: 'Password must be at least 6 characters' });
+      }
+
     if(errors.length>0){
         res.render('registration.hbs', {
             errors,
@@ -57,11 +63,10 @@ router.post('/registration', (req, res)  =>{
         });
 
     }
+    //validation passed
     else{
-//validation passed
-
-User.findOne({email:email})
-.then(user =>{
+    User.findOne({email:email})
+    .then(user =>{
     if(user){
         //user exists
         errors.push({ msg: 'user exist'});
@@ -82,8 +87,7 @@ User.findOne({email:email})
         password,
         password2
 
-        }
-        );
+        });
     
 
 //hash password
@@ -111,11 +115,19 @@ newUser.save()
 
 
 //login
-router.post('/login', 
+router.post('/login', (req, res, next)=>{
     passport.authenticate('local',{
         successRedirect: '/registration',
         failureRedirect:'/user/login',
         failureFlash:true
-    }));
+    })(req, res, next);
+});
+
+// Logout
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/users/login');
+  });
 
 module.exports = router;
