@@ -9,6 +9,6 @@ router.get('/', (req, res) => res.render('index.hbs',
 }));
 
 router.get('/dashboard', (req, res) => res.render('index.hbs',
- { title: "SaveTaxs" 
+ { title: "SaveTaxs" ,name: req.user.firstname + "_"+ req.user.secondname
 }));
 module.exports = router;

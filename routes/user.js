@@ -23,6 +23,13 @@ app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
 
+router.get('/', function(req, res){
+    console.log(req.user);
+    console.log(req.isAuthenticated())
+    res.render('index.hbs');
+});
+
+
 router.get('/login', (_req, res) => res.render('login.hbs'));
 
 router.get('/registration', (_req, res) => res.render('registration.hbs'));
@@ -47,10 +54,7 @@ router.post('/registration', (req, res)  =>{
         errors.push({ msg: 'Passwords do not match' });
       }
 
-      if (password.length < 6) {
-        errors.push({ msg: 'Password must be at least 6 characters' });
-      }
-
+     
     if(errors.length>0){
         res.render('registration.hbs', {
             errors,
@@ -117,17 +121,18 @@ newUser.save()
 //login
 router.post('/login', (req, res, next)=>{
     passport.authenticate('local',{
-        successRedirect: '/registration',
+        successRedirect: '/dashboard',
         failureRedirect:'/user/login',
         failureFlash:true
     })(req, res, next);
 });
 
+
 // Logout
 router.get('/logout', (req, res) => {
     req.logout();
     req.flash('success_msg', 'You are logged out');
-    res.redirect('/users/login');
+    res.redirect('/');
   });
 
 module.exports = router;

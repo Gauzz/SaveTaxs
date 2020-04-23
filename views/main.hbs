@@ -218,13 +218,22 @@
                    </div>
                    
               </li>
-              <li class="registration"><a href="/registration" style="color:white;">Sign up</a></li>
-            <li class="login"><a href="/login" style="color:white;">Sign in</a></li>
+              {{#if isAuthenticated}}
+              <li class="registration"><a href="/logout" id="logout" style="color:white;">LogOut</a></li>
+              <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">{{name}}</h4>
+            
+            {{else}}
+           
+              <li class="registration"><a href="/registration" id="signUp" style="color:white;">Sign up</a></li>
+            <li class="login"><a href="/login" id="signIn" style="color:white;">Sign in</a></li>
+            {{/if}}
         </ul>
     </nav>
 
 </div>
-
+<script>
+  
+  </script>
 
 </div>
 
@@ -242,7 +251,7 @@
         <ul>
             <li class="h">Company</li>
             <li><a href="/about" class="foota">About Us</a></li>
-            <li><a href="/blog" class="foota" >Blog</a></li>
+            <li><a href="/Blog" class="foota" >Blog</a></li>
             <li><a class="foota" >Partner with us</a></li>
             <li><a href="/contact" class="foota" >Contact Us</a></li>
 
