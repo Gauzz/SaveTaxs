@@ -23,15 +23,14 @@ app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
 
-router.get('/login', (_req, res) => res.render('login.hbs'));
+router.get('/login', (_req, res) =>{
+ res.render('login.hbs');
+  });
 
-router.get('/registration', (_req, res) => res.render('registration.hbs'));
-// router.get('/dashboard/category' , function(req,res){
-//     categories.find({parent_id} , function(err , docs){
-//       if(err) res.json(err);
-//       else res.render('category',{categories:docs})
-//     });
-//   });
+router.get('/registration', (_req, res) => {
+res.render('registration.hbs');
+ });
+
 
 
 router.post('/registration', (req, res)  =>{
@@ -47,9 +46,9 @@ router.post('/registration', (req, res)  =>{
         errors.push({ msg: 'Passwords do not match' });
       }
 
-      if (password.length < 6) {
-        errors.push({ msg: 'Password must be at least 6 characters' });
-      }
+     // if (password.length < 6) {
+      //  errors.push({ msg: 'Password must be at least 6 characters' });
+      //}
 
     if(errors.length>0){
         res.render('registration.hbs', {
@@ -114,12 +113,14 @@ newUser.save()
     
 
 
+
+
 //login
 router.post('/login', (req, res, next)=>{
     passport.authenticate('local',{
-        successRedirect: '/registration',
+        successRedirect: '/userprofile',
         failureRedirect:'/user/login',
-        failureFlash:true
+        failureFlash: 'wrong user or password'
     })(req, res, next);
 });
 
@@ -127,7 +128,7 @@ router.post('/login', (req, res, next)=>{
 router.get('/logout', (req, res) => {
     req.logout();
     req.flash('success_msg', 'You are logged out');
-    res.redirect('/users/login');
+    res.redirect('/');
   });
 
 module.exports = router;
