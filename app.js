@@ -149,9 +149,6 @@ app.get('/login', function(req, res) {
 });
  
 
-app.get('/logout', function(req, res) {
-    res.render('index.hbs' ); // or res.render('index.ejs');
-});
  
 
 app.get('/customerFeedback', function(req, res){

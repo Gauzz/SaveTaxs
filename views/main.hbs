@@ -219,9 +219,10 @@
                    
               </li>
               {{#if isAuthenticated}}
-              <li class="registration"><a href="/logout" id="logout" style="color:white;">LogOut</a></li>
-              <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">{{name}}</h4>
-            
+
+                <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bold;">{{name}}</h4>
+              <li class="login"><a href="/" id="logout" style="color:white;float:right;">LogOut</a></li>
+        
             {{else}}
            
               <li class="registration"><a href="/registration" id="signUp" style="color:white;">Sign up</a></li>

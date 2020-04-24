@@ -30,6 +30,7 @@ router.get('/', function(req, res){
 });
 
 
+
 router.get('/login', (_req, res) => res.render('login.hbs'));
 
 router.get('/registration', (_req, res) => res.render('registration.hbs'));
@@ -119,9 +120,9 @@ newUser.save()
 
 
 //login
-router.post('/login', (req, res, next)=>{
+router.post('/login', checkNotAuthenticated, (req, res, next)=>{
     passport.authenticate('local',{
-        successRedirect: '/dashboard',
+        successRedirect: '/',
         failureRedirect:'/user/login',
         failureFlash:true
     })(req, res, next);
@@ -129,10 +130,17 @@ router.post('/login', (req, res, next)=>{
 
 
 // Logout
-router.get('/logout', (req, res) => {
+router.get('/logout', checkNotAuthenticated,(req, res) => {
     req.logout();
     req.flash('success_msg', 'You are logged out');
     res.redirect('/');
   });
 
+  function checkNotAuthenticated(req,res,next){
+    if (req.isAuthenticated()){
+        return res.redirect('/');
+    }
+    next();
+}
+ 
 module.exports = router;
