@@ -16,7 +16,8 @@ const Strategy = require('passport-local').Strategy;
 var app = express();
 
 //passport config
-require('./config/passport')(passport);
+require('./config/passport')(passport)
+ 
 
 var categories = require('./models/category.js');
 var chat = require('./models/chat.js');
@@ -82,6 +83,8 @@ next();
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
 //connect flash
 app.use(flash());
 
@@ -120,8 +123,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-
-
+//changes after authentication
+app.use(function(req,res,next){
+    res.locals.isAuthenticated = req.isAuthenticated();
+    next();
+});
 
 
 // login and registration
@@ -137,8 +143,6 @@ app.use('/userprofile', require('./routes/userprofile'));
 //app.engine('html', require('ejs').renderFile);
 //app.set('view engine', 'html');
 
-
-
 app.get('/dashboard/admin/index2.html', function(req, res) {
     res.render('./dashboard/admin/index2.html'); // or res.render('index.ejs');
 });
@@ -148,18 +152,19 @@ app.get('/login', function(req, res) {
 });
  
 
+<<<<<<< HEAD
 app.get('/publicprofile', function(req, res) {
     res.render('publicprofile.hbs', { title: "Profile" }); // or res.render('index.ejs');
 });
 
+=======
+ 
+>>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
 
 app.get('/customerFeedback', function(req, res){
     res.render('./dashboard/customer/customerfeedback.hbs');
 });
 
-app.get('/index', function(req, res) {
-    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
-});
 
 app.get('/registration', function(req, res) {
     res.render('registration.hbs'); // or res.render('index.ejs');
@@ -185,7 +190,9 @@ app.get('views/index', function(req, res) {
 
 //admin 
 
-
+app.get('/Blog', function(req, res) {
+    res.render('./dashboard/admin/footerBlog.hbs'); // or res.render('index.ejs');
+});
 
 app.get('/blog', function(req, res) {
     res.render('./dashboard/admin/editblog.hbs'); // or res.render('index.ejs');
@@ -428,7 +435,3 @@ app.get('/dashboard/customer', function(req, res) {
     res.render('./dashboard/customer/customerpage.hbs'); // or res.render('index.ejs');
 });
 
-
-app.get('/customer/profile', function(req, res) {
-    res.render('./dashboard/customer/pro.hbs'); // or res.render('index.ejs');
-});

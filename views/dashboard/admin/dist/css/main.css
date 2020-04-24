@@ -60,8 +60,8 @@ nav a {
 }
 
 .links .login {
-    float: right;
-    margin-right: 30px;
+    
+    margin-left: 250px;
     
     background: var(--bg-g);
     border-radius: 3px;
@@ -588,6 +588,18 @@ footer ul .h {
 /* @media */
 #menuToggle input{
     display:none;
+}
+@media(max-width:1200px){
+    .links{
+        width:100%;
+        margin-left:10px;
+    }
+    li{
+        padding:0px 0px;
+    }
+    .links .login{
+        margin-left:20px;
+    }
 }
 @media(max-width:700px){
     .trust{

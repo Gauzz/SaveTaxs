@@ -1,5 +1,0 @@
-
-
-  function openfileDialog() {
-    $("#fileLoader").click();
-}
