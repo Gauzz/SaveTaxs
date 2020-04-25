@@ -23,6 +23,15 @@ app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
 
+<<<<<<< HEAD
+router.get('/login', (_req, res) =>{
+ res.render('login.hbs');
+  });
+
+router.get('/registration', (_req, res) => {
+res.render('registration.hbs');
+ });
+=======
 router.get('/', function(req, res){
     console.log(req.user);
     console.log(req.isAuthenticated())
@@ -32,14 +41,8 @@ router.get('/', function(req, res){
 
 
 router.get('/login', (_req, res) => res.render('login.hbs'));
+>>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
 
-router.get('/registration', (_req, res) => res.render('registration.hbs'));
-// router.get('/dashboard/category' , function(req,res){
-//     categories.find({parent_id} , function(err , docs){
-//       if(err) res.json(err);
-//       else res.render('category',{categories:docs})
-//     });
-//   });
 
 
 router.post('/registration', (req, res)  =>{
@@ -55,7 +58,14 @@ router.post('/registration', (req, res)  =>{
         errors.push({ msg: 'Passwords do not match' });
       }
 
+<<<<<<< HEAD
+     // if (password.length < 6) {
+      //  errors.push({ msg: 'Password must be at least 6 characters' });
+      //}
+
+=======
      
+>>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
     if(errors.length>0){
         res.render('registration.hbs', {
             errors,
@@ -119,12 +129,18 @@ newUser.save()
     
 
 
+
+
 //login
 router.post('/login',  (req, res, next)=>{
     passport.authenticate('local',{
+<<<<<<< HEAD
+        successRedirect: '/userprofile',
+=======
         successRedirect: '/',
+>>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
         failureRedirect:'/user/login',
-        failureFlash:true
+        failureFlash: 'wrong user or password'
     })(req, res, next);
 });
 

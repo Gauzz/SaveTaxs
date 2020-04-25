@@ -5,43 +5,23 @@ var userprofileSchema = new Schema({
     id: {
         type: Number
     },
-    type: {
-       type: String 
-    }, 
-    firstName: {
+    name: {
         type: String 
      }, 
-    lastName: {
-        type: String 
-     }, 
-    gender: {
-        type: String 
-     }, 
+    
     age:{
         type: Number
     },
-    contact: {
+    phone: {
         type: Number 
      }, 
     email: {
         type: String 
      }, 
-    facebook: {
-        type: String 
-     }, 
-     skype: {
-        type: String 
-     }, 
-     instagram: {
-        type: String 
-     }, 
-     dob: {
-        type: Date
-     },
      address: {
         type: String 
      }, 
-     city: {
+     country: {
         type: String 
      },  
      about: {
@@ -50,28 +30,18 @@ var userprofileSchema = new Schema({
      occupation: {
       type: String
    }, 
-   document: {
+   district: {
       type: String
    }, 
-   status: {
+    
+   imagprofile: {
       type: String
    }, 
-   orders: {
+   
+   location: {
       type: String
    }, 
-   varification: {
-      type: String
-   }, 
-   remember_token: {
-      type: String
-   }, 
-   authentication_token: {
-      type: String
-   }, 
-   profile_image: {
-      type: String
-   }, 
-     rating: {
+     gender: {
         type: String
      }
 });

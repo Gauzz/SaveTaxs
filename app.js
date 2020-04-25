@@ -12,10 +12,7 @@ const handlebars = require('express-handlebars');
 var expressValidator = require('express-validator');
 const passport = require('passport');
 const config = require('./config/database');
-
-
-
-
+const Strategy = require('passport-local').Strategy;
 var app = express();
 
 //passport config
@@ -77,6 +74,11 @@ app.use(session({
     saveUninitialized: false
 }));
 
+app.use((req, res, next) => {
+res.locals.loggedIn = req.isAuthenticated();
+next();
+});
+
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -132,6 +134,7 @@ app.use(function(req,res,next){
 app.use('/', require('./routes/index'));
 app.use('/user', require('./routes/user'));
 app.use('/category', require('./routes/category'));
+app.use('/userprofile', require('./routes/userprofile'));
 
 
 // admin dashboard // routes
@@ -149,7 +152,14 @@ app.get('/login', function(req, res) {
 });
  
 
+<<<<<<< HEAD
+app.get('/publicprofile', function(req, res) {
+    res.render('publicprofile.hbs', { title: "Profile" }); // or res.render('index.ejs');
+});
+
+=======
  
+>>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
 
 app.get('/customerFeedback', function(req, res){
     res.render('./dashboard/customer/customerfeedback.hbs');
