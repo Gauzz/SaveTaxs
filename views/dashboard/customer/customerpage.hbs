@@ -2,12 +2,46 @@
   <link rel="stylesheet" href="/dashboard/admin/dist/css/adpage.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-=======
+
  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
->>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
+ 
+ <style>
+   
+button {
+  border: none;
+  padding: 0.8em;
+  background: #F96;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+#editor {
+  padding: 1em;
+  background: #E6E6E6;
+  border-radius: 3px;
+}
+
+#editor:focus {
+  background: #FFF;
+  border-color: #69c773;
+}
+
+[contenteditable="true"] {
+  font-family: "Rajdhani";
+  color: #C00;
+}
+
+ </style>
   <!-- Navbar -->
     <nav1 style="display:flex;background-color:rgba(39, 124, 46, 0.2);justify-content:space-between;width:100%;">
         <div class="hamburger" style="margin:20px;cursor:pointer;">
@@ -74,8 +108,7 @@
            <table id="form" class="view">
 
         <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" name="Imagprofile">
-           <button id='EditSave' data-text="Save"> <i class="fas fa-edit"></i> Edit Profile</button>
-         <button id='Cancel' data-text="Cancel" style="display:none;">Cancel</button>
+           <button id='editBtn' data-text="Save"> <i class="fas fa-edit"></i> Edit Profile</button>
 
         </div>
         <form action="/userprofile" method="POST">
@@ -86,10 +119,10 @@
             <li><i class="far fa-comment-dots" style="font-size:24px;"></i></li>
         </div>
         <div>
-            <li><input type="text" name="name" id="name" value="{{ name }} " style="border: none;" ></li>
-            <li><input type="text" name="phone" id="phone" value="{{ phone }} " style="border: none;" ></li>
-            <li><input type="text" name="email" id="email" value="{{ email }} " style="border: none;" ></li>
-            <li><input type="text" name="about" id="about" value="{{ about }} " style="border: none;" ></li>
+            <li><input type="text" name="name" id="username"  style="border: none;" ></li>
+            <li><input type="text" name="phone" id="phone"  style="border: none;" ></li>
+            <li><input type="text" name="email" id="email" style="border: none;" ></li>
+            <li><input type="text" name="about" id="about"  style="border: none;" ></li>
 
         </div>
         <div>
@@ -104,9 +137,9 @@
                  <a href="#" style="margin:5px;"><i class="fab fa-linkedin"></i></a>
         </div>
         <div>
-            <li><input type="text" value="{{ location }} " name="location" id="location" style="border: none;" ></li>
-            <li><input type="text" value="{{ age }} " name="age" id="age" style="border: none;" ></li>
-            <li><input type="text" value="{{ occupation }} " name="occupation" id="occupation" style="border: none;" ></li>
+            <li><input type="text"  name="location" id="location" style="border: none;" ></li>
+            <li><input type="text" name="age" id="age" style="border: none;" ></li>
+            <li><input type="text"  name="occupation" id="occupation" style="border: none;" ></li>
             
         </div>
     </div>
@@ -118,10 +151,10 @@
               <li>Gender:</li>
         </div>
         <div>
-            <li><input type="text" value="{{ address }} " name="address" id="address" style="border: none;" ></li>
-            <li><input type="text" value="{{ country }} " name="country" id="country" style="border: none;" ></li>
-            <li><input type="text" value="{{ district }} " name="district" id="district" style="border: none;" ></li>
-            <li><input type="checkbox" name="gender" id="gender" value="{{ gender }} " class="Gender">Female<input class="Gender" name="gender" id="gender" value="{{ gender }} " type="checkbox">Male<input class="Gender" name="gender" id="gender" value="{{ gender }} " type="checkbox">Other</li>
+            <li><input type="text"  name="address" id="address" style="border: none;" ></li>
+            <li><input type="text"  name="country" id="country" style="border: none;" ></li>
+            <li><input type="text"  name="district" id="district" style="border: none;" ></li>
+            <li><input type="checkbox" name="gender" id="gender" class="Gender">Female<input class="Gender" name="gender" id="gender"  type="checkbox">Male<input class="Gender" name="gender" id="gender"  type="checkbox">Other</li>
         </div>
       </div>
     </div>
@@ -132,26 +165,97 @@
  </div>
 </div>
 
+
 <script>
-  $("#EditSave").click(function(){
-    var btnText = $(this).text();
-    if(btnText == 'Edit')
-    {
-        $(this).text('Save');
-        $('#Cancel').show();
+var editBtn = document.getElementById('editBtn');
+var editables = document.querySelectorAll('#username, #phone, #address, #email, #location, #gender, #district, #about, #occupation, #imgprofile, #age, #country');
+
+if (typeof(Storage) !== "undefined") {
+  if (localStorage.getItem('username') !== null) {
+    editables[0].innerHTML = localStorage.getItem('username');
+  }
+  if (localStorage.getItem('phone') !== null) {
+    editables[1].innerHTML = localStorage.getItem('phone');
+  }
+  if (localStorage.getItem('address') !== null) {
+    editables[2].innerHTML = localStorage.getItem('address');
+  }
+  if (localStorage.getItem('email') !== null) {
+    editables[3].innerHTML = localStorage.getItem('email');
+  }
+  if (localStorage.getItem('location') !== null) {
+    editables[4].innerHTML = localStorage.getItem('location');
+  }
+  if (localStorage.getItem('gender') !== null) {
+    editables[5].innerHTML = localStorage.getItem('gender');
+  }
+  if (localStorage.getItem('district') !== null) {
+    editables[6].innerHTML = localStorage.getItem('district');
+  }
+  if (localStorage.getItem('about') !== null) {
+    editables[7].innerHTML = localStorage.getItem('about');
+  }
+  if (localStorage.getItem('occupation') !== null) {
+    editables[8].innerHTML = localStorage.getItem('occupation');
+  }
+  if (localStorage.getItem('imagprofile') !== null) {
+    editables[9].innerHTML = localStorage.getItem('imgprofile');
+  }
+  if (localStorage.getItem('age') !== null) {
+    editables[10].innerHTML = localStorage.getItem('age');
+  }
+  if (localStorage.getItem('country') !== null) {
+    editables[11].innerHTML = localStorage.getItem('country');
+  }
+}
+
+editBtn.addEventListener('click', function(e) {
+  if (!editables[0].isContentEditable) {
+    editables[0].contentEditable = 'true';
+    editables[1].contentEditable = 'true';
+    editables[2].contentEditable = 'true';
+    editables[3].contentEditable = 'true';
+    editables[4].contentEditable = 'true';
+    editables[5].contentEditable = 'true';
+    editables[6].contentEditable = 'true';
+    editables[7].contentEditable = 'true';
+    editables[8].contentEditable = 'true';
+    editables[9].contentEditable = 'true';
+    editables[10].contentEditable = 'true';
+    editables[11].contentEditable = 'true';
+
+    editBtn.innerHTML = 'Save Changes';
+    editBtn.style.backgroundColor = '#6F9';
+  } else {
+    // Disable Editing
+    editables[0].contentEditable = 'false';
+    editables[1].contentEditable = 'false';
+    editables[2].contentEditable = 'false';
+    editables[3].contentEditable = 'false';
+    editables[4].contentEditable = 'false';
+    editables[5].contentEditable = 'false';
+    editables[6].contentEditable = 'false';
+    editables[7].contentEditable = 'false';
+    editables[8].contentEditable = 'false';
+    editables[9].contentEditable = 'false';
+    editables[10].contentEditable = 'false';
+    editables[11].contentEditable = 'false';
+
+    // Change Button Text and Color
+    editBtn.innerHTML = 'Enable Editing';
+    editBtn.style.backgroundColor = '#F96';
+    // Save the data in localStorage 
+    for (var i = 0; i < editables.length; i++) {
+      localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
     }
-    else
-    {
-        $(this).text('Edit');
-        $('#Cancel').hide();
-    }
+  }
 });
 
-$('#Cancel').click(function(){
-    $(this).hide();
-    $('#EditSave').text('Edit');
-});
-
+setInterval(function() {
+  for (var i = 0; i < editables.length; i++) {
+    localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
+  }
+}, 5000);
 </script>
  <script>
      function displayMenu(av){
