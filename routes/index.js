@@ -15,10 +15,17 @@ router.get('/',  (req, res) =>{
 
 
 router.get('/dashboard', (req, res) => res.render('index.hbs',
- { title: "SaveTaxs" ,name: req.user.firstname + "_"+ req.user.secondname
+ { title: "SaveTaxs"
 }));
 
 
+
+// Logout
+router.get('/logout',(req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/');
+  });
 
    
 module.exports = router;
