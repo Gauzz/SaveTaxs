@@ -152,14 +152,10 @@ app.get('/login', function(req, res) {
 });
  
 
-<<<<<<< HEAD
-app.get('/publicprofile', function(req, res) {
-    res.render('publicprofile.hbs', { title: "Profile" }); // or res.render('index.ejs');
+app.get('/usersprofile', function(req, res) {
+    res.render('publicprofile.hbs', { title: "Login" }); // or res.render('index.ejs');
 });
-
-=======
  
->>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
 
 app.get('/customerFeedback', function(req, res){
     res.render('./dashboard/customer/customerfeedback.hbs');
@@ -167,8 +163,9 @@ app.get('/customerFeedback', function(req, res){
 
 
 app.get('/registration', function(req, res) {
-    res.render('registration.hbs'); // or res.render('index.ejs');
-});
+     res.render('registration.hbs'); // or res.render('index.ejs');
+   
+   });
  app.get('/dashboard', function (req, res) {
    res.render('index2'); // or res.render('index.ejs');
  });

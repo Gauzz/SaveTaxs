@@ -2,16 +2,12 @@
   <link rel="stylesheet" href="/dashboard/admin/dist/css/adpage.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-=======
- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
->>>>>>> aad54b3cc811a2702be3578561d877747bd7d0aa
+ 
   <!-- Navbar -->
     <nav1 style="display:flex;background-color:rgba(39, 124, 46, 0.2);justify-content:space-between;width:100%;">
         <div class="hamburger" style="margin:20px;cursor:pointer;">
         <i class="fa fa-bars" style="font-size:28px;" onclick="displayMenu(this)"></i>
+        <h2>{{name}}</h2>
         </div>
         <ul class="link">
             <li><i class="fa fa-refresh" style="font-size:28px"></i></li> 
@@ -70,22 +66,24 @@
   <div class="tab-pane" id="customerprofile">
                
    <div class="wrap">
+     
+     <form action="/userprofile" method="POST">
      <div class="nested">
-           <table id="form" class="view">
+         
 
-        <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" name="Imagprofile">
-           <button id='EditSave' data-text="Save"> <i class="fas fa-edit"></i> Edit Profile</button>
-         <button id='Cancel' data-text="Cancel" style="display:none;">Cancel</button>
+            <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" name="Imagprofile">
+               <button id='EditSave' data-text="Save"> <i class="fas fa-edit"></i> Edit Profile</button>
+               <button id='Cancel' data-text="Cancel" style="display:none;">Cancel</button>
 
-        </div>
-        <form action="/userprofile" method="POST">
-        <div>
+            </div>
+       
+           <div>
             <li><b>NAME</b></li>
             <li><i class="fa fa-phone" aria-hidden="true" style="font-size:24px;"></i></li>
             <li><i class="fas fa-envelope" style="font-size:24px;"></i></li>
             <li><i class="far fa-comment-dots" style="font-size:24px;"></i></li>
-        </div>
-        <div>
+          </div>
+           <div>
             <li><input type="text" name="name" id="name" value="{{ name }} " style="border: none;" ></li>
             <li><input type="text" name="phone" id="phone" value="{{ phone }} " style="border: none;" ></li>
             <li><input type="text" name="email" id="email" value="{{ email }} " style="border: none;" ></li>
@@ -121,14 +119,18 @@
             <li><input type="text" value="{{ address }} " name="address" id="address" style="border: none;" ></li>
             <li><input type="text" value="{{ country }} " name="country" id="country" style="border: none;" ></li>
             <li><input type="text" value="{{ district }} " name="district" id="district" style="border: none;" ></li>
-            <li><input type="checkbox" name="gender" id="gender" value="{{ gender }} " class="Gender">Female<input class="Gender" name="gender" id="gender" value="{{ gender }} " type="checkbox">Male<input class="Gender" name="gender" id="gender" value="{{ gender }} " type="checkbox">Other</li>
+            <li><input type="checkbox" name="gender"  value="{{ gender }} " class="Gender">Female<input class="Gender" name="gender" value="{{ gender }} " type="checkbox">Male<input class="Gender" name="gender" id="gender" value="{{ gender }} " type="checkbox">Other</li>
+        </div>
+      
+        <div>
+          <p><a href="userprofile/{{name}}" target="_blank">View profile</a> </p>
         </div>
       </div>
+    </form>
+
+  
     </div>
   </div>
-        </form>
-<p><a href="userprofile/{{name}}" target="_blank">View profile</a> </p>
-  </table>
  </div>
 </div>
 
