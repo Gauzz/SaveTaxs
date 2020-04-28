@@ -1,58 +1,100 @@
 const express = require('express');
 const router = express.Router();
-const config = require('../config/passport')
 const ObjectID = require('mongodb').ObjectID;
+var bodyParser = require('body-parser');
+const passport = require('passport');
+const crypto = require("crypto");
+const path = require('path');
+const bcrypt = require('bcryptjs');
+const fs = require('fs');
+const stringify = require('json-stringify-safe')
 
 
+let User  = require('../models/userprofile');
+var jsonParser = bodyParser.json()
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
+var app = express();
+app.use(jsonParser);
+app.use(urlencodedParser);
+app.use(router);
 
 
 router.get('/', (req, res, next) => {
     if (!req.isAuthenticated()){
-    res.render('user/login');
+    res.redirect('user/login');
 }
-const users = req.app.locals.users;
-const _id = ObjectID(req.session.passport.user);
+ const userprofiles = req.app.locals.userprofiles;
+ const _id = ObjectID(req.session.passport.user);
 
-users.findOne({ _id }, (err, results) => {
-if (err) {
+ userprofiles.findOne({ _id }, (err, results) => {
+ if (err) {
 
-    throw err;
-}
-res.render('customerpage', { ...results});
+     throw err;
+ }
+ console.log('error');
+ res.render('./dashboard/customer/customerpage.hbs', { ...results});
+ });
 });
-});
 
 
-router.get('/email', (req, res, next) =>{
-const users = req.app.locals.users;
+router.get('/:email', (req, res) =>{
+const userprofiles = req.app.locals.userprofiles;
 const email = req.params.email;
 
-users.findOne({ email }, (err, results) =>{
-if(err || !results){ 
-res.render('publicprofile', {message: {error: ['User not found']}});
- }
- res.render('publicprofile', { ...results, email });
-});
-});
+ users.findOne({ email:email })
+.then(user => { 
+    if(!user){ 
+        return done(null, false, { 
+            message: 'that email is not register' });
+         }
 
-router.post('/',  (req, res, next) => {
+ res.render('./dashboard/customer/customerpage.hbs', {message: {error: ['User not found']}});
+    })
+ res.render('./dashboard/customer/customerpage.hbs', { ...results, email })
+ });
+
+
+router.post('/dashboard/customerpage',  (req, res, next) => {
 if (!req.isAuthenticated()){ 
     res.redirect(  '/user/login');
 } 
+const userprofiles = req.app.locals.userprofiles;
+const { Imagprofile, name, phone, email, about, age, occupation, address, location, country, district, gender } = req.body;
+const id = ObjectID(req.session.passport.userprofiles);
 
-const users = req.app.locals.users;
-const { imagprofile, name, phone, email, about, age, occupation, address, location, country, district, gender } = req.body;
-const _id = ObjectID(req.session.passport.users);
-
-users.updateOne({ _id }, { $set: {imagprofile, name,  phone, email, about, age, occupation, address, location, country, district, gender }},
+userprofiles.updateOne({ id }, { $set: {Imagprofile, name,  phone, email, about, age, occupation, address, location, country, district, gender }},
     (err) =>{ 
 if (err){ 
     throw err;
 }
-res.redirect('/usersprofile');
+
+res.render('./dashboard/customer/customerpage.hbs');
 
 });
 });
+
+
+// let User  = require('../models/userprofile');
+// var jsonParser = bodyParser.json()
+
+// // create application/x-www-form-urlencoded parser
+// var urlencodedParser = bodyParser.urlencoded({ extended: true })
+// var app = express();
+// app.use(jsonParser);
+// app.use(urlencodedParser);
+// app.use(router);
+
+// router.get('/customerpage', (req, res) => res.send('./dashboard/customer/customerpage.hbs'));
+
+
+// router.post('/dashboard/customerpage', (req, res)  =>{
+//     console.log('tittle');
+//     const{name, about, email, gender, address, country, location, occupation, Imagprofile, phone, district, age } = req.body;
+//  res.render('./dashboard/customer/customerpage.hbs');
+
+// });
 
 
 

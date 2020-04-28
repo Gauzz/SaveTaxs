@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var userprofileSchema = new Schema({
+var userprofilesSchema = new Schema({
     id: {
         type: Number
     },
@@ -45,4 +45,4 @@ var userprofileSchema = new Schema({
         type: String
      }
 });
-module.exports = mongoose.model('userprofile', userprofileSchema);
+module.exports = mongoose.model('userprofiles', userprofilesSchema);

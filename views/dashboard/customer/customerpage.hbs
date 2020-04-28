@@ -100,18 +100,19 @@ button:hover, button:focus {
 
 <div class="col-lg-10">
           <!-- Tab panes -->
+        <form action="/userprofile/dashboard/customerpage" method="POST">
+
 <div class="tab-content" >
   <div class="tab-pane" id="customerprofile">
-               
+    
    <div class="wrap">
      <div class="nested">
            <table id="form" class="view">
 
         <div><img src="/dashboard/admin/images/profilepic.jpg" alt="profile" id="Imgprofile" name="Imagprofile">
-           <button id='editBtn' data-text="Save"> <i class="fas fa-edit"></i> Edit Profile</button>
+           <button id='editBtn' type="submit"  onclick="return showDiv();" value="Submit"> <i class="fas fa-edit"></i> Edit</button>
 
         </div>
-        <form action="/userprofile" method="POST">
         <div>
             <li><b>NAME</b></li>
             <li><i class="fa fa-phone" aria-hidden="true" style="font-size:24px;"></i></li>
@@ -119,7 +120,7 @@ button:hover, button:focus {
             <li><i class="far fa-comment-dots" style="font-size:24px;"></i></li>
         </div>
         <div>
-            <li><input type="text" name="name" id="username"  style="border: none;" ></li>
+            <li><input type="text" name="name" id="name" value="{{name}} "  style="border: none;" ></li>
             <li><input type="text" name="phone" id="phone"  style="border: none;" ></li>
             <li><input type="text" name="email" id="email" style="border: none;" ></li>
             <li><input type="text" name="about" id="about"  style="border: none;" ></li>
@@ -159,20 +160,24 @@ button:hover, button:focus {
       </div>
     </div>
   </div>
-        </form>
-<p><a href="userprofile/{{name}}" target="_blank">View profile</a> </p>
+  
+            
   </table>
  </div>
 </div>
 
+<div id="div2" style="display: none;" style="float: right; margin-top:300px;">
 
+        <button type="submit" value="Submit" onClick = "this.style.visibility= 'hidden';">Submit</button>
+</div>
+        </form>
 <script>
 var editBtn = document.getElementById('editBtn');
-var editables = document.querySelectorAll('#username, #phone, #address, #email, #location, #gender, #district, #about, #occupation, #imgprofile, #age, #country');
+var editables = document.querySelectorAll('#name, #phone, #address, #email, #location, #gender, #district, #about, #occupation, #Imgprofile, #age, #country');
 
 if (typeof(Storage) !== "undefined") {
-  if (localStorage.getItem('username') !== null) {
-    editables[0].innerHTML = localStorage.getItem('username');
+  if (localStorage.getItem('name') !== null) {
+    editables[0].innerHTML = localStorage.getItem('name');
   }
   if (localStorage.getItem('phone') !== null) {
     editables[1].innerHTML = localStorage.getItem('phone');
@@ -198,8 +203,8 @@ if (typeof(Storage) !== "undefined") {
   if (localStorage.getItem('occupation') !== null) {
     editables[8].innerHTML = localStorage.getItem('occupation');
   }
-  if (localStorage.getItem('imagprofile') !== null) {
-    editables[9].innerHTML = localStorage.getItem('imgprofile');
+  if (localStorage.getItem('Imgprofile') !== null) {
+    editables[9].innerHTML = localStorage.getItem('Imgprofile');
   }
   if (localStorage.getItem('age') !== null) {
     editables[10].innerHTML = localStorage.getItem('age');
@@ -242,7 +247,7 @@ editBtn.addEventListener('click', function(e) {
     editables[11].contentEditable = 'false';
 
     // Change Button Text and Color
-    editBtn.innerHTML = 'Enable Editing';
+    editBtn.innerHTML = 'Edit';
     editBtn.style.backgroundColor = '#F96';
     // Save the data in localStorage 
     for (var i = 0; i < editables.length; i++) {
@@ -267,6 +272,15 @@ setInterval(function() {
         }
      }
  </script>
+
+     <script type="text/javascript">
+        function showDiv() {
+            document.getElementById('div2').style.display = 'block';
+            return false;
+        }
+    </script>
+
+
 
        <div class="col-lg-10">
           <!-- Tab panes -->
