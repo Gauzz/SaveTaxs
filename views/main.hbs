@@ -10,6 +10,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+ <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
 <style>
     html{
       margin: 0;
@@ -24,7 +26,7 @@
     <!-- Navbar -->
 
  <div class="brand">
-            <i>savetaxs</i>
+            <a href="/"><i>savetaxs</i></a>
 </div>
 
     <nav>
@@ -238,9 +240,7 @@
   </script>
 
 </div>
- {{#loggedIn}}
-<p class="text-right"><a href="/user/logout">Logout</a></p>
- {{/loggedIn}}
+
 {{{body}}}
 
  <footer style="display:inline-flex;">
@@ -255,7 +255,7 @@
         <ul>
             <li class="h">Company</li>
             <li><a href="/about" class="foota">About Us</a></li>
-            <li><a href="/Blog" class="foota" >Blog</a></li>
+            <li><a href="/footerBlog" class="foota" >Blog</a></li>
             <li><a class="foota" >Partner with us</a></li>
             <li><a href="/contact" class="foota" >Contact Us</a></li>
 

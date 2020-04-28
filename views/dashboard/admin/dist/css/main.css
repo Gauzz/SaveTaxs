@@ -37,6 +37,10 @@ nav a {
     width: 100px;
 
 }
+.brand a{
+    color:#001445;
+    text-decoration: none;
+}
 .wrapper{
     margin-top:10px;
     margin-left: 200px;

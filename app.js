@@ -16,8 +16,7 @@ const Strategy = require('passport-local').Strategy;
 var app = express();
 
 //passport config
-require('./config/passport')(passport)
- 
+require('./config/passport')(passport);
 
 var categories = require('./models/category.js');
 var chat = require('./models/chat.js');
@@ -74,16 +73,11 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use((req, res, next) => {
-res.locals.loggedIn = req.isAuthenticated();
-next();
-});
+
 
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-
-
 
 //connect flash
 app.use(flash());
@@ -108,7 +102,7 @@ app.use(expressValidator());  //this line to be addded
 app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
-var port = 9000;
+var port = 3000;
 app.engine("hbs", handlebars({
     extname: "hbs",
     defaultLayout: "main",
@@ -123,11 +117,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-//changes after authentication
-app.use(function(req,res,next){
+
+app.use(function(req, res, next) {
     res.locals.isAuthenticated = req.isAuthenticated();
     next();
-});
+ });
 
 
 // login and registration
@@ -143,6 +137,31 @@ app.use('/userprofile', require('./routes/userprofile'));
 //app.engine('html', require('ejs').renderFile);
 //app.set('view engine', 'html');
 
+// passport.use(new Strategy(
+//     (email, password, done) => {
+//         app.locals.users.findOne({email}, (err, user) => {
+//           if (err) {
+//               return done(err);
+//           } 
+//           if (!user){
+//               return done(null, false);
+//           }
+//           if (user.password != password){
+//               return done(null, false);
+//           }
+//           return done(null, user);
+//         });
+//     }
+// ));
+
+// passport.serializeUser((user, done) =>{
+//     done(null, user._id);
+// });
+
+// passport.deserializeUser((id, done) =>{
+//     done(null, {id});
+// });
+
 app.get('/dashboard/admin/index2.html', function(req, res) {
     res.render('./dashboard/admin/index2.html'); // or res.render('index.ejs');
 });
@@ -152,15 +171,18 @@ app.get('/login', function(req, res) {
 });
  
 
-app.get('/usersprofile', function(req, res) {
-    res.render('publicprofile.hbs', { title: "Login" }); // or res.render('index.ejs');
+app.get('/publicprofile', function(req, res) {
+    res.render('publicprofile.hbs', { title: "Profile" }); // or res.render('index.ejs');
 });
- 
+
 
 app.get('/customerFeedback', function(req, res){
     res.render('./dashboard/customer/customerfeedback.hbs');
 });
 
+app.get('/index', function(req, res) {
+    res.render('./dashboard/admin/index.html'); // or res.render('index.ejs');
+});
 
 app.get('/registration', function(req, res) {
      res.render('registration.hbs'); // or res.render('index.ejs');
@@ -187,12 +209,15 @@ app.get('views/index', function(req, res) {
 
 //admin 
 
-app.get('/Blog', function(req, res) {
-    res.render('./dashboard/admin/footerBlog.hbs'); // or res.render('index.ejs');
-});
+
 
 app.get('/blog', function(req, res) {
     res.render('./dashboard/admin/editblog.hbs'); // or res.render('index.ejs');
+});
+
+
+app.get('/footerBlog', function(req, res) {
+    res.render('./dashboard/admin/footerBlog.hbs'); // or res.render('index.ejs');
 });
 
 
@@ -428,7 +453,11 @@ app.post('/dashboard/category', function(req, res) {
 });
 
 
-app.get('/dashboard/customer', function(req, res) {
+app.get('/dashboard/customerpage', function(req, res) {
     res.render('./dashboard/customer/customerpage.hbs'); // or res.render('index.ejs');
 });
 
+
+app.get('/customer/profile', function(req, res) {
+    res.render('./dashboard/customer/pro.hbs'); // or res.render('index.ejs');
+});
