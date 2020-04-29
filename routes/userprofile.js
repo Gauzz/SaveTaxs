@@ -43,7 +43,7 @@ router.get('/:email', (req, res) =>{
 const userprofiles = req.app.locals.userprofiles;
 const email = req.params.email;
 
- users.findOne({ email:email })
+ userprofiles.findOne({ email:email })
 .then(user => { 
     if(!user){ 
         return done(null, false, { 

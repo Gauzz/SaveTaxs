@@ -94,9 +94,12 @@ nav a {
 }
 ul {
 list-style-type: none;
-
-
 }
+
+ul:hover {
+    overflow: visible;
+    
+    } 
 
 .links li {
 float: left;

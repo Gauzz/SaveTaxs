@@ -74,7 +74,6 @@ app.use(session({
 }));
 
 
-
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -134,8 +133,8 @@ app.use('/userprofile', require('./routes/userprofile'));
 // admin dashboard // routes
 
 
-//app.engine('html', require('ejs').renderFile);
-//app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // passport.use(new Strategy(
 //     (email, password, done) => {
@@ -224,6 +223,11 @@ app.get('/footerBlog', function(req, res) {
 app.get('/contact', function(req, res) {
     res.render('./dashboard/admin/contact.hbs'); // or res.render('index.ejs');
 });
+
+app.get('/contactus', function(req, res) {
+    res.render('./dashboard/admin/contactus.hbs'); // or res.render('index.ejs');
+});
+
 app.get('/helpdesk', function(req, res) {
     res.render('./dashboard/admin/helpdesk.hbs'); // or res.render('index.ejs');
 });
@@ -460,4 +464,7 @@ app.get('/dashboard/customerpage', function(req, res) {
 
 app.get('/customer/profile', function(req, res) {
     res.render('./dashboard/customer/pro.hbs'); // or res.render('index.ejs');
+});
+app.get('/customer/support', function(req, res) {
+    res.render('./dashboard/customer/support.hbs'); // or res.render('index.ejs');
 });
