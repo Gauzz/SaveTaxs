@@ -13,21 +13,68 @@
                 <p class="subtitle">
                     Savetaxs provides you all kind of solution starting from company registration, GST Resitration, Tax Filling, Trademark, Registration and much more..
                 </p>
-                <form action="#">
+                
                     <div class="group">
-                        <input type="text" placeholder="Search anything...">
-                        <button>Search</button>
+                        <input type="text" list="browsers" id="searchtext" placeholder="Search anything...">
+                         <datalist id="browsers">
+                              <option value="Private Limited Company" url="/privatelimcom">
+                              <option value="Limited Liability Partnership">
+                              <option value="One Person Company">
+                              <option value="Nidhi Company">
+                                <option value="Producer Company">
+                              <option value="Partnership Firm">
+                              <option value="Sole Proprietorship">
+                              <option value="Opera">
+                              <option value="Safari">
+                                <option value="Internet Explorer">
+                              <option value="Firefox">
+                              <option value="Chrome">
+                              <option value="Opera">
+                              <option value="Safari">
+                                <option value="Internet Explorer">
+                              <option value="Firefox">
+                              <option value="Chrome">
+                              <option value="Opera">
+                              <option value="Safari">
+                                <option value="Internet Explorer">
+                              <option value="Firefox">
+                              <option value="Chrome">
+                              <option value="Opera">
+                              <option value="Safari">
+                                <option value="Internet Explorer">
+                              <option value="Firefox">
+                              <option value="Chrome">
+                              <option value="Opera">
+                              <option value="Safari">
+                              <option value="Safari">
+                          </datalist>
+                        <button onclick="function(this)">Search</button>
                     </div>
-                </form>
+               
             </div>
             </div>
             <div class="col-lg-6">
             <img id="img1" src="/dashboard/admin/images/home-img.png" alt="svg">
             </div>
         </div>
+
       </div>  
     </div>
 
+   <script type="text/javascript"> 
+   document.querySelector("input").addEventListener("change",function(evn) {
+     
+      var search = document.getElementById("searchtext").value; 
+      var items = document.getElementById("browsers").value;
+       if(search == items.value){
+            var Url = document.getElementsByTagName("option").url;
+            window.location.assign(Url);
+       }
+     
+      
+   })
+</script>
+  
     <!-- services -->
     <section class="service">
         <p class="title">Our Services</p>
@@ -328,8 +375,6 @@
         </div>
     </section>
 
-   
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
