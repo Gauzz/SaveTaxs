@@ -73,10 +73,6 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use((req, res, next) => {
-res.locals.loggedIn = req.isAuthenticated();
-next();
-});
 
 // passport middleware
 app.use(passport.initialize());
@@ -121,7 +117,10 @@ app.set('view engine', 'ejs');
 
 
 
-
+app.use(function(req, res, next) {
+    res.locals.isAuthenticated = req.isAuthenticated();
+    next();
+ });
 
 
 // login and registration
@@ -185,8 +184,9 @@ app.get('/index', function(req, res) {
 });
 
 app.get('/registration', function(req, res) {
-    res.render('registration.hbs'); // or res.render('index.ejs');
-});
+     res.render('registration.hbs'); // or res.render('index.ejs');
+   
+   });
  app.get('/dashboard', function (req, res) {
    res.render('index2'); // or res.render('index.ejs');
  });
@@ -212,6 +212,11 @@ app.get('views/index', function(req, res) {
 
 app.get('/blog', function(req, res) {
     res.render('./dashboard/admin/editblog.hbs'); // or res.render('index.ejs');
+});
+
+
+app.get('/footerBlog', function(req, res) {
+    res.render('./dashboard/admin/footerBlog.hbs'); // or res.render('index.ejs');
 });
 
 

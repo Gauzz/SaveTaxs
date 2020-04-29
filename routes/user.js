@@ -111,9 +111,6 @@ newUser.save()
 });
     
 
-
-
-
 //login
 router.post('/login',  (req, res, next)=>{
     passport.authenticate('local',{

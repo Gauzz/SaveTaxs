@@ -37,6 +37,10 @@ nav a {
     width: 100px;
 
 }
+.brand a{
+    color:#001445;
+    text-decoration: none;
+}
 .wrapper{
     margin-top:10px;
     margin-left: 200px;
@@ -56,12 +60,20 @@ nav a {
     font-size: 1.0em;
     
     text-transform: uppercase;
-    padding: 7px 15px;
+    padding: 7px 10px;
 }
 
 .links .login {
     
     margin-left: 250px;
+    
+    background: var(--bg-g);
+    border-radius: 3px;
+ 
+}
+.links .logout {
+    
+    margin-left: 200px;
     
     background: var(--bg-g);
     border-radius: 3px;
