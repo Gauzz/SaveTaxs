@@ -9,7 +9,6 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
  
  <style>
    
@@ -43,7 +42,10 @@ button:hover, button:focus {
   font-family: "Rajdhani";
   color: #C00;
 }
-
+.link{
+  display: flex;
+  flex-direction: row;
+}
  </style>
   <!-- Navbar -->
     <nav1 style="display:flex;background-color:rgba(39, 124, 46, 0.2);justify-content:space-between;width:100%;">
@@ -57,64 +59,125 @@ button:hover, button:focus {
             <li><i class="fa fa-user-o" style="font-size:28px;"></i></li>
         </ul> 
     </nav1>
-<div class="row">
+<aside class="main-sidebar sidebar-dark-primary elevation-4 col-lg-2">
+
+            <!-- Sidebar -->
+            <div class="sidebar1">
+                <!-- Sidebar user panel (optional) -->
+                <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="/dashboard/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                </div> -->
+
+                <!-- Sidebar Menu -->
+                <nav0 class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                        <li class="nav-item has-treeview menu-open">
+                            <a id="customerstatus_a" class="nav-link1 active" onclick="toggleDashboardView(this)">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                        Status
+                                    <i class="right fas fa-angle-left"></i>
+                               
+                            </a>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a id="customerprofile_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                <i class="fas fa-child"></i>
+                                    Profile
+                                    <i class="fas fa-angle-left right"></i>
+                                
+                            </a>
+                        <li>
+
+                        <li class="nav-item has-treeview ">
+                            <a id="customerVideoConference_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                <i class="fas fa-child"></i>
+                                    Video Conferencing
+                                    <i class="fas fa-angle-left right"></i>
+                                
+                            </a>
+                        </li>
+
+                        <li class="nav-item has-treeview ">
+                            <a id="customerpayment_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                <i class="fas fa-comments"></i>
+                                    Payment Gateway
+                                    <i class="fas fa-angle-left right"></i>
+                                
+                            </a>
+                        <li>
+
+                        <li class="nav-item has-treeview ">
+                            <a id="customerrating_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                <i class="fas fa-columns"></i>
+                                    Rating
+                                    <i class="fas fa-angle-left right"></i>
+                                
+                            </a>
+                        </li>
+
+                        
+                        <li class="nav-item has-treeview ">
+                            <a id="customersearch_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                <i class="nav-icon fas fa-tree"></i>
+                                    Search
+                                    <i class="fas fa-angle-left right"></i>
+                               
+                            </a>
+                        <li>
+
+                            <li class="nav-item has-treeview ">
+                                <a id="customerorderH_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                    <i class="nav-icon fas fa-tree"></i>
+                                        Order History
+                                        <i class="fas fa-angle-left right"></i>
+                                   
+                                </a>
+                            <li>
+                                <li class="nav-item has-treeview ">
+                                    <a id="customersupport_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                        <i class="nav-icon fas fa-tree"></i>
+                                            Customer Support
+                                            <i class="fas fa-angle-left right"></i>
+                                        
+                                    </a>
+                                <li>
+                                    <li class="nav-item has-treeview ">
+                                        <a id="customerchat_a" class="nav-link1" onclick="toggleDashboardView(this)">
+                                            <i class="nav-icon fas fa-tree"></i>
+                                            Chat
+                                                <i class="fas fa-angle-left right"></i>
+                                          
+                                        </a>
+                                    <li>
+
+                                  <li class="nav-item has-treeview ">
+                                     <a id="customernotify_a" class="nav-link1" href="#">
+                                     <i class="fas fa-sign-out-alt"></i>
+                                       Notifications
+                                    <i class="fas fa-angle-left left"></i>
+                                
+                            </a>
+                        <li>                
+                            
+                                <li class="nav-item has-treeview ">
+                                    <a id="customerlogout_a" class="nav-link1" href="#">
+                                       <i class="fas fa-sign-out-alt"></i>
+                                         Logout
+                                       <i class="fas fa-angle-left left"></i>
+                                
+                                   </a>
+                               <li>                                         
+                    </ul>
+            </nav0>
+      </div>
+      </aside>
+<div id="customerprofile-tab" class="content-wrapper">
+<div class="col-lg-8" >
   
-  <div class="col-lg-2">
-    <ul class="nav-tabs tabs-left" id="flex"  style="left:0px;">
-       
-        <li class="items">
-           <a href="#" data-toggle="tab">Status</a>
-        </li><br/>
- 
-        <li class="items active">
-           <a href="#customerprofile" data-toggle="tab" id="customerprofile_a" onclick="toggleDashboardView(this)">Profile</a>
-        </li><br/>
-
-        <li class="items active">
-           <a href="#customerVideoConference" id="customervideo_a" onclick="toggleDashboardView(this)" data-toggle="tab">Video Conferencing</a>
-        </li><br/>
-
-        <li class="items">
-           <a href="#" data-toggle="tab">Payment Gateway</a>
-        </li><br/>
-
-         <li class="items">
-             <a href="#" data-toggle="tab">Ratings</a>
-         </li><br/>
-
-         <li class="items">
-           <a href="#" data-toggle="tab">Search</a>
-        </li><br/>
-
-        <li class="items">
-           <a href="#" data-toggle="tab">Order History</a>
-        </li><br/>
-
-         <li class="items active">
-           <a href="#customerhelp" id="customerhelp_a" onclick="toggleDashboardView(this)" data-toggle="tab">Customer Support</a>
-        </li><br/>
- <li class="items active">
-           <a href="#customerchat" id="customerchat_a" onclick="toggleDashboardView(this)" data-toggle="tab">Chat</a>
-        </li><br/>
-<li class="items active">
-           <a href="#customernotification" id="customernotification_a" onclick="toggleDashboardView(this)" data-toggle="tab">Notifications</a>
-        </li><br/>
-
-        <li class="items">
-           <a href="#" data-toggle="tab">Logout</a>
-        </li>
-        
-     </ul>
-
-</div>
-
-<div class="col-lg-10" id="customerprofile">
-          <!-- Tab panes -->
-        <form action="/userprofile/dashboard/customerpage" method="POST">
-
-<div class="tab-content" >
-  <div class="tab-pane" >
-    
    <div class="wrap">
      
      <form action="/userprofile" method="POST">
@@ -171,13 +234,8 @@ button:hover, button:focus {
         </div>
       </div>
     </form>
-
-  
-    </div>
-  </div>
-  
             
-  </table>
+  
  </div>
 </div>
 
@@ -185,7 +243,7 @@ button:hover, button:focus {
 
         <button type="submit" value="Submit" onClick = "this.style.visibility= 'hidden';">Submit</button>
 </div>
-        </form>
+</div>
 <script>
 var editBtn = document.getElementById('editBtn');
 var editables = document.querySelectorAll('#name, #phone, #address, #email, #location, #gender, #district, #about, #occupation, #Imgprofile, #age, #country');
@@ -277,16 +335,7 @@ setInterval(function() {
   }
 }, 5000);
 </script>
- <script>
-     function displayMenu(av){
-        if(document.getElementById('flex').style.display==="none"){
-        document.getElementById('flex').style.display="block";
-        }
-        else{
-          document.getElementById('flex').style.display="none";
-        }
-     }
- </script>
+ 
 
      <script type="text/javascript">
         function showDiv() {
@@ -296,12 +345,9 @@ setInterval(function() {
     </script>
 
 
-
-       <div class="col-lg-10">
-          <!-- Tab panes -->
-           <div class="tab-content" id="customerVideoConference" >
-                <div class="tab-pane" >
-
+<div id="customerVideoConference" class="content-wrapper">
+       <div class="col-lg-9">
+         
                   <h4>My Feed :</h4>
                 <div id="me"></div>
                 
@@ -313,15 +359,13 @@ setInterval(function() {
                 <div id="canvas-container">
                 
                 </div>
-               </div>
-            </div>
+               
         </div>
 
 
-
+</div>
    <!-- Video-Confrencing-Page SCRIPTS -->
-        <script src="dist/js/scripts/AgoraRTCSDK-2.4.0.js"></script>
-        <script src="dist/js/scripts/script.js"></script>
+       
         
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -356,11 +400,9 @@ setInterval(function() {
         
 
 
-
-     <div class="col-lg-10">
-          <!-- Tab panes -->
-           <div class="tab-content" id="customerhelp">
-                <div class="tab-pane" >
+  <div id="customersupport-tab" class="content-wrapper">  
+     <div class="col-lg-8">
+        
  <div class="uk-background-muted">
 		<div class="uk-container">
 			<div class="uk-margin">
@@ -467,13 +509,12 @@ setInterval(function() {
                                  
                </div>
             </div>
-        </div>
+        
 
         {{!-- chat section --}}
+<div id="customerchat-tab" class="content-wrapper">        
  <div class="col-lg-10" >
-          <!-- Tab panes -->
-           <div class="tab-content" id="customerchat">
-                <div class="tab-pane" >
+          
     <div class="fullscreen">
                 <div class="containerz" style="margin-left: 10px;">
                 <h3 class=" text-center">Messaging</h3>
@@ -614,23 +655,20 @@ setInterval(function() {
                           </div>
                         </div>
                       </div>
-                      
+                      </div>
                             
-                    </div></div>
+                    </div>
+                    </div>
                     </div>     
                               
                </div>
-            </div>
-        </div>
+           
 
 
-
-         <div class="col-lg-10">
-          <!-- Tab panes -->
-           <div class="tab-content" id="customernotification">
-                <div class="tab-pane" >
-
-                <div id="contentc" class="py-4">
+<div id="customernotification-tab" class="content-wrapper">
+<div class="col-lg-8">
+          
+        <div id="contentc" class="py-4">
     <div class="containerc">
       <div class="rowc"> 
         <!-- Left Panel
@@ -663,12 +701,15 @@ setInterval(function() {
           
           <!-- Need Help?
           =============================== -->
+
+     
           <div class="bg-light shadow-sm rounded text-center p-3 mb-4">
             <div class="text-17 text-light my-3"><i class="fas fa-comments"></i></div>
             <h3 class="text-3 font-weight-400 my-4">Need Help?</h3>
             <p class="text-muted opacity-8 mb-4">Have questions or concerns regrading your account?<br>
               Our experts are here to help!.</p>
             <a href="#" style="text-decoration: none;" class="btn btn1-primary btn1-block">Chate with Us</a> </div>
+        
           <!-- Need Help? End --> 
           
         </aside>
@@ -680,6 +721,7 @@ setInterval(function() {
           
           <!-- Notifications
           ============================================= -->
+     
           <div class="bg-light shadow-sm rounded p-4 mb-4">
             <h3 class="text-5 font-weight-400">Notifications</h3>
             <p class="text-muted">Select subscriptions to be delivered to <span class="text-body">smithrhodes1982@gmail.com</span></p>
@@ -730,6 +772,7 @@ setInterval(function() {
               <button class="btn btn1-primary mt-1" type="submit">Save Changes</button>
             </form>
           </div>
+          </div>
           <!-- Notifications End --> 
           
         </div>
@@ -738,87 +781,69 @@ setInterval(function() {
     </div>
   </div>
 
-                </div>
-               </div>
-            </div>
-        </div>
+</div>
+              
+           
+      
 
-        <!-- REQUIRED SCRIPTS -->
-        <!-- jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- overlayScrollbars -->
-        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="/dashboard/admin/dist/js/adminlte.js"></script>
-         <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-        <script src="plugins/raphael/raphael.min.js"></script>
-        <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
-        <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
-
-        <script src="/dashboard/admin/dist/js/pages/dashboard2.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
         <script>
-            var customerprofile = document.getElementById("customerprofile");
-            var customerchat = document.getElementById("customerchat");
-            var customerhelp = document.getElementById("customerhelp");
-            var customervideo = document.getElementById("customervideo");
-            var customernotification = document.getElementById("customernotification");
+            var customerstatus_tab = document.getElementById("customerstatus-tab");
+            var customerprofile_tab = document.getElementById("customerprofile-tab");
+            var customerchat_tab = document.getElementById("customerchat-tab");
+            var customersupport_tab = document.getElementById("customersupport-tab");
+            var customerVideoConference = document.getElementById("customerVideoConference");
+            var customernotification_tab = document.getElementById("customernotification-tab");
 
            
-
-            customerprofile.style.display = "none";
-            customerchat.style.display = "none";
-            customerhelp.style.display = "none";
-            customervideo.style.display = "none";
-           customernotification.style.display = "none";
+             customerprofile_tab.style.display = "none";
+            customerprofile_tab.style.display = "none";
+            customerchat_tab.style.display = "none";
+            customersupport_tab.style.display = "none";
+            customerVideoConference.style.display = "none";
+           customernotification_tab.style.display = "none";
 
 
 
 
             // document.getElementById("analytics-tab").style.display="none";
             function toggleDashboardView(evt) {
-                customerprofile.style.display = "none";
-                customerchat.style.display = "none";
-                customerhelp.style.display = "none";
-                customervideo.style.display = "none";
-                customernotification.style.display = "none";
+                customerprofile_tab.style.display = "none";
+                customerchat_tab.style.display = "none";
+                customersupport_tab.style.display = "none";
+                customerVideoConference.style.display = "none";
+                customernotification_tab.style.display = "none";
 
                 
 
                 var target_element = evt;
                 switch (target_element.id) {
+                    case "customerstatus_a":
+                        customerstatus_tab.style.display = "block";
+                        break;
                     case "customerprofile_a":
-                        customerprofile.style.display = "block";
+                        customerprofile_tab.style.display = "block";
                         break;
                     case "customerchat_a":
-                        customerchat.style.display = "block";
+                        customerchat_tab.style.display = "block";
                         break;
-                    case "customerhelp_a":
-                        customerhelp.style.display = "block";
+                    case "customersupport_a":
+                        customersupport_tab.style.display = "block";
                         break;
-                    case "customervideo_a":
-                customervideo.style.display = "block";
+                    case "customerVideoConference_a":
+                customerVideoConference.style.display = "block";
                         break;
-                    case "customernotification_a":
-                customernotification.style.display = "block";
+                    case "customernotify_a":
+                customernotification_tab.style.display = "block";
                         break;
                     
 
                 }
             }
         </script>
-        <script>
-               function displayMenu(av){
-                  if(document.getElementById('flex').style.display==="none"){
-                  document.getElementById('flex').style.display="block";
-                  }
-                  else{
-                    document.getElementById('flex').style.display="none";
-                  }
-               }
-           </script>
+    
+          
+          
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

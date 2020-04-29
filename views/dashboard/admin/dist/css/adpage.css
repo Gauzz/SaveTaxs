@@ -12,34 +12,12 @@ input:focus{
     outline-style: none;
     border-bottom-color: rgb(43, 43, 109);
 }
-#flex{
-    flex-direction: column;
-    background-color: rgba(60, 60, 60, 0.7);
+
+.has-treeview .nav-link1{
     text-align: center;
-    width:200px;
-    height:46em;
-    position: sticky;
+    padding: 10px 10px;
+   
 }
-li .items{
-    padding-inline-start: 0%;
-    line-height: 3.0;
-    font-style: italic;
-     font-weight: bold;
-}
-
-.items a{
-    color:white;
-    text-decoration: none;
-}
-.link{
-    float:right;
-    margin-right: 80px;
-    width:300px;
-    display:flex;
-    justify-content:space-around;
-    margin-top:15px;
-}
-
 .nav-tabs>li>a:hover {
 /* margin-right: 2px; */
   
