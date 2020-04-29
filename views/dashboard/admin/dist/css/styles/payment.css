@@ -1,5 +1,5 @@
 /* Padding - just for asthetics on Bootsnipp.com */
-body { margin-top:20px; }
+body { margin-top:40px; }
 
 /* CSS for Credit Card Payment form */
 .credit-card-box .panel-title {
@@ -9,7 +9,7 @@ body { margin-top:20px; }
 .credit-card-box .form-control.error {
     border-color: red;
     outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+    box-shadow: inset 0 1px 1px rgba(146, 137, 137, 0.075),0 0 8px rgba(255,0,0,0.6);
 }
 .credit-card-box label.error {
   font-weight: bold;

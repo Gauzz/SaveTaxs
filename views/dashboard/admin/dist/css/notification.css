@@ -657,3 +657,74 @@ form {
     display: block;
     padding-left: 1.25rem;
 }
+
+ /* new css  */
+/*      
+ .head1{
+    font-weight: bold;
+    margin-left:20px;
+} */
+ ul {
+/* list-style-type: none; */
+overflow: hidden;
+
+} 
+
+
+/* .links li {
+float: left;
+}
+
+li a, .dropbtn {
+display: block;
+
+text-align: center;
+
+text-decoration: none;
+} */
+/* 
+li a:hover, .dropdown:hover .dropbtn {
+color:rgb(73, 68, 68);
+font-weight: bold;
+text-decoration: none;
+} */
+/* 
+li.dropdown {
+display: inline-block;
+} */
+/* 
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 300px;
+
+max-height:650px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: +3;
+
+} */
+
+/* .dropdown-content a {
+color: black;
+padding: 12px 18px;
+text-decoration: none;
+display:block;
+text-align: left;
+visibility: visible;
+
+} */
+/* 
+.dropdown-content a:hover {background-color: #0f0e0e;
+visibility: visible;
+} */
+
+/* .dropdown:hover .dropdown-content {
+visibility: visible;
+
+width: 100%;
+display: block;
+top: 60px;
+
+
+} */

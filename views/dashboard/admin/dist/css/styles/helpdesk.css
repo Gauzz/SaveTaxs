@@ -27,11 +27,11 @@ div {
     display: block;
 }
 
-.hero-bg {
+/* .hero-bg {
     background-image: url('/dashboard/admin/images/png/contact-us-banner.jpg');
     height: 250px;
 
-}
+} */
 .hero-contenta{
     background-color: rgb(85, 250, 85);
     height: 250px;
