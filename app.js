@@ -377,7 +377,7 @@ app.get('/Trade_License', function(req, res) {
 });
 app.get('/Will', function(req, res) {
 
-    res.render('./dashboard/admin/will.hbs');
+    res.render('./dashboard/admin/services/will.hbs');
 });
 app.get('/Web-and-App', function(req, res) {
     res.render('./dashboard/admin/services/web-and-app.hbs'); // or res.render('index.ejs');
