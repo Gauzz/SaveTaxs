@@ -1,7 +1,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
    <!-- cover -->
 <style>
-  
+ 
 </style>
 
     <div class="main">
@@ -14,43 +14,61 @@
                     Savetaxs provides you all kind of solution starting from company registration, GST Resitration, Tax Filling, Trademark, Registration and much more..
                 </p>
                 
+                <!--for search -->
                     <div class="group">
-                        <input type="text" list="browsers" id="searchtext" placeholder="Search anything...">
-                         <datalist id="browsers">
-                              <option value="Private Limited Company" url="/privatelimcom">
-                              <option value="Limited Liability Partnership">
-                              <option value="One Person Company">
-                              <option value="Nidhi Company">
-                                <option value="Producer Company">
-                              <option value="Partnership Firm">
-                              <option value="Sole Proprietorship">
-                              <option value="Opera">
-                              <option value="Safari">
-                                <option value="Internet Explorer">
-                              <option value="Firefox">
-                              <option value="Chrome">
-                              <option value="Opera">
-                              <option value="Safari">
-                                <option value="Internet Explorer">
-                              <option value="Firefox">
-                              <option value="Chrome">
-                              <option value="Opera">
-                              <option value="Safari">
-                                <option value="Internet Explorer">
-                              <option value="Firefox">
-                              <option value="Chrome">
-                              <option value="Opera">
-                              <option value="Safari">
-                                <option value="Internet Explorer">
-                              <option value="Firefox">
-                              <option value="Chrome">
-                              <option value="Opera">
-                              <option value="Safari">
-                              <option value="Safari">
-                          </datalist>
-                        <button onclick="function(this)">Search</button>
-                    </div>
-               
+                        <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search anything..." onfocus="myDisplay();">
+                         <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                     </div>    
+                          <ul id="myUL" style="display:none;">
+                              <li><a href="/privatelimcom">Private Limited Company</a></li>
+                              <li><a href="/llp">Limited Liability Partnership</a></li>
+                               <li><a href="/oneperson">One Person Company</a></li>
+                              <li><a href="/nidhicom">Nidhi Company</a></li>
+                              <li><a href="/producercom">Producer Company</a></li>
+                              <li><a href="/partnership">Partnership Firm</a></li>
+                              <li><a href="/propertoship">Sole Proprietorship</a></li>
+                              <li><a href="/Shop-And-Establishment">Shop & Establishment Registration</a></li>
+                              <li><a href="/IMPORTERCODE">IEC(Import/Export Code)</a></li>
+                              <li><a href="/SSI-MSME">MSME/SSI Registration</a></li>
+                              <li><a href="/ISO">ISO Certification</a>
+                              <li><a href="/Trade_License">Trade License</a></li>
+                              <li><a href="/tax"> Goods & Services Tax Registration (GST)</a></li>
+                              <li><a href="/GSTReturn">GST Return Filing</a></li>
+                              <li><a href="/professnaltax">Professional Tax Registration</a></li>
+                              <li><a href="/tds">TDS Return</a></li>
+                              <li><a href="/pf">EPF Registration</a></li>
+                              <li><a href="/esi">ESI Registration</a></li>
+                              <li><a href="/itr">Income Tax Return</a></li>
+                              <li><a href="/Web-and-App"> Terms of Service and Privacy Policy, Disclaimer</a></li>
+                              <li><a href="/Trademark">Trademark Registration</a></li>
+                              <li><a href="/fssai">FSSAI(Food License)</a>  </li>
+                              <li><a href="/digisignatur">Digital Signature Certificate</a></li>
+                              <li><a href="/otherservice">OSP License</a>  </li>
+                              <li><a href="/Copyright">Copyright Registration</a></li>
+                              <li><a href="/businessplan"> Business Plan</a></li>
+                              <li> <a href="/businessloan">Businessloan</a></li>
+                              <li><a href="/businessfund"> Fundraising</a></li>
+                              <li><a href="/patent"> Patent</a></li>
+                              <li><a href="/PropertyVerify"> Property Title Verification</a></li>
+                              <li><a href="/PropertyRegistration">Property Registration</a></li>
+                              <li><a href="/Succession">Succession Certificate</a></li>
+                              <li><a href="/Legal_Heir">Legal Heir Certificate</a></li>
+                              <li><a href="/residential">Residential </a></li>
+                              <li><a href="/Relinquish">Relinquishment </a></li>
+                              <li><a href="/legalnotic"> legalnotice</a></li>
+                              <li><a href="/NGO"> NGO</a></li>
+                              <li><a href="/Accounts">Accounts</a></li>
+                              <li><a href="/Caste"> Caste Certificate </a></li>
+                              <li><a href="/Public">Public Interest Litigation </a></li>
+                              <li><a href="/CaveatPetition">Caveat Petition</a></li>
+                              <li><a href="/MoneyRecovery">Money Recovery</a></li>
+                              <li><a href="/Complaints">Consumer Complaint </a></li>
+                              <li><a href="/Conjugal">Conjugal </a></li>
+                              <li> <a href="/NameChange">Name Change</a></li>
+                              <li><a href="/GenderChange">Gender Change</a></li>
+                              <li><a href="/will">Will Probate</a></li>
+                          </ul>
+
             </div>
             </div>
             <div class="col-lg-6">
@@ -61,19 +79,29 @@
       </div>  
     </div>
 
-   <script type="text/javascript"> 
-   document.querySelector("input").addEventListener("change",function(evn) {
-     
-      var search = document.getElementById("searchtext").value; 
-      var items = document.getElementById("browsers").value;
-       if(search == items.value){
-            var Url = document.getElementsByTagName("option").url;
-            window.location.assign(Url);
-       }
-     
-      
-   })
+ <script>
+   function myDisplay(){
+      document.getElementById("myUL").style.display = "block";
+   }
+function mySearch(env) {
+    
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
 </script>
+
   
     <!-- services -->
     <section class="service">

@@ -238,9 +238,9 @@ z-index: 9;
     font-family: 'Calibri', sans-serif;
     padding: 5px;
     border: none;
-    background: var(--bg-g);
+    background-color: white;
     text-transform: uppercase;
-    color: #fff;
+    color: rgb(138, 137, 137);
     margin: 5px;
     border-radius: 0;
 }
@@ -249,6 +249,28 @@ z-index: 9;
     outline: none;
 }
 
+/* for search */
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    overflow-y: auto;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+  }
+  #myUL li a:hover:not(.header) {
+    background-color: #eee;
+  }
 
 /* Services */
 
