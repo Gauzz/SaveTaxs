@@ -46,6 +46,20 @@ button:hover, button:focus {
   display: flex;
   flex-direction: row;
 }
+
+
+
+.content-wrapper {
+    display: none;
+    margin-top: -450px;
+    margin-left: 0px;
+}
+@media (min-width: 768px){ 
+.content-wrapper {
+    transition: margin-left .3s ease-in-out;
+    margin-left: 250px;
+    margin-right: 0px;
+}}
  </style>
   <!-- Navbar -->
     <nav1 style="display:flex;background-color:rgba(39, 124, 46, 0.2);justify-content:space-between;width:100%;">
@@ -155,7 +169,7 @@ button:hover, button:focus {
                                     <li>
 
                                   <li class="nav-item has-treeview ">
-                                     <a id="customernotify_a" class="nav-link1" href="#">
+                                     <a id="customernotify_a" class="nav-link1" href="#" onclick="toggleDashboardView(this)">
                                      <i class="fas fa-sign-out-alt"></i>
                                        Notifications
                                     <i class="fas fa-angle-left left"></i>
@@ -175,7 +189,7 @@ button:hover, button:focus {
             </nav0>
       </div>
       </aside>
-<div id="customerprofile-tab" class="content-wrapper">
+<div id="customerprofile-tab" class="content-wrapper" style="width: 1660px; min-height:1300">
 <div class="col-lg-8" >
   
    <div class="wrap">
@@ -400,10 +414,10 @@ setInterval(function() {
         
 
 
-  <div id="customersupport-tab" class="content-wrapper">  
+  <div id="customersupport-tab" class="content-wrapper" style="width: 1660px; min-height:1300">  
      <div class="col-lg-8">
         
- <div class="uk-background-muted">
+ <div class="uk-background-muted" class="content-wrapper">
 		<div class="uk-container">
 			<div class="uk-margin">
 				<form class="uk-search uk-search-default uk-width-1-1 awesomplete">
@@ -512,7 +526,7 @@ setInterval(function() {
         
 
         {{!-- chat section --}}
-<div id="customerchat-tab" class="content-wrapper">        
+<div id="customerchat-tab" class="content-wrapper" style="width: 1320px; min-height:1300">        
  <div class="col-lg-10" >
           
     <div class="fullscreen">
@@ -665,8 +679,8 @@ setInterval(function() {
            
 
 
-<div id="customernotification-tab" class="content-wrapper">
-<div class="col-lg-8">
+<div id="customernotification-tab" class="content-wrapper" style="width: 1660px; min-height:800 margin-bottom:0px;">
+<div class="col-lg-8" >
           
         <div id="contentc" class="py-4">
     <div class="containerc">
