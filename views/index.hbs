@@ -17,7 +17,7 @@
                 <!--for search -->
                     <div class="group">
                         <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search anything..." onfocus="myDisplay();">
-                         <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                         <button type="submit" onclick="clickSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
                      </div>    
                           <ul id="myUL" style="display:none;">
                               <li><a href="/privatelimcom">Private Limited Company</a></li>
@@ -99,6 +99,19 @@ function mySearch(env) {
             li[i].style.display = "none";
         }
     }
+}
+
+function clickSearch(){
+       var input = document.getElementById("myInput").value;
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li").childNodes;
+        
+         a = li.getElementsByTagName("a")[0];
+         if(input == a.textContent){
+          var path = location.pathname;
+          document.getElementById("myUL").style.display = path;
+         }
+
 }
 </script>
 
