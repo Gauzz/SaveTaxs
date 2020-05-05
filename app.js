@@ -419,6 +419,13 @@ app.get('/GSTReturn', function(req, res) {
     res.render('./dashboard/admin/services/GSTReturn.hbs'); // or res.render('index.ejs');
 });
 
+
+app.get('/coupon', function(req, res) {
+    res.render('./dashboard/customer/coupon.hbs'); // or res.render('index.ejs');
+});
+app.get('/wishlist', function(req, res) {
+    res.render('./dashboard/customer/wishlist.hbs'); // or res.render('index.ejs');
+});
 //fetch data from db into category.ejs
 
 app.get('/dashboard/category', function(req, res) {

@@ -68,4 +68,6 @@ display: block;
     border-bottom: 1px solid;
     background: honeydew;
     }
-    
+    .nav-sidebar{
+        position: relative;
+    }
