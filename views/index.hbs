@@ -1,8 +1,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165577552-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165577552-1');
+</script>
+
+    </head>
    <!-- cover -->
-<style>
- 
-</style>
 
     <div class="main">
         <div class="container" style="max-width: 90%;">
@@ -16,7 +25,7 @@
                 
                 <!--for search -->
                     <div class="group">
-                        <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search anything..." onfocus="myDisplay();">
+                        <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search anything..." onfocus=" return myDisplay();">
                          <button type="submit" onclick="clickSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
                      </div>    
                           <ul id="myUL" style="display:none;">
@@ -82,6 +91,7 @@
  <script>
    function myDisplay(){
       document.getElementById("myUL").style.display = "block";
+      return false;
    }
 function mySearch(env) {
     
@@ -232,12 +242,12 @@ function clickSearch(){
             <div class="badge">
                 <div class="badgeimg two"></div>
                 <p class="count">150+</p>
-                <p class="sub">Partners</p>
+                <p class="sub">Happy Customers</p>
             </div>
             <div class="badge">
                 <div class="badgeimg three"></div>
-                <p class="count">7000+</p>
-                <p class="sub">Happy Customers</p>
+                <p class="count">7,000+</p>
+                <p class="sub">Partners</p>
             </div>
         </div>
     </section>
@@ -245,7 +255,7 @@ function clickSearch(){
     <section class="choose">
         <div class="content">
             <p class="title">Why choose <i><b>savetaxs</b></i>?</p>
-            <ul>
+            <ul list-style-type="disc">
                 <li>India's <b>best startup's legal service provider</b> company.</li>
                 <li><b>Lowest pricing</b> through autmation and technology.</li>
                 <li><b>Startup friendly team</b> which gives you service beyond satisfaction</li>
@@ -267,13 +277,7 @@ function clickSearch(){
     <!--Carousel Wrapper-->
     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval="false">
 
-      <!--Controls-->
-      <div class="controls-top">
-        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating ml-5" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-      </div>
-      <!--/.Controls-->
-
+     
       <!--Indicators-->
       <ol class="carousel-indicators">
         <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
@@ -379,14 +383,19 @@ function clickSearch(){
 
         </div>
         <!--/.Third slide-->
-
+       
       </div>
       <!--/.Slides-->
 
     </div>
     <!--/.Carousel Wrapper-->
 
-
+     <!--Controls-->
+      <div class="controls-down">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
   </div>
     </section>
 
