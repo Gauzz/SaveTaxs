@@ -8,8 +8,11 @@
   .clear:after {
     clear: both;
   }
+  .container{
+    background:gray; 
+
+  }
   body {
-    background:#e8f5fa;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
       font-size: 13.5px;
       line-height: 1.8;
