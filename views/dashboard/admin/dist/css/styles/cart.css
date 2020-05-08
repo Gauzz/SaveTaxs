@@ -1,4 +1,14 @@
-.col-xs-8{
-    width:  99.66666666666666%;
-    ;
+body {
+	margin-top: 20px;
+}
+.panel-info{
+    margin: 50px;
+}
+#states{
+    padding: 5px;
+    border-radius: 5px;
+}
+#language{
+    padding: 5px;
+    border-radius: 5px;
 }

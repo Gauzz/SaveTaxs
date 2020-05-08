@@ -8,7 +8,7 @@ router.get('/',  (req, res) =>{
         return res.render('index.hbs', {name: req.user.firstname + "_"+ req.user.secondname});
     }
     else{
-        return res.render('index.hbs');
+        return res.render('index.hbs', {title:"Savetaxs"});
     }
 
 });
