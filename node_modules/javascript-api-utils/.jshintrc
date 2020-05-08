@@ -1,0 +1,11 @@
+{
+  "browser": true,
+  "boss": true,
+  "esnext": true,
+  "expr": true,
+  "funcscope": true,
+  "mocha": true,
+  "node": true,
+  "quotmark": "single",
+  "shadow": true
+}
