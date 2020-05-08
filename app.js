@@ -13,6 +13,8 @@ var expressValidator = require('express-validator');
 const passport = require('passport');
 const config = require('./config/database');
 const Strategy = require('passport-local').Strategy;
+var io = require('socket.io')(app);
+
 var app = express();
 
 //passport config
@@ -160,6 +162,70 @@ app.set('view engine', 'html');
 // passport.deserializeUser((id, done) =>{
 //     done(null, {id});
 // });
+
+
+// chat box function
+
+
+console.log("App running...");
+
+
+function response(req, res) {
+    var file = "";
+    if(req.url == "/dashboard/chat1"){
+	   file = __dirname + './dashboard/customer/chat1.hbs';
+    } else {
+	   file = __dirname + req.url;
+    }
+   
+    fs.readFile(file,
+	    function (err, data) {
+			if (err) {
+				res.writeHead(404);
+				return res.end('Page or file not found');
+			}
+
+			res.writeHead(200);
+			res.end(data);
+	    }
+    );
+}
+
+
+app.get('/', function(req, res){
+    fs.readFile(__dirname + 'chat1.hbs', function(error, data) {
+       res.writeHead(200);
+       res.end(data);         
+    });
+  });
+ 
+
+//   app.get('/', (req, res) => {
+// 	res.render('chat1')
+// })
+
+io.on("connection", function(socket){
+    socket.on("send message", function(sent_msg, callback){
+		sent_msg = "[ " + getCurrentDate() + " ]: " + sent_msg;
+
+		io.sockets.emit("update messages", sent_msg);
+		callback();
+    });
+});
+
+function getCurrentDate(){
+	var currentDate = new Date();
+	var day = (currentDate.getDate()<10 ? '0' : '') + currentDate.getDate();
+	var month = ((currentDate.getMonth() + 1)<10 ? '0' : '') + (currentDate.getMonth() + 1);
+	var year = currentDate.getFullYear();
+	var hour = (currentDate.getHours()<10 ? '0' : '') + currentDate.getHours();
+	var minute = (currentDate.getMinutes()<10 ? '0' : '') + currentDate.getMinutes();
+	var second = (currentDate.getSeconds()<10 ? '0' : '') + currentDate.getSeconds();
+
+	return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+}
+
+
 
 app.get('/dashboard/admin/index2.html', function(req, res) {
     res.render('./dashboard/admin/index2.html'); // or res.render('index.ejs');
@@ -419,6 +485,17 @@ app.get('/GSTReturn', function(req, res) {
     res.render('./dashboard/admin/services/GSTReturn.hbs'); // or res.render('index.ejs');
 });
 
+app.get('/dashboard/chat1', function(req, res) {
+    res.render('./dashboard/customer/chat1.hbs'); // or res.render('index.ejs');
+});
+
+
+app.get('/dashboard/coupon', function(req, res) {
+    res.render('./dashboard/customer/coupon.hbs'); // or res.render('index.ejs');
+});
+app.get('/dashboard/wishlist', function(req, res) {
+    res.render('./dashboard/customer/wishlist.hbs'); // or res.render('index.ejs');
+});
 //fetch data from db into category.ejs
 
 app.get('/dashboard/category', function(req, res) {
