@@ -1,3 +1,8 @@
+body{
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+}
 .container1{
     width: 100%;
     margin-top: 10px;
@@ -48,6 +53,9 @@ input[type=button]{
     padding-left:20px;
     height: 500px;
       
+}
+.details ul{
+    list-style-type: none;
 }
 .menu0{
     background-color: rgb(230, 228, 228);

@@ -24,22 +24,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                    
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -109,49 +131,59 @@
                 <h3>Documents Required for registration</h3>
                 <ol>
                     <li>Business address proof
-                        <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                    {{/if}} 
                     </li>
                     <li>Copies of the sale bill and purchase bill
-                        <span>
+                        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                    {{/if}} 
                     </li>
                     <li>Partnership deed/ MoA and AoA
-                        <span>
+                        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                    {{/if}} 
                         </li>
                     <li>Copy of Licenses
-                        <span>
+                        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                    {{/if}} 
                     </li>
                     <li>Bills of Machinery Purchased
-                        <span>
+                        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                       {{/if}} 
                         </li>
                 </ol>
-
+                  {{#if isAuthenticated}}
                 <button type="submit" id="btn">Submit</button>
-                
+                {{/if}}
             </div><br><br/>
 
             

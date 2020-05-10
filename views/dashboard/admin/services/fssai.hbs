@@ -26,22 +26,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                   
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -106,52 +128,64 @@
 
 <ul class="a">
 <li>1. Form B – completed and signed
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}}   
 </li>
 <li>2. Photo Identity of FBO
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>3. Proof of possession of premises (eg. Rental Agreement )
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>4. Partnership Deed / Certificate of Incorporation / Articles of Association etc
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>5. List of food products to be dealt with
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>6. Food safety management system plan
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 
 </ul>
@@ -170,173 +204,214 @@
 
 <ul class="a">
 <li>1. Form B duly completed and signed
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>2. Plan of the processing unit showing the dimensions and operation-wise area allocation  
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
          </li> 
 <li>3. List of Directors/ Partners/ Proprietor with address, contact details, and photo ID
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>4. Name and list of equipment and machinery used with the number and installed capacity
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>5. List of food category to be manufactured
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>6. Authority letter from manufacturer nominated a responsible person name and address
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>7.Analysis report of water to be used in the process to confirm the portability
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>8. Source of raw material for milk, meat etc
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>9. Recall plan wherever applicable
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>10. Ministry of Commerce Certificate for 100% EOU
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>11. NOC/PA document issued by FSSAI
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>12. IE code document issued by DGFT
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>13. Form IX
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>14. Certificate from Ministry of Tourism 
-      <span>
+       {{#if isAuthenticated}}
+     <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
         </li> 
 <li>15. Proof of possession of premises
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>16. Partnership deed/ affidavit of proprietorship
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>17. NOC and copy of License from the manufacturer
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>18. Food safety management system plan or certificate
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>19. NOC from the municipality or local body
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
-
+     {{/if}} 
 </li>
 <li>20. Supporting document for proof of turnover and transportation
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>21. Declaration form
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 </ul>
 </div><br/>
@@ -347,106 +422,131 @@
 
 <ul class="a">
 <li>i.	Form B duly completed and signed
+     {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>2.	Plan of the processing unit showing the dimensions and operation-wise area allocation 
-        <span>
+         {{#if isAuthenticated}}
+     <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
         </li>
 <li>3. List of Directors/ Partners/ Proprietor with address, contact details, and photo ID
+    
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>4. Name and list of equipment and machinery used with the number and installed capacity
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>5. List of food category to be manufactured
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>6. Authority letter from manufacturer nominated a responsible person name and address
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>7. Analysis report of water to be used in the process to confirm the portability
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>8. Proof of possession of premises
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>9.	Partnership deed/ affidavit of proprietorship
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>10.	NOC and copy of License from the manufacturer
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
-<li>11.	Copy of certificate obtained under Coop Act 1861/Multi state Coop Act 2002
+<li>11. Copy of certificate obtained under Coop Act 1861/Multi state Coop Act 2002
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 <li>12. Food safety management system plan or certificate
+      {{#if isAuthenticated}}
      <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
 </li>
 
 </ul>
-
+{{#if isAuthenticated}}
 <button type="submit" id="btn">Submit</button><br>
-
+{{/if}}
 </div>
 </div>
 

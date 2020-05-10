@@ -28,22 +28,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                <div class="form-group">
+                    
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -89,111 +111,135 @@
 
 <ul class="a">
     <li>1. Complete specification (in English)
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>2. Drawing(s)
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>3. Name, address, and nationality of inventors
-         <span>
+         {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 
     </li>
     <li>4. Name, address, and nationality of applicants
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>5.	Power of Attorney (To be filed in case the application is filed by a patent agent)
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
         <li>6.	Assignment Deed or Application Form endorsed by the inventor (if the inventors are not the applicants)
-            <span>
+            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
         </li>
     <li>7.	Details of correspond­ing applications filed in other countries (Infor­mation and undertaking under Section 8)
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>8.	Verified English translation of the priority application (required for convention applications).
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>9.	Verified English translation of the PCT application (required only for national phase applications)
          Agent can verify the English translation of PCT application on behalf of the applicant.
-         <span>
+         {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
          
          </li>
     <li>10.	Certified copy of the priority application, if requested by the Controller (required usually for convention 
         applications, but may also be requested for national phase application in case the priority document was not 
         submitted with the International Bureau)
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
         </li>
     <li>11.	Sequence listing in computer-readable text format (if any) (no print form is required to be submitted)
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>12.	Permission from National Biodiversity Authority (in case any Biological material used in the invention is from India).
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
 
 </ul>
-
+{{#if isAuthenticated}}
 <button type="submit" id="btn">Submit</button>
-
+{{/if}}
 </div><br/>
 
 </div>

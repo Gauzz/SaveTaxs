@@ -29,22 +29,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                   
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -102,52 +124,64 @@
 <p style="padding-left: 22px;">1. Proprietorship Firm</p>
 <ul class="a">
 <li>1. Name
-    <span>
+    {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 </li>
 <li>2. PAN Card
-    <span>
+    {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 </li>
 <li>3. ID Proof – Driving License / Passport / Voter Card
-    <span>
+    {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 </li>
 <li>4. Address Proof for the premises
-    <span>
+   {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 </li>
 <li>5. Residential address proof
-    <span>
+    {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 </li>
 <li>6. Telephone number
-    <span>
+    {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
 </li>
 
 
@@ -159,44 +193,54 @@
          <p style="padding-left: 22px;">2. Society/Trust</p>
                <ul class="a">
                    <li>1.	Certification of Incorporation
-                       <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                    </li>
                    <li>2.	MOA and By-laws
-                       <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                    </li>
                    <li>3.	Pan Card number
-                       <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                    </li>
                   <li>4.	Address proof
-                      <span>
+                      {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                   </li>
                    <li>5.	ID proof
-                       <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                    </li>
 
 
@@ -207,44 +251,54 @@
                <p style="padding-left: 22px;">3. Partnership Firms</p>
                  <ul class="a">
                  <li>1. Certificate of Registration Firms
-                     <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                  </li>
                   <li>2. Partnership Deed
-                      <span>
+                      {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                   </li>
                  <li>3.  ID Proof – Driving License / Passport / Voter Card
-                     <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                  </li>
                  <li>4. List of all partners with address proof
-                     <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                  </li>
                  <li>5. ID proof of all partners
-                     <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                  </li>
 
                </ul>
@@ -252,44 +306,54 @@
                 <p style="padding-left: 22px;"> 4. LLP/Company</p>
                      <ul class="a">
                          <li>1. Incorporation Certificate
-                             <span>
+                           {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                          </li>
                          <li>2.	proof of directors
-                             <span>
+                             {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                          </li>
                         <li>3.	DSC of directors
-                            <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
                          <li>4.	List of all directors with address proof
-                             <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                               </li>
                          <li>5.	ID proof
-                             <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                          </li>
 
 
@@ -307,30 +371,54 @@
                         <li>8.	Salary</li>
                        <li>9.	Designation</li>
                        <li>10. ID Proof – Driving License / Passport / Voter Card
-                           <span>
+                           {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                        </li>
-                        <li>11. Bank account number with IFSC code</li>
+                        <li>11. Bank account number with IFSC code
+                            {{#if isAuthenticated}}
+                          <span>
+                            <div class="upload-btn-wrapper">
+                            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                            <input type="file" name="myfile" />
+                            </div>
+                          </span>
+                         {{/if}}
+                        </li>
                           <li>12. Voluntary application
-                              <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                           </li>
-                        <li>13. Employee details</li>
-                       <li>14. Signature
-                           <span>
+                        <li>13. Employee details
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
+                        </li>
+                       <li>14. Signature
+                           {{#if isAuthenticated}}
+                          <span>
+                            <div class="upload-btn-wrapper">
+                            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                            <input type="file" name="myfile" />
+                            </div>
+                          </span>
+                         {{/if}}
                        </li>
                        <li>15. Date of agreement</li>
 
@@ -339,75 +427,92 @@
                 <p style="padding-left: 22px;">6. Other Entities</p>
                     <ul class="a">
                         <li>1. First sale bill.
-                            <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
                          <li>2. First purchase bill of raw material and machinery.
-                             <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                          </li>
                         <li>3. GST Registration Certificate, if registered
-                            <span>
+                          {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
                         <li>4. Bankers details- name, address, branch, IFSC code
-                            <span>
+                           {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
                         <li>5. Record of a monthly strength of the number of employees.
-                            <span>
+                           {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
                         <li>6. Register of salary and wages, all vouchers, 
                             all balance sheets from day one to current date of provisional coverage.
-                            <span>
+                           {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                             </li>
                         <li>7. Salary and PF Statement.
-                            <span>
+                           {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
                         <li>8. Cross cancelled cheque.
-                            <span>
+                            {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
                         </li>
 
 
                   </ul>
+                  {{#if isAuthenticated}}
                   <button type="submit" id="btn">Submit</button>
-
+                 {{/if}}
 </div><br>
 <br>
 

@@ -25,22 +25,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                  
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -90,91 +112,113 @@
 
 <ul class="a">
     <li>1. A registration certificate obtained either under the:
-         <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+                          </span>
+                        {{/if}}
     </li>
     <p>a. Factories Act</p>
         <p>b. Shops and Establishment Act</p>
 
     <li>2. Certificate of Registration in case of Company, and Partnership deed in case of a Partnership
-         <span>
+         {{#if isAuthenticated}}
+          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
         </span>
+     {{/if}} 
     </li>
     <li>3. Memorandum of Association and Articles of Association of the Company
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
     <li>4. A list of all the employees working in the Establishment
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
     <li>5. PAN Card of the Business Entity as well as all the Employees working under the entity
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
     <li>6. The compensation details of all the employees
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
         <li>7. A cancelled cheque of the Bank Account of the Company
-             <span>
+             {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
         </li>
     <li>8. List of Directors of the Company
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
     <li>9. List of the Shareholders of the Company
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
     <li>10. Register containing the attendance of the employees
-         <span>
+         {{#if isAuthenticated}}
+           <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-        </span>
+           </span>
+        {{/if}} 
     </li>
 
 </ul>
+{{#if isAuthenticated}}
  <button type="submit" id="btn">Submit</button>
+ {{/if}}
 </div><br>
 <br>
 

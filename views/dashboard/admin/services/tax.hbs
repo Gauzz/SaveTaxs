@@ -27,22 +27,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                   
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -103,74 +125,91 @@
     <h3>Documents Required for GST Registration<i class="material-icons">attachment</i></h3>
 <ul class="a">
     <li>1. PAN of the Applicant
-        <span>
-             <div class="upload-btn-wrapper">
-            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
-             <input type="file" name="myfile" />
-               </div>
-       </span>
+        {{#if isAuthenticated}}
+                          <span>
+                            <div class="upload-btn-wrapper">
+                            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                            <input type="file" name="myfile" />
+                            </div>
+                          </span>
+                         {{/if}}
     </li>
     <li>2. Aadhaar card
-        <span>
-             <div class="upload-btn-wrapper">
-              <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
-               <input type="file" name="myfile" />
-             </div>
-         </span>
+        {{#if isAuthenticated}}
+                          <span>
+                            <div class="upload-btn-wrapper">
+                            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                            <input type="file" name="myfile" />
+                            </div>
+                          </span>
+                         {{/if}}
     </li>
     <li>3. Proof of business registration or Incorporation certificate
 
-        <span>
-            <div class="upload-btn-wrapper">
-            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
-            <input type="file" name="myfile" />
-             </div>
-         </span>
+        {{#if isAuthenticated}}
+                          <span>
+                            <div class="upload-btn-wrapper">
+                            <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                            <input type="file" name="myfile" />
+                            </div>
+                          </span>
+                         {{/if}}
     </li>
     <li>4. Identity and Address proof of Promoters/Director with Photographs.
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>5. Address proof of the place of business.
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>6. Bank Account statement/Cancelled cheque.
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>7. Digital Signature.
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
     <li>8. Letter of Authorization/Board Resolution for Authorized Signatory.
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}}
     </li>
 
 </ul>
-
+{{#if isAuthenticated}}
 <button type="submit" id="btn">Submit</button>
+{{/if}}
 
 </div><br>
 <br>

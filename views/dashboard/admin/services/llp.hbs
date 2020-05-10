@@ -27,22 +27,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                    
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -116,83 +138,98 @@
 <p style="padding-left: 22px;">For Partners (All the documents must be self-attested, scanned and uploaded)</p>
 <ul class="a">
     <li>1. PAN Card or passport (Foreign Nationals & NRIs)
-        <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
     <li>2. Apply for the DIN (Director Identification Number)
-        <span>
+                    {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
     <li>3. Application for the name availability.
-        <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
     <li>4. Filing of the EMoa and EAOA to register private limited company
-        <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
 </ul>
 
-<button type="submit" id="btn">Submit</button>
 
 </div><br><br/>
 <div id="m4">
 <h3>For Registered Office (All documents must be scanned and uploaded)	</h3>
 <ul class="a">
     <li>1. Bank Statement/ Telephone Bill/ Electricity or Gas Bill
-        <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
     <li>2. Notarised Rental Agreement in English
-        <span>
+        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
     <li>3. No-Objection Certificate from the property owner
-        <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
     <li>4. Sale Deed/ Property Deed in English
-        <span>
+                     {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                        {{/if}} 
                     </li>
     </li>
 </ul>
@@ -209,7 +246,10 @@
     <li>4. Company Incorporation Certificate </li>
 </ul>
 
-</div>
+</div><br>
+{{#if isAuthenticated}}
+<button type="submit" id="btn">Submit</button>
+{{/if}}
 
 </div>
 </div>

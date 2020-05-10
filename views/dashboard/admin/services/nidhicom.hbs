@@ -30,22 +30,44 @@
                     <input type="text" class="form-control" placeholder="City">
                 </div>
                 <div class="form-group">
+                   
                     <select class="form-control">
                         <option selected>Select state</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Goa</option>
-                        <option>UttarPradesh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh </option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                         <option>Chhattisgarh</option>
+                         <option>Goa</option>
+                        <option>Gujarat </option>
+                        <option>Haryana </option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jammu and Kashmir</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                         <option>Madhya Pradesh</option>
+                         <option>Maharashtra</option>
+                         <option>Manipur </option>
+                         <option>Meghalaya</option>
+                         <option>Mizoram</option> 
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
                         <option>Punjab</option>
-                        <option>Gujrat</option>
-                        <option>Maharastra</option>
+                        <option>Rajasthan</option> 
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu </option>
+                         <option>Telangana</option> 
+                        <option>Tripura </option>
+                        <option>Uttar Pradesh </option>
+                         <option>Uttarakhand</option>
+                         <option>West Bengal</option>
+
                     </select>
                 </div>
                  <div class="form-group">
                     <select class="form-control">
                         <option selected>Language</option>
-                        <option>Accord</option>
-                        <option>Camry</option>
-                        <option>Civic</option>
                         <option>English</option>
                         <option>Hindi</option>
                     </select>
@@ -66,7 +88,7 @@
             <div class="menu0"><a href="#m3">Document required</a></div>
             <div class="menu0"><a href="#m4">Why Choose Us</a></div>
 </div>
-<div class="col-lg-3">
+<div class="col-lg-8">
 
 <div class="details" >
     <div id="m1">
@@ -75,7 +97,7 @@
           and belongs to the non-banking finance sector in India. They are regulated by
            the Ministry of Corporate Affairs and their core business is borrowing and lending money between their members... </p>
                         
-    </div>M<br/>
+    </div><br/>
    <div id="m2">
     <h3>Requirements to register a Nidhi Company</h3>
     <ul class="a">
@@ -92,46 +114,54 @@
 
 <ul class="a">
     <li>1. Passport (Foreign Nationals and NRIs)
-      <span>
+                      {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}} 
                     </li>
       
     </li>
     <li>2. Passport/Voter’s ID/Driver’s Licence
-        <span>
+                       {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}} 
                     </li>
     </li>
     <li>3. Current Bank Account Statement/Phone Bill/ Electricity or Gas Bill
-        <span>
+                        {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}} 
                     </li>
     </li>
     <li>4. Passport Sized Photograph
-        <span>
+                      {{#if isAuthenticated}}
+                          <span>
                             <div class="upload-btn-wrapper">
                             <button class="btn"><i class="fa fa-upload" aria-hidden="true"></i></button>
                             <input type="file" name="myfile" />
                             </div>
-                        </span>
+                          </span>
+                         {{/if}} 
                     </li>
     </li>
 </ul>
-
+{{#if isAuthenticated}}
 <button type="submit" id="btn">Submit</button>
-
+{{/if}}
 </div><br/><br/>
 
 
