@@ -103,7 +103,7 @@ app.use(expressValidator());  //this line to be addded
 app.use(jsonParser);
 app.use(urlencodedParser);
 app.use(router);
-var port = 3000;
+var port = 80;
 app.engine("hbs", handlebars({
     extname: "hbs",
     defaultLayout: "main",
